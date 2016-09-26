@@ -1,0 +1,5 @@
+*param*.py
+*param*.json
+*.sublime-workspace
+*.sublime-project
+ipython_log.*
