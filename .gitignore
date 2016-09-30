@@ -21,6 +21,9 @@
 !git-prompt.sh
 /^./
 
+# バイナリファイル
+.ipython/profile_default/db/dhist
+
 # サブフォルダとそれ以下のすべてのファイル
 # ただし/msys64/etc/以下の特定ファイルは除く。
 # 複雑な.gitignoreの書き方参考(http://qiita.com/anqooqie/items/110957797b3d5280c44f)
