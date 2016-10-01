@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment</key>
+	<string> # EnhancedText ver3.6
+# EnhancedText 3.6 シングル、ダブルクォート
+##TEST 'これはハイライト' 'これは　ハイライトじゃない' ''ここはハイライト' 'ここはハイライト'ここはハイライトとするな' ''ここだけハイライト'''ここだけハイライト'
+
+# EnhancedText 3.5 数字をハイライト アングルかっこ&lt;&gt;の文字色のつけかた変更
+##TEST 12 123 koa 123 12. koreha 12. kor $324 eha ￥９２もする 12. 12.64.33 だけどな...
+
+@スペース2つにも左右されない @間にスペース 1つで色変え @245
+
+&lt;このかっこは中身の色を変えない&gt; &lt;このかっこは&lt;中身の&gt;色を変えない&gt; &lt;このかっ&gt;こは&lt;中身の色を変えない&gt; &lt;カッコ自体に色がつくだけ&gt; &lt;1623&gt;株の番号とかカッコに色付き、数字は別色
+
+
+#### UPDATE3.4.1 行頭の&lt;=2個以上&gt;の並び 色変え README追加
+#### UPDATE3.3.1 ()内コメントアウト　行頭でも有効なように修正
+## INTRODUCTION 自分用シンタックスハイライト markdownサポート
+## ACTION YAML形式でハイライトを設定
+## USAGE Built by PackageDev
+## PLAN 行変えしてもルール継続する方法ないんか？
+
+rules -------------------
+```text 下にある方が優先度高い '^'はひとつ前の文字の指定 '\s' 半角スペースorTab '\S'は半角スペース置かなかったら有効 '\S*'は次のスペースかタブが来るまで続く文字列指定 '\t'タブ [1-9]とすれば1から9まで [a-z]とすればaからzまで '\('は手前括弧。逆も同様 '*'は同様の文字列が続いたとき '.*'はそれ以下のどんな文字列でも '.' なんでも1文字の意味 '.+' 好きな文字いくらでも '(a|b)'でaまたはb '\d'が数字 '\d{4}'で数字４つ '\d+'でdいくつでもという意味 '\\.'でdot '+'はその前の同じ文字１文字以上でも (\\s|.)*スペースも文字も含む (参考)([1-2]\d{3}[-/\\.](0?[1-9]|1[012])[-/\\.](0[1-9]|[12]\d|3[01]) ){1,2}で日付表示 '\\d{3}.*'で数字が３つ続いたらその後はずっと色変え ```
+color ------------------------------------------------------------------------- Using Color Scheme Theme-Nil Color Scheme-Tubnil_kai &lt;&lt; customed Tubnil (Sankasan)
+```text ------------------------------------------------------------------------- foreground pink / red  (markup.deleted.git_gutter) foreground red / white  (invalid) ------------------------------------------------------------------------- background skyblue / skyblue   (meta.package) background palepink / red   (entity.name.type) background palepink / pink   (entity.name.function) background purple / white   (meta.diff.git-commit) background light purple / white   (punctuation.definition.unchanged.diff) background mint green / white   (markup.inserted) background blue / white   (meta.diff.header) background green / yellow   (markup.inserted.git_gutter) background orange / orange   (keyword.control.memory) ------------------------------------------------------------------------- red   (constant.character.escaped) yellow(orrange)   (markup.changed.git_gutter) blue(orrange)   (constant) dark blue(dark orrange)   (keyword.operator) dark sky blue(brown)   (support.type) pale pink(brown)   (punctuation.definition.string.begin) yellow(green)   (entity.name.tag) yellow(green)   (meta.tag) green(moss green)   (support.function) purple   (support.constant) gray   (source comment.block) gray   (comment) red orange(green blue)   (storage) blue   (variable.language) blue   (keyword.control.import) purple   (variable.other.constant/constant.numeric) skyblue(light purple)   (keyword) pink    (entity.other.inherited-class) dark pink   (keyword.control) ``` </string>
+	<key>fileTypes</key>
+	<array>
+		<string>txt</string>
+		<string>md</string>
+	</array>
+	<key>name</key>
+	<string>Enhanced text</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>行頭の&lt;アンダースコア2個以上&gt;以下(Markdownの太字)</string>
+			<key>match</key>
+			<string>^\_{2}(\s|\_|.)*</string>
+			<key>name</key>
+			<string>meta.package</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>行頭2文字以上の&lt;ハイフン&gt;または&lt;イコール&gt;以下(Markdownのライン)</string>
+			<key>match</key>
+			<string>^(\-|=){2}(\s|\-|=|.)*</string>
+			<key>name</key>
+			<string>keyword.control.memory</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>行頭の*か+か-(Markdownの項目)</string>
+			<key>match</key>
+			<string>(^|^\s+)(((\*|\+|\-)\s)|・)</string>
+			<key>name</key>
+			<string>keyword.control.import</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>行頭または空白にある数字と記号(Markdownの数字項目および数字)</string>
+			<key>match</key>
+			<string>\d+</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>1個以上の'&lt;'か'&gt;'(Markdownの引用符とカッコ)</string>
+			<key>match</key>
+			<string>[\&lt;\&gt;]</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>カッコ内の数字・記号</string>
+			<key>match</key>
+			<string>\([\)_,\.\-\s\d]+\)</string>
+			<key>name</key>
+			<string>constant</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>カッコ内の数字・記号以外((?&lt;=[^\]])は下の「MarkdownのURL」との衝突回避策)</string>
+			<key>match</key>
+			<string>(?&lt;=[^\]]|^)\([\w\s\.,_^\)]+\)</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>直前に]がある()内の文字列  ただし]は含まない  (MarkdownのURL)</string>
+			<key>match</key>
+			<string>(?&lt;=\])(\(.*\))</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>半角&lt;&gt;内</string>
+			<key>match</key>
+			<string>\&lt;+[^\&gt;]+\&gt;+</string>
+			<key>name</key>
+			<string>constant</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>全角&lt;&gt;内</string>
+			<key>match</key>
+			<string>＜+[^＞]+＞+</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>「」内</string>
+			<key>match</key>
+			<string>「[^」]*」</string>
+			<key>name</key>
+			<string>storage</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>飾りカッコ【】内</string>
+			<key>match</key>
+			<string>【[^】]*】</string>
+			<key>name</key>
+			<string>storage</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>[]内</string>
+			<key>match</key>
+			<string>\[+[^\]]+\]+</string>
+			<key>name</key>
+			<string>meta.tag</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>ダブルクォーテーション内(ただし間に空白が一個あるとキャンセル)</string>
+			<key>match</key>
+			<string>"[^"\s]+"</string>
+			<key>name</key>
+			<string>keyword.operator</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>シングルクォーテーション内(ただし間に空白が一個あるとキャンセル)</string>
+			<key>match</key>
+			<string>\'[^\'\s]+\'</string>
+			<key>name</key>
+			<string>keyword.operator</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>&lt;スペース&gt;&lt;**&gt;&lt;文字列&gt;&lt;**&gt;&lt;スペース&gt;(Markdownの太字)</string>
+			<key>match</key>
+			<string>(^|\s)\*{2}[^(\*{2})]*.+\*{2}($|\s)</string>
+			<key>name</key>
+			<string>punctuation.definition.string.begin</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>&lt;スペース&gt;&lt;*&gt;&lt;文字列&gt;&lt;*&gt;&lt;スペース&gt;(Markdownのイタリック体)</string>
+			<key>match</key>
+			<string>(^|\s)\*[^(\*)]*.+\*($|\s)</string>
+			<key>name</key>
+			<string>support.type</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>~~&lt;スペース&gt;文字&lt;スペース&gt;~~(Markdownの打ち消し文字)</string>
+			<key>match</key>
+			<string>(~~)[^(~~)]*(~~)</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>バッククォート内(Markdownのコード)</string>
+			<key>match</key>
+			<string>`[^`]*(\s|\`|.)</string>
+			<key>name</key>
+			<string>meta.diff.header</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>行頭のhttp:かhttps:以下</string>
+			<key>match</key>
+			<string>(^|\s)http(:|s:)\S+</string>
+			<key>name</key>
+			<string>keyword</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>#行頭にある一個以上の&lt;シャープ&gt;&lt;スペース&gt;&lt;任意の文字列以下&gt;(Markdownの見出し)</string>
+			<key>match</key>
+			<string>^\#+\s(\s|.)*</string>
+			<key>name</key>
+			<string>entity.name.type</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>#直前が行頭ではない一個以上のシャープ&lt;スペース&gt;&lt;任意の文字列以下&gt;(Markdownの見出し)</string>
+			<key>match</key>
+			<string>(?&lt;=[^^])\#+\s.*</string>
+			<key>name</key>
+			<string>source comment.block</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>@とスペース2つに挟まれたスペース以外の文字</string>
+			<key>match</key>
+			<string>@\S+\s{2}</string>
+			<key>name</key>
+			<string>constant.character.escaped</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>コメントアウト</string>
+			<key>match</key>
+			<string>//\s.*</string>
+			<key>name</key>
+			<string>comment</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>ブロックコメントアウト</string>
+			<key>match</key>
+			<string>(/\*\s[^(\*/)]*\*/|/\*\s([^(\*/)]|\s)*|.*\s\*/)</string>
+			<key>name</key>
+			<string>source comment.block</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.enhanced</string>
+</dict>
+</plist>

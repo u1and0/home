@@ -1,0 +1,5 @@
+{
+	"version": "11.13.2012.1305.0",
+	"statusbar_file_size" : true,
+	"default_browser": "firefox" //one of this list: firefox, chrome, chromium, opera, safari
+}

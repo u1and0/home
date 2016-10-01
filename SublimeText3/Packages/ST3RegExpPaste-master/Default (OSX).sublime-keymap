@@ -1,0 +1,5 @@
+[
+    {
+        "keys": ["super+shift+v"], "command": "myfunc_reg"
+    }
+]

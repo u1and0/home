@@ -1,0 +1,126 @@
+[
+//先頭へ移動
+	{
+		"args": {
+			"to": "bof",
+			 "extend": false
+		},
+		"command": "move_to"
+	},
+
+
+
+
+/////////////////////////////////////////////////////
+
+
+
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+	{
+	"args": {
+		"file": "res://Packages/Default/Add Line Before.sublime-macro"
+		},
+	"command": "run_macro_file"
+	},
+
+
+
+
+/////////////////////////////////////////////////////
+
+
+
+
+//日付挿入//Package InsertDate要インストール
+	// {
+	// 	"args":{
+	// 		"format": "_________________\n__%x__\n_________________"
+	// 		},
+	// 	"command": "insert_date",
+	// },
+	{
+		"args":{
+			"format": "__%x "
+			},
+		"command": "insert_date",
+	},
+
+	// {
+		// "args":
+		// {
+		// 	"file": "res://Packages/Default/Add Line.sublime-macro"
+		// },
+		// "command": "run_macro_file"
+	// },
+//snippet yotei要作成
+	// <snippet>
+	// 	<content><![CDATA[
+	// 0830-1000 ${1:this}
+	// 1030-1200 ${2:this}
+	// 1300-1500 ${3:this}
+	// 1530-1700 ${4:this}
+	// 1730-1900 ${5:this}
+	// ]]></content>
+	// 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	// 	<tabTrigger>0830</tabTrigger>
+	// 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	// 	<!-- <scope>source.python</scope> -->
+	// </snippet>
+
+	{
+		"args":
+		{
+			"characters": "0830"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"default": "	",
+			"exact": false
+		},
+		"command": "insert_best_completion"
+	}
+]

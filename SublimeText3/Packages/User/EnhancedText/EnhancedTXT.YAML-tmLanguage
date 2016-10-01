@@ -1,0 +1,340 @@
+{ "name": "Enhanced text",
+"scopeName": "text.enhanced",
+"fileTypes": ["txt","md"],
+"comment": "
+# EnhancedText ver3.6
+
+# EnhancedText 3.6
+シングル、ダブルクォート
+
+##TEST
+'これはハイライト'
+'これは　ハイライトじゃない'
+''ここはハイライト'
+'ここはハイライト'ここはハイライトとするな'
+''ここだけハイライト'''ここだけハイライト'
+
+
+# EnhancedText 3.5
+数字をハイライト
+アングルかっこ<>の文字色のつけかた変更
+
+##TEST
+12
+123 koa
+ 123 
+12. koreha
+ 12. kor $324 eha
+￥９２もする
+12. 
+12.64.33
+だけどな...
+
+
+@スペース2つにも左右されない  
+@間にスペース 1つで色変え  
+@245  
+
+
+<このかっこは中身の色を変えない>
+<このかっこは<中身の>色を変えない>
+<このかっ>こは<中身の色を変えない>
+<カッコ自体に色がつくだけ>
+<1623>株の番号とかカッコに色付き、数字は別色
+
+
+
+#### UPDATE3.4.1
+行頭の<=2個以上>の並び 色変え
+README追加
+
+#### UPDATE3.3.1
+()内コメントアウト　行頭でも有効なように修正
+
+## INTRODUCTION
+自分用シンタックスハイライト
+markdownサポート
+
+## ACTION
+YAML形式でハイライトを設定
+
+## USAGE
+Built by PackageDev
+
+## PLAN
+行変えしてもルール継続する方法ないんか？
+
+
+rules
+-------------------
+
+```text
+  下にある方が優先度高い
+  '^'はひとつ前の文字の指定
+  '\\s' 半角スペースorTab
+  '\\S'は半角スペース置かなかったら有効
+  '\\S*'は次のスペースかタブが来るまで続く文字列指定
+  '\\t'タブ
+  [1-9]とすれば1から9まで
+  [a-z]とすればaからzまで
+  '\\('は手前括弧。逆も同様
+  '*'は同様の文字列が続いたとき
+  '.*'はそれ以下のどんな文字列でも
+  '.' なんでも1文字の意味
+     '.+' 好きな文字いくらでも
+  '(a|b)'でaまたはb
+  '\\d'が数字
+     '\\d{4}'で数字４つ
+     '\\d+'でdいくつでもという意味
+  '\\\\.'でdot
+  '+'はその前の同じ文字１文字以上でも
+  (\\\\s|.)*スペースも文字も含む
+  (参考)([1-2]\\d{3}[-/\\\\.](0?[1-9]|1[012])[-/\\\\.](0[1-9]|[12]\\d|3[01])
+  ){1,2}で日付表示
+    '\\\\d{3}.*'で数字が３つ続いたらその後はずっと色変え
+```
+
+color
+-------------------------------------------------------------------------
+Using Color Scheme 
+Theme-Nil
+Color Scheme-Tubnil_kai << customed Tubnil (Sankasan)
+
+```text
+  -------------------------------------------------------------------------
+  foreground pink / red  (markup.deleted.git_gutter)
+  foreground red / white  (invalid)
+  -------------------------------------------------------------------------
+  background skyblue / skyblue   (meta.package)
+  background palepink / red   (entity.name.type)
+  background palepink / pink   (entity.name.function)
+  background purple / white   (meta.diff.git-commit)
+  background light purple / white   (punctuation.definition.unchanged.diff)
+  background mint green / white   (markup.inserted)
+  background blue / white   (meta.diff.header)
+  background green / yellow   (markup.inserted.git_gutter)
+  background orange / orange   (keyword.control.memory)
+  -------------------------------------------------------------------------
+  red   (constant.character.escaped)
+  yellow(orrange)   (markup.changed.git_gutter)
+  blue(orrange)   (constant)
+  dark blue(dark orrange)   (keyword.operator)
+  dark sky blue(brown)   (support.type)
+  pale pink(brown)   (punctuation.definition.string.begin)
+  yellow(green)   (entity.name.tag)
+  yellow(green)   (meta.tag)
+  green(moss green)   (support.function)
+  purple   (support.constant)
+  gray   (source comment.block)
+  gray   (comment)
+  red orange(green blue)   (storage)
+  blue   (variable.language)
+  blue   (keyword.control.import)
+  purple   (variable.other.constant/constant.numeric)
+  skyblue(light purple)   (keyword)
+  pink    (entity.other.inherited-class)
+  dark pink   (keyword.control)
+```
+",
+
+
+
+"patterns": [
+# ライン
+       {"match": "^\\_{2}(\\s|\\_|.)*",
+       "name": "meta.package",
+       "comment": "行頭の<アンダースコア2個以上>以下(Markdownの太字)"
+       },
+       {"match": "^(\\-|=){2}(\\s|\\-|=|.)*",
+       "name": "keyword.control.memory",
+       "comment": "行頭2文字以上の<ハイフン>または<イコール>以下(Markdownのライン)"
+       },
+
+
+# 行頭にある文字列
+       {"match": "(^|^\\s+)(((\\*|\\+|\\-)\\s)|・)",
+       "name": "keyword.control.import",
+       "comment": "行頭の*か+か-(Markdownの項目)"
+       },
+       {"match": "\\d+",
+       "name": "support.function",
+       "comment": "行頭または空白にある数字と記号(Markdownの数字項目および数字)"
+       },
+       # {"match": "(\\s|^)\\d+\\.\\s",
+       # "name": "constant",
+       # "comment": "行頭にある数字とドット(Markdownの数字項目)"
+       # },
+       {"match": "[\\<\\>]",
+      # {"match": "^\\>+",
+       "name": "keyword",
+       "comment": "1個以上の'<'か'>'(Markdownの引用符とカッコ)"
+       },
+      #  {"match": "(^\\>(\\>|\\s)+|^\\>)",
+      # # {"match": "^\\>+",
+      #  "name": "keyword",
+      #  "comment": "行頭の1個以上の>(Markdownの引用符)"
+      #  },
+
+
+
+# 記号内の文字列
+       {"match": "\\([\\)_,\\.\\-\\s\\d]+\\)",
+       "name": "constant",
+       "comment": "カッコ内の数字・記号"
+       },
+       {"match": "(?<=[^\\]]|^)\\([\\w\\s\\.,_^\\)]+\\)",
+       "name": "comment",
+       "comment": "カッコ内の数字・記号以外((?<=[^\\]])は下の「MarkdownのURL」との衝突回避策)"
+       },
+       {"match": "(?<=\\])(\\(.*\\))",
+       "name": "keyword",
+       "comment": "直前に]がある()内の文字列  ただし]は含まない  (MarkdownのURL)"
+       },
+       {"match": "\\<+[^\\>]+\\>+",
+       "name": "constant",
+       "comment": "半角<>内"
+       },
+       {"match": "＜+[^＞]+＞+",
+       "name": "support.function",
+       "comment": "全角<>内"
+       },
+       {"match": "「[^」]*」",
+       "name": "storage",
+       "comment": "「」内"
+       },
+       {"match": "【[^】]*】",
+       "name": "storage",
+       "comment": "飾りカッコ【】内"
+       },
+       # {"match": "\\{[^\\}]*\\}",
+       # "name": "keyword.operator",
+       # "comment": "{}内の文字"
+       # },
+       {"match": "\\[+[^\\]]+\\]+",
+       "name": "meta.tag",
+       "comment": "[]内"
+       },
+       {"match": "\"[^\"\\s]+\"",
+       "name": "keyword.operator",
+       "comment": "ダブルクォーテーション内(ただし間に空白が一個あるとキャンセル)"
+       },
+       {"match": "\\'[^\\'\\s]+\\'",
+       "name": "keyword.operator",
+       "comment": "シングルクォーテーション内(ただし間に空白が一個あるとキャンセル)"
+       },
+       {"match": "(^|\\s)\\*{2}[^(\\*{2})]*.+\\*{2}($|\\s)",
+       "name": "punctuation.definition.string.begin",
+       "comment": "<スペース><**><文字列><**><スペース>(Markdownの太字)"
+       },
+       #数字か.を何文字か打つとバグる
+       {"match": "(^|\\s)\\*[^(\\*)]*.+\\*($|\\s)",
+       "name": "support.type",
+       "comment": "<スペース><*><文字列><*><スペース>(Markdownのイタリック体)"
+       },
+       {"match": "(~~)[^(~~)]*(~~)",
+       "name": "comment",
+       "comment": "~~<スペース>文字<スペース>~~(Markdownの打ち消し文字)"
+       },
+       {"match": "`[^`]*(\\s|\\`|.)",
+       "name": "meta.diff.header",
+       "comment": "バッククォート内(Markdownのコード)"
+       },
+
+
+
+
+
+
+# 記号・文字列以下
+       {"match": "(^|\\s)http(:|s:)\\S+",
+       "name": "keyword",
+       "comment": "行頭のhttp:かhttps:以下"
+       },
+      {"match": "^\\#+\\s(\\s|.)*",
+       "name": "entity.name.type",
+       "comment": "#行頭にある一個以上の<シャープ><スペース><任意の文字列以下>(Markdownの見出し)"
+       },
+      {"match": "(?<=[^^])\\#+\\s.*",
+       "name": "source comment.block",
+       "comment": "#直前が行頭ではない一個以上のシャープ<スペース><任意の文字列以下>(Markdownの見出し)"
+       },
+      {"match": "@\\S+\\s{2}",
+      # {"match": "(@|＠)\\s.*\\S(\\s{3,})$",
+       "name": "constant.character.escaped",
+       "comment": "@とスペース2つに挟まれたスペース以外の文字"
+       # "comment": "@ 半角スペース 半角スペース以外の文字にマッチ、末尾がスペース2つ以上"
+       },
+       {"match": "//\\s.*",
+       "name": "comment",
+       "comment": "コメントアウト"
+       },
+       {"match": "(/\\*\\s[^(\\*/)]*\\*/|/\\*\\s([^(\\*/)]|\\s)*|.*\\s\\*/)",
+       "name": "source comment.block",
+       "comment": "ブロックコメントアウト"
+       },
+       # ____________________________________________________
+       # ----------------example------------------
+       # {"match": "^==.*",
+       # "name": "entity.name.tag",
+       # "comment": "見出し2 : == h2"
+       # },
+       # {"match": "^=\\s.*",
+       # "name": "storage",
+       # "comment": "見出し1 : = h1"
+       # },
+       # {"match": "^\\[\\d+/\\d+/\\d+\\]\\s.*$",
+       # # {"match": "^[\\d+/\\d+/\\d]\\s.*$",
+       # "name": "string.heading",
+       # "comment": "タスク : [2014/01/02] コードFix"
+       # },
+       # {"match": "\\d{3}.*",
+       # "name": "keyword.control",
+       # "comment": "3連数字"
+       # },
+       # {"match": "^\\[[a-z]\\]",
+       # "name": "storage",
+       # "comment": "[]内"
+       # },
+       # {"match": "^\\([A-Za-z0-9_]\\)",
+       # "name": "storage",
+       # "comment": "()内"
+       # },
+# ____________________________________________________
+       # 動作未確認
+       # {"match": "\\/\\*(\\s|\\r|\\_|.)*(\\*\\/)$",
+       # # {"match": "\\/\\*(\\s|.)*",
+       # "name": "source comment.block",
+       # "comment": "/**/内の文字(ブロックコメントアウト)改行までどう含めるかが課題"
+       # },
+       # { "name": "keyword",
+       #   "begin": "/\*\s.*",
+       #   "end": "\s.*\*/",
+       #   },
+       #   "patterns": [
+       #      {  "name": "keyword",
+       #         "match": "\\$([A-Za-z][A-Za-z0-9_]+)"
+       #                   }
+       #   ],
+       #   "contentName": "keyword"
+       # }
+       # {"match": "\\$([A-Za-z][A-Za-z0-9_]+)",
+       # "name": "keyword.control",
+       # "comment": "見出し2 : == h2"
+       # },
+       # {"match": "[/+*]\\s.* ",
+       # "name": "comment.block",
+       # #Tubnil_kaiから拾ってきた
+       # "comment": "ブロックコメントアウト"
+       # },
+       # {"match": "[\\s|\t]\\d+\\..*",
+       # "name": "storage",
+       # #Tubnil_kaiから拾ってきた
+       # "comment": "ナンバリング"
+       # },
+       # {"match": "^\\d+\\..*",
+       # "name": "storage",
+       # #Tubnil_kaiから拾ってきた
+       # "comment": "ナンバリング"
+       # },
+],
+}

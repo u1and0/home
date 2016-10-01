@@ -1,0 +1,209 @@
+[
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args": null,
+		"command": "single_selection"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"close_panel": true
+		},
+		"command": "replace_all"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"close_panel": true
+		},
+		"command": "replace_all"
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args": null,
+		"command": "right_delete"
+	},
+	{
+		"args": null,
+		"command": "single_selection"
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "eol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args":
+		{
+			"forward": true
+		},
+		"command": "select_lines"
+	},
+	{
+		"args": null,
+		"command": "left_delete"
+	},
+	{
+		"args": null,
+		"command": "single_selection"
+	},
+	{
+		"args":
+		{
+			"by": "lines",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "lines",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "lines",
+			"forward": true
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"by": "characters",
+			"extend": true,
+			"forward": false
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"close_panel": true
+		},
+		"command": "replace_all"
+	}
+]

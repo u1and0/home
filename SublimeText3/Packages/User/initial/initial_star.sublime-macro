@@ -1,0 +1,21 @@
+[
+/*行頭にスターを挿入*/
+	{
+		"command": "split_selection_into_lines" 
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"characters": "* "
+		},
+		"command": "insert"
+	}
+]

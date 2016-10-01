@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "MyFunction: 正規表現のエスケープ",
+        "command": "myfunc_reg"
+    }
+]

@@ -1,0 +1,36 @@
+// Installed Packageに入っている奴一覧
+// dir /b  "E:\Users\U1and0\Dropbox\Program\SublimeText3\Installed Packages" > ./InstalledPackageList.txt
+
+0_package_control_loader.sublime-package
+Abacus.sublime-package
+All Autocomplete.sublime-package
+Awk.sublime-package
+BracketHighlighter.sublime-package
+Evernote.sublime-package
+Expand Selection to Quotes.sublime-package
+Expand Selection to Whitespace.sublime-package
+File History.sublime-package
+filelist.txt
+FindKeyConflicts.sublime-package
+GitGutter.sublime-package
+Gnuplot.sublime-package
+INI.sublime-package
+InputSequence.sublime-package
+InsertDate.sublime-package
+Markdown Extended.sublime-package
+Markdown Preview.sublime-package
+MarkdownTOC.sublime-package
+MetaQuotes (MQL4) Language Package.sublime-package
+Package Control.sublime-package
+PackageDev.sublime-package
+pckglst.txt
+Search Stack Overflow.sublime-package
+SideBarEnhancements.sublime-package
+Sublime Files.sublime-package
+sublime-text-2-buildview.sublime-package
+Sublimerge 3.sublime-package
+Super Calculator.sublime-package
+Theme - Nexus.sublime-package
+Theme - Nil.sublime-package
+TrailingSpaces.sublime-package
+VBDotNet.sublime-package

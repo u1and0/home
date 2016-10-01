@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+## ${1:--filename--} ver${2:--version--}
+
+__UPDATE${2:--version--}__
+${3:First commit}
+
+__USAGE__
+${4:Just build}
+
+__INTRODUCTION__
+${5:--introduction--}
+
+__ACTION__
+${6:--action--}
+
+__TODO__
+${7:None}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>new</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,77 @@
+[
+/*sublime-keymap ver7.3.0
+__UPDATE7.3.0__
+Auto-Pair moved to insertline directory
+
+__UPDATE7.2.9__
+"text.enhanced"のスコープ内でのみ動作可能にする"を削除
+	{"key": "selector", "operator": "equal", "operand": "text.enhanced"}
+
+__UPDATE7.2.8__
+build break change from default keybind as ["ctrl+alt+b"]
+
+__UPDATE7.2.7__
+markdown_preview in browser as ["alt+b"]
+
+__UPDATE7.2.6__
+show_panel build result as ["ctrl+alt+`"]
+
+__UPDATE7.2.5__
+Quick Change Project as ["ctrl+alt+p"]
+
+__UPDATE7.2.4__emove "save_project_as" and "save_workspace_as"
+Close work space as ["ctrl+k","ctrl+c"]
+*/
+
+
+
+
+// -----------------------------------User definition------------------------------------
+	{ "keys": ["alt+b"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} },
+	{"keys": ["ctrl+alt+`"], "command": "show_panel", "args": {"panel": "output.exec"}},
+	{ "keys": ["ctrl+alt+t"], "command": "clone_file"},
+	{ "keys": ["ctrl+alt+up"], "command": "scroll_lines", "args": {"amount": 20.0 } },
+	{ "keys": ["ctrl+alt+down"], "command": "scroll_lines", "args": {"amount": -20.0 } },
+	{ "keys": ["ctrl+k","ctrl+c"], "command": "close_workspace" },
+	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
+// -----------------------------------Change from Default------------------------------------
+	{ "keys": ["ctrl+alt+pageup"], "command": "show_at_center" },
+	{ "keys": ["ctrl+alt+pagedown"], "command": "show_at_center" },
+	{ "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["ctrl+alt+b"], "command": "exec", "args": {"kill": true} },
+
+
+
+	// -----------------------------------User definition macros------------------------------------
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/User/insert_Spaces_SharpNewline.sublime-macro"} },
+	{ "keys": ["alt+d"], "command": "run_macro_file", "args": {"file": "res://Packages/User/insertdate.sublime-macro"} },
+
+
+
+
+
+
+
+
+// -----------------------------------User definition Installed Package------------------------------------
+//selection
+	{ "keys": ["alt+t"], "command": "open_terminal" },
+	{"keys": ["ctrl+alt+m"], "command": "expand_selection_to_quotes"},
+	{ "keys": ["ctrl+k", "ctrl+m"], "command": "expand_selection_to_whitespace" },
+//evernote
+	{ "keys": ["ctrl+alt+e"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Evernote: "} },
+	{ "keys": ["ctrl+e", "ctrl+f"], "command": "search_note" },
+	{ "keys": ["ctrl+e", "ctrl+shift+s"], "command": "send_to_evernote" },
+	// { "keys": ["ctrl+e", "ctrl+o"], "command": "list_recent_notes" },
+	{ "keys": ["ctrl+shift+e", "ctrl+shift+o"], "command": "open_evernote_note", "args": {"max_notes": 10, "by_searching": "*", "order": "updated", "ascending": false}, "caption": "Evernote: List recent notes" },
+	{ "keys": ["ctrl+e", "ctrl+o"], "command": "open_evernote_note" },
+	{ "keys": ["ctrl+e", "ctrl+f"], "command": "open_evernote_note", "args": {"by_searching": true}, "caption": "Evernote: Search Note" },
+	{ "keys": ["ctrl+e", "ctrl+s"], "command": "save_evernote_note"},
+	// , "context": [{"key": "evernote_note"}] }
+	{ "keys": ["ctrl+shift+0"], "command": "input_sequence"},
+	{
+		"command": "anaconda_doc", "keys": ["alt+shift+d"], "context": [
+		{"key": "selector", "operator": "equal", "operand": "source.python"}
+	]},
+]

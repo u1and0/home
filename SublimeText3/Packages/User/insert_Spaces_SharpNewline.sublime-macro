@@ -1,0 +1,27 @@
+[
+/*Insert double space at end of line*/
+// modify end behavior as END tap twice
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "eol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "eol"
+		},
+		"command": "move_to"
+	},
+	{
+		"args":
+		{
+			"characters": "  # "
+		},
+		"command": "insert"
+	},
+]

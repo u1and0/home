@@ -1,0 +1,94 @@
+[
+/*ver2.0
+<UPDATE2.0>
+日付を囲う記号を「snippetのアンダーバー」から「アンダーバー2つ」に変更
+<INTRODUCTION>
+行頭に移動してラインと日付と１０行の改行を挿入するmacro
+<USAGE>
+Package"Insert Date"と自作Snippet"line_under"が必要
+以下のようにキーボードショートカットを登録するといい
+	{ "keys": ["alt+shift+d"], "command": "run_macro_file", "args": {"file": "res://Packages/User/insertdate.sublime-macro"} },*/
+	// 最上段に移動
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bof"
+		},
+		"command": "move_to"
+	},
+	// 改行
+	{
+		"args":
+		{
+			"characters": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+		},
+		"command": "insert"
+	},
+	// {
+	// 	"args":
+	// 	{
+	// 		"characters": "\n\n\n\n\n\n\n\n\n\n"
+	// 	},
+	// 	"command": "insert"
+	// },
+	// 最上段に移動
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bof"
+		},
+		"command": "move_to"
+	},
+	// __ver2.0__________________________
+	// 日付の挿入
+	// Package "Insert Date"を導入すること
+	{
+		"args":
+		{
+			"characters": "__"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"format": "%x"
+		},
+		"command": "insert_date"
+	},
+	{
+		"args":
+		{
+			"characters": "__\n"
+		},
+		"command": "insert"
+	}
+	// __ver1.0__________________________
+/*	// line_under.sublime-snippetを使用
+	{
+		"args":
+		{
+			"characters": "_"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"default": "	",
+			"exact": false
+		},
+		"command": "insert_best_completion"
+	},
+	// 日付の挿入
+	// Package "Insert Date"を導入すること
+	{
+		"args":
+		{
+			"format": "%x"
+		},
+		"command": "insert_date"
+	}*/
+]

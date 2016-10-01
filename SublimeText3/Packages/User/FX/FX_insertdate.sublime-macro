@@ -1,0 +1,97 @@
+[
+// spreadnameだけでも動作可能
+// 	このとき最上段が国名になるように。
+
+// 行頭に移動してラインと日付と１０行の改行を挿入するmacro
+// Package"Insert Date"と自作Snippet"line_under"が必要
+// 以下のようにキーボードショートカットを登録するといい
+	{
+		"args": {"file": "res://Packages/User/FX_spreadname.sublime-macro"},
+		"command": "run_macro_file"
+	},
+	// 最上段に移動
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bof"
+		},
+		"command": "move_to"
+	},
+	// // 改行
+	// {
+	// 	"args":
+	// 	{
+	// 		"characters": "\n"
+	// 	},
+	// 	"command": "insert"
+	// },
+	// // 最上段に移動
+	// {
+	// 	"args":
+	// 	{
+	// 		"extend": false,
+	// 		"to": "bof"
+	// 	},
+	// 	"command": "move_to"
+	// },
+	{
+		"args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"},
+		"command": "run_macro_file"
+	},
+	// FX_insertdate.sublime-snippetを使用
+	{
+		"args":
+		{
+			"characters": "date"
+		},
+		"command": "insert"
+	},
+	{
+		"args":
+		{
+			"default": "	",
+			"exact": false
+		},
+		"command": "insert_best_completion"
+	},
+	// 日付の挿入
+	// Package "Insert Date"を導入すること
+	{
+		"args":
+		{
+			"format": "%c"
+		},
+		"command": "insert_date"
+	},
+	// 選択29行
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"},
+	{"args":	{"to": "line"},"command": "expand_selection"}
+]

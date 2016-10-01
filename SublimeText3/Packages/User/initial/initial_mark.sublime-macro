@@ -1,0 +1,30 @@
+[
+	//必ず行頭にマークされてしまう
+	// 行の途中に挿入したい場合はsnippetのタブトリガー"/"で"split_selection_into_lines(選択行のキャレット分割)"から"行頭にキャレットを移す操作"を回避できる
+	{
+		"command": "split_selection_into_lines" 
+	},
+	{
+		"args":
+		{
+			"extend": false,
+			"to": "bol"
+		},
+		"command": "move_to"
+	},
+	{//snippet trigger
+		"args":
+		{
+			"characters": "/"
+		},
+		"command": "insert"
+	},
+	{//snippet起動
+		"args":
+		{
+			"default": "	",
+			"exact": false
+		},
+		"command": "insert_best_completion"
+	}
+]

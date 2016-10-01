@@ -17,8 +17,6 @@
 *.cache
 
 # 先頭にダットがつかないファイル
-[a-zA-Z0-9]*.*
-!git-prompt.sh
 /^./
 
 
@@ -51,3 +49,5 @@
 !/Cmder/config/aliases
 !/Cmder/config/ConEmu.xml
 !/Cmder/config/user-startup.cmd
+
+!/SublimeText3/

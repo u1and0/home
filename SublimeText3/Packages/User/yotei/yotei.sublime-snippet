@@ -1,0 +1,37 @@
+<!--
+## yotei.sublime-snippet ver2.0
+
+__UPDATE2.0__
+__Updete__
+Todoの形式
+__Remove__
+Done消した
+
+__USAGE__
+`0830`を入力してtabキー
+
+__INTRODUCTION__
+本日の予定を入力するフォーマット
+
+__ACTION__
+`0830`+`tab`と入力
+
+__TODO__
+None 
+-->
+<snippet>
+	<content><![CDATA[
+${1:youbi}__
+0830-1000 ${2:plan}
+1030-1200 ${2:plan}
+1300-1500 ${2:plan}
+1530-1700 ${2:plan}
+
+${3:}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>0830</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

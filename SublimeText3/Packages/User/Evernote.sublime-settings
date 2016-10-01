@@ -1,0 +1,8 @@
+{
+	"code": "color: black; font-family: Times New Roman; font-size: 1em;",
+	"max_notes": 1000,
+	"noteStoreUrl": "https://www.evernote.com/shard/s135/notestore",
+	"pre": "color: #000000; font-family: Meiryo; font-size: 1em; white-space: pre-wrap; word-wrap: break-word; background-color: #f8f8f8; border: 1px solid #cccccc; border-radius: 3px; overflow: auto; padding: 6px 10px; margin-bottom: 10px;",
+	"token": "S=s135:U=e1e674:E=15ce3b19a8a:C=1558c006cb0:P=1cd:A=en-devtoken:V=2:H=7097c3ece5c97491b7f7660759a519dd",
+	"update_on_save": false
+}

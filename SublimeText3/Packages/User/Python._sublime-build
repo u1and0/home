@@ -1,0 +1,10 @@
+    {
+        "shell_cmd": "python -u $file",
+        "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+        "selector": "source.python",
+        "windows":
+        {
+            "encoding": "cp932",
+            "path": "C:/Users/U1and0/AppData/Local/Programs/Python/Python35"
+        }
+    }

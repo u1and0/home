@@ -1,0 +1,47 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Abacus",
+		"All Autocomplete",
+		"Anaconda",
+		"Awk",
+		"BracketHighlighter",
+		"ConvertToUTF8",
+		"Evernote",
+		"Expand Selection to Quotes",
+		"Expand Selection to Whitespace",
+		"File History",
+		"FindKeyConflicts",
+		"GitGutter",
+		"Gnuplot",
+		"IMESupport",
+		"INI",
+		"InputSequence",
+		"InsertDate",
+		"Markdown Extended",
+		"Markdown Preview",
+		"MarkdownTOC",
+		"MetaQuotes (MQL4) Compiler",
+		"MetaQuotes (MQL4) Language Package",
+		"Package Control",
+		"PackageDev",
+		"Search Stack Overflow",
+		"SideBarEnhancements",
+		"Sublime Files",
+		"sublime-text-2-buildview",
+		"Sublimerge 3",
+		"Super Calculator",
+		"Theme - Nexus",
+		"Theme - Nil",
+		"TrailingSpaces",
+		"VBDotNet"
+	],
+	"repositories":
+	[
+		"https://github.com/kazu1107/InputSequence.git"
+	]
+}
