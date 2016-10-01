@@ -51,3 +51,19 @@
 !/Cmder/config/user-startup.cmd
 
 !/SublimeText3/
+FileHistory*.*
+Evernote.sublime-settings
+*.cache
+*cache*.*
+encoding_cache.json
+
+"Package\ Control."*
+FX_*.*
+Todo.md
+c2u_tmp
+*.last-run
+*の競合コピー*.*
+STtools.sublime*
+*.last-run
+*.sublime-project
+*.sublime-workspace
