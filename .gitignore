@@ -21,8 +21,7 @@
 !git-prompt.sh
 /^./
 
-# バイナリファイル
-.ipython/profile_default/db/dhist
+
 
 # サブフォルダとそれ以下のすべてのファイル
 # ただし/msys64/etc/以下の特定ファイルは除く。
@@ -34,3 +33,13 @@
 /msys64/etc/*
 !/msys64/etc/profile
 !/msys64/etc/fstab
+
+!/.ipython/
+/.ipython/*
+!/.ipython/profile_default/
+/.ipython/profile_default/*
+!/.ipython/profile_default/startup/
+/.ipython/profile_default/startup/*
+!/.ipython/profile_default/startup/startup.ipy
+# バイナリファイル
+.ipython/profile_default/db/dhist
