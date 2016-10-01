@@ -43,3 +43,11 @@
 !/.ipython/profile_default/startup/startup.ipy
 # バイナリファイル
 .ipython/profile_default/db/dhist
+
+!/Cmder/
+/Cmder/*
+!/Cmder/config/
+/Cmder/config/*
+!/Cmder/config/aliases
+!/Cmder/config/ConEmu.xml
+!/Cmder/config/user-startup.cmd

@@ -1,0 +1,16 @@
+modules = ('numpy',
+           'matplotlib.pyplot',
+           'pandas',
+           'seaborn')
+standfor = {'numpy': 'np',
+            'matplotlib.pyplot': 'plt',
+            'pandas': 'pd',
+            'seaborn': 'sns'}
+
+print('\n################')
+print('Import Packages')
+print('################\n')
+for module in modules:
+    execution = 'import %s as %s' % (module, standfor[module])
+    print(execution)
+    exec(execution)
