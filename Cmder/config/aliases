@@ -18,7 +18,7 @@ subl="sublime_text.exe" $*
 py="python" $*
 ipy=ipython
 jpy=cmd /k "jupyter qtconsole --style=monokai" -new_console:t:"Jupyter" -new_console:b
-jpyn=jupyter notebook -new_console:t:"jupyter notebook" -new_console:b
+jpyn=jupyter notebook -new_console:t:"Jupyter Notebook" -new_console:b
 spy=spyder -new_console:t:"Spyder"
 
 ::git=
