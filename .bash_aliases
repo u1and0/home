@@ -74,6 +74,10 @@ alias subl='sublime_text.exe'
 alias py='python'
 alias ipy='ipython'
 alias jpy='jupyter qtconsole --style=monokai'
+alias jpyn='jupyter notebook'
+alias spy="Spyder"
+
+
 # git
 alias g='git'
 alias gf='git flow'
@@ -90,8 +94,7 @@ alias gp='git push'
 alias gpo='git push origin'
 
 # status
-alias gs='git status --short'
-alias gsb='git status --short --branch'
+alias gs='git status --short --branch'
 alias gl='git log --oneline --all --graph --decorate'
 alias gls='git ls-files'
 alias gd='git diff --color-words'
