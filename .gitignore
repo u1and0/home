@@ -67,3 +67,4 @@ STtools.sublime*
 *.last-run
 *.sublime-project
 *.sublime-workspace
+FileHistory*.json
