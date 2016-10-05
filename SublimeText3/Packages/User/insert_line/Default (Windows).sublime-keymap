@@ -212,7 +212,7 @@ See also "line_under.sublime-snippet"
 		]
 	},
 // Auto-pair Underline
-	{ "keys": ["_"], "command": "insert_snippet", "args": {"contents": "__${0:$SELECTION}__"}, "context":
+	{ "keys": ["_"], "command": "insert_snippet", "args": {"contents": "_${0:$SELECTION}_"}, "context":
 		[
 			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
 			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
