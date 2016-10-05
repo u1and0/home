@@ -68,3 +68,4 @@ STtools.sublime*
 *.sublime-project
 *.sublime-workspace
 FileHistory*.json
+Sublimerge*.sublime-commands
