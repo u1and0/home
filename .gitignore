@@ -49,6 +49,11 @@
 !/Cmder/config/aliases
 !/Cmder/config/ConEmu.xml
 !/Cmder/config/user-startup.cmd
+!/Cmder/vendor
+/Cmder/vendor/*
+!/Cmder/vendor/conemu-maximus5/
+/Cmder/vendor/conemu-maximus5/*
+!/Cmder/vendor/conemu-maximus5/ConEmu.xml
 
 !/SublimeText3/
 FileHistory*.*
