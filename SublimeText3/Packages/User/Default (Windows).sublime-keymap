@@ -46,6 +46,7 @@ Close work space as ["ctrl+k","ctrl+c"]
 	// -----------------------------------User definition macros------------------------------------
 	{ "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/User/insert_Spaces_SharpNewline.sublime-macro"} },
 	{ "keys": ["alt+d"], "command": "run_macro_file", "args": {"file": "res://Packages/User/insertdate.sublime-macro"} },
+	{ "keys": ["alt+d"], "command": "run_macro_file", "args": {"file": "res://Packages/User/yotei/nippo.sublime-macro"} },
 
 
 
