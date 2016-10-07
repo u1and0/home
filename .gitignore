@@ -12,7 +12,6 @@
 # 以下はバイナリだったりヒストリー含まれるので管理対象外
 .swp
 .lesshst
-.viminfo
 .*_history
 *.cache
 
