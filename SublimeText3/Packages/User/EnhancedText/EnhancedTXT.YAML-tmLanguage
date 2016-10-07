@@ -2,10 +2,11 @@
 "scopeName": "text.enhanced",
 "fileTypes": ["txt","md"],
 "comment": "
-# EnhancedText ver3.6
+# EnhancedText ver3.7
+3.6の機能削除
 
 # EnhancedText 3.6
-シングル、ダブルクォート
+シングル、ダブルクォート空白入れるとシンタックス終了
 
 ##TEST
 'これはハイライト'
@@ -214,13 +215,13 @@ Color Scheme-Tubnil_kai << customed Tubnil (Sankasan)
        "name": "meta.tag",
        "comment": "[]内"
        },
-       {"match": "\"[^\"\\s]+\"",
+       {"match": "\"[^\"]+\"",
        "name": "keyword.operator",
-       "comment": "ダブルクォーテーション内(ただし間に空白が一個あるとキャンセル)"
+       "comment": "ダブルクォーテーション内"
        },
-       {"match": "\\'[^\\'\\s]+\\'",
+       {"match": "\\'[^\\']+\\'",
        "name": "keyword.operator",
-       "comment": "シングルクォーテーション内(ただし間に空白が一個あるとキャンセル)"
+       "comment": "シングルクォーテーション内"
        },
        {"match": "(^|\\s)\\*{2}[^(\\*{2})]*.+\\*{2}($|\\s)",
        "name": "punctuation.definition.string.begin",

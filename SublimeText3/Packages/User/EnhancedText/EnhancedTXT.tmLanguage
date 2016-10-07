@@ -143,7 +143,7 @@ color ------------------------------------------------------------------------- 
 			<key>comment</key>
 			<string>ダブルクォーテーション内(ただし間に空白が一個あるとキャンセル)</string>
 			<key>match</key>
-			<string>"[^"\s]+"</string>
+			<string>"[^"]+"</string>
 			<key>name</key>
 			<string>keyword.operator</string>
 		</dict>
@@ -151,7 +151,7 @@ color ------------------------------------------------------------------------- 
 			<key>comment</key>
 			<string>シングルクォーテーション内(ただし間に空白が一個あるとキャンセル)</string>
 			<key>match</key>
-			<string>\'[^\'\s]+\'</string>
+			<string>\'[^\']+\'</string>
 			<key>name</key>
 			<string>keyword.operator</string>
 		</dict>
