@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string> # EnhancedText ver3.6
-# EnhancedText 3.6 シングル、ダブルクォート
+	<string> # EnhancedText ver3.7 3.6の機能削除
+# EnhancedText 3.6 シングル、ダブルクォート空白入れるとシンタックス終了
 ##TEST 'これはハイライト' 'これは　ハイライトじゃない' ''ここはハイライト' 'ここはハイライト'ここはハイライトとするな' ''ここだけハイライト'''ここだけハイライト'
 
 # EnhancedText 3.5 数字をハイライト アングルかっこ&lt;&gt;の文字色のつけかた変更
@@ -141,7 +141,7 @@ color ------------------------------------------------------------------------- 
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>ダブルクォーテーション内(ただし間に空白が一個あるとキャンセル)</string>
+			<string>ダブルクォーテーション内</string>
 			<key>match</key>
 			<string>"[^"]+"</string>
 			<key>name</key>
@@ -149,7 +149,7 @@ color ------------------------------------------------------------------------- 
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>シングルクォーテーション内(ただし間に空白が一個あるとキャンセル)</string>
+			<string>シングルクォーテーション内</string>
 			<key>match</key>
 			<string>\'[^\']+\'</string>
 			<key>name</key>
