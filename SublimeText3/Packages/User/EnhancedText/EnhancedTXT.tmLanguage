@@ -87,7 +87,7 @@ color ------------------------------------------------------------------------- 
 			<key>comment</key>
 			<string>カッコ内の数字・記号以外((?&lt;=[^\]])は下の「MarkdownのURL」との衝突回避策)</string>
 			<key>match</key>
-			<string>(?&lt;=[^\]]|^)\([\w\s\.,_^\)]+\)</string>
+			<string>(?&lt;=[^\]]|^)\([\w\s\.,。、_^\)]+\)</string>
 			<key>name</key>
 			<string>comment</string>
 		</dict>

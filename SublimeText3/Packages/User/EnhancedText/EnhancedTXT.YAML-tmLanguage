@@ -183,7 +183,7 @@ Color Scheme-Tubnil_kai << customed Tubnil (Sankasan)
        "name": "constant",
        "comment": "カッコ内の数字・記号"
        },
-       {"match": "(?<=[^\\]]|^)\\([\\w\\s\\.,_^\\)]+\\)",
+       {"match": "(?<=[^\\]]|^)\\([\\w\\s\\.,。、_^\\)]+\\)",
        "name": "comment",
        "comment": "カッコ内の数字・記号以外((?<=[^\\]])は下の「MarkdownのURL」との衝突回避策)"
        },
