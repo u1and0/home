@@ -1,5 +1,9 @@
 /*
-## [Default (Windows).sunlime-keymap](initial keymap) ver1.2
+## [Default (Windows).sunlime-keymap](initial keymap) ver1.3
+
+__UPDATE1.3__
+* initial_anglebraket.sublime-macro
+	* 行頭に>を挿入するmacroを実行
 
 __UPDATE1.2__
 * initial_star(markdownの"項目")をinitial_markから独立したマクロにした
@@ -59,7 +63,7 @@ None
 	},
 	//initial mark
 	{"keys": ["ctrl+alt+/"], "command": "run_macro_file", "args": {"file": "res://Packages/User/initial/initial_mark.sublime-macro"}},//, "context":
-	{"keys": ["alt+/"], "command": "run_macro_file", "args": {"file": "res://Packages/User/initial/initial_star.sublime-macro"}}//, "context":
+	{"keys": ["alt+/"], "command": "run_macro_file", "args": {"file": "res://Packages/User/initial/initial_star.sublime-macro"}},//, "context":
 	// 	[
 	// 		{ "key": "has_prev_field", "operator": "equal", "operand": true }
 	// 	]
@@ -69,4 +73,5 @@ None
 	// 		{ "key": "has_prev_field", "operator": "equal", "operand": true }
 	// 	]
 	// }
+	{"keys": ["alt+."], "command": "run_macro_file", "args": {"file": "res://Packages/User/initial/initial_angle.sublime-macro"}},
 	]
