@@ -73,5 +73,6 @@ None
 	// 		{ "key": "has_prev_field", "operator": "equal", "operand": true }
 	// 	]
 	// }
-	{"keys": ["alt+."], "command": "run_macro_file", "args": {"file": "res://Packages/User/initial/initial_angle.sublime-macro"}},
+	//initial anglebraket
+	{"keys": ["alt+."], "command": "run_macro_file", "args": {"file": "res://Packages/User/initial/initial_anglebraket.sublime-macro"}},
 	]
