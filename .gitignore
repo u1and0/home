@@ -54,6 +54,10 @@
 /Cmder/vendor/conemu-maximus5/*
 !/Cmder/vendor/conemu-maximus5/ConEmu.xml
 
+!/.spyder-py3/
+/.spyder-py3/*
+!/.spyder-py3/spyder.ini
+
 !/SublimeText3/
 FileHistory*.*
 Evernote.sublime-settings
