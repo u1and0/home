@@ -39,8 +39,7 @@ Close work space as ["ctrl+k","ctrl+c"]
 	{ "keys": ["ctrl+alt+pagedown"], "command": "show_at_center" },
 	{ "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
 	{ "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
-	{ "keys": ["ctrl+alt+b"], "command": "exec", "args": {"kill": true} },
-
+	{ "keys": ["ctrl+alt+b"], "command": "cancel_build" },
 
 
 	// -----------------------------------User definition macros------------------------------------
