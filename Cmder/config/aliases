@@ -47,3 +47,4 @@ gch=git checkout $*
 gb=git branch $*
 gm=git merge $*
 gt=git tag $*
+grst-h=git reset --hard  HEAD  
