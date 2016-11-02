@@ -1,11 +1,11 @@
 modules = ('numpy',
-           'seaborn',
            'pandas',
-           'matplotlib.pyplot')
+           'matplotlib.pyplot',
+           'seaborn')
 standfor = {'numpy': 'np',
-            'seaborn': 'sns',
             'pandas': 'pd',
-            'matplotlib.pyplot': 'plt'}
+            'matplotlib.pyplot': 'plt',
+            'seaborn': 'sns'}
 
 for module in modules:
     execution = 'import %s as %s' % (module, standfor[module])

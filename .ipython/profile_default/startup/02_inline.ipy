@@ -1,0 +1,10 @@
+inline = 'matplotlib inline'
+gui = 'matplotlib auto'
+try:
+    get_ipython().magic(inline)
+    print('%' + inline)
+except:
+    get_ipython().magic(gui)
+    print('%' + gui)
+    print('If you use `plt.show()` command,')
+    print('you should use `plt.ioff()` to turn interactive mode off.')

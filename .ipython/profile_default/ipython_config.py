@@ -623,9 +623,6 @@
 #------------------------------------------------------------------------------
 
 c.AliasManager.user_aliases = [
-    # magic command
-    # ('run', 'run -t'),
-
     # shell command
     ('ls', 'ls  --show-control-chars -F --color'),
     ('grep', 'grep --color'),
@@ -660,11 +657,9 @@ c.AliasManager.user_aliases = [
     ('gt', 'git tag'),
 ]
 
-c.InteractiveShellApp.exec_lines = ['%matplotlib inline']
-c.InlineBackend.rc = {'font.family': 'IPAPGothic',
-                      'font.size': 10,
-                      'figure.figsize': (6.0, 4.0),
+# c.InteractiveShellApp.exec_lines = ['%matplotlib inline']
+c.InlineBackend.rc = {'font.family': 'IPAMincho',
                       'figure.facecolor': (1, 1, 1, 1),
                       'savefig.dpi': 72,
                       'figure.subplot.bottom': 0.125,
-                      'figure.edgecolor': (1, 1, 1,1)}
+                      'figure.edgecolor': (1, 1, 1, 1)}
