@@ -1,3 +1,8 @@
+"""
+Promptly run command as Ipython startup.
+Try to import 'numpy','pandas','matplotlib.pyplot','seaborn',
+and print importing modules to stdout.
+"""
 modules = ('numpy',
            'pandas',
            'matplotlib.pyplot',

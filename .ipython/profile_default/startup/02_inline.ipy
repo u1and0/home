@@ -1,3 +1,11 @@
+"""
+Promptly run command as Ipython startup.
+If error occered when try to run `%matplotlib inline`, run `%matplotlib auto`.
+
+It could plot promptly when type `plt.<code>`.
+If you'd like to use `plt.show()` command,
+you can type `plt.ioff()`/`plt.ion()` to turn interactive mode off/on.
+"""
 inline = 'matplotlib inline'
 gui = 'matplotlib auto'
 try:
@@ -6,5 +14,5 @@ try:
 except:
     get_ipython().magic(gui)
     print('%' + gui)
-    print('If you use `plt.show()` command,')
-    print('you should use `plt.ioff()` to turn interactive mode off.')
+    print("If you'd like to use `plt.show()` command,")
+    print('you can type `plt.ioff()`/`plt.ion()` to turn interactive mode off/on.')
