@@ -34,10 +34,10 @@
 !/.ipython/
 /.ipython/*
 !/.ipython/profile_default/
-/.ipython/profile_default/*
+/.ipython/profile_default/*/
+/.ipython/profile_default/history.sqlite
 !/.ipython/profile_default/startup/
-/.ipython/profile_default/startup/*
-!/.ipython/profile_default/startup/startup.ipy
+
 # バイナリファイル
 .ipython/profile_default/db/dhist
 
