@@ -1,5 +1,5 @@
 modules = ('numpy',
-           # 'seaborn',
+           'seaborn',
            'pandas',
            'matplotlib.pyplot')
 standfor = {'numpy': 'np',

@@ -41,6 +41,12 @@
 # バイナリファイル
 .ipython/profile_default/db/dhist
 
+!/.matplotlib/
+/.matplotlib/*.cache
+
+
+
+
 !/Cmder/
 /Cmder/*
 !/Cmder/config/
