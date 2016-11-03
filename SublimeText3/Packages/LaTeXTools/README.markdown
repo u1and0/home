@@ -10,7 +10,7 @@ Additional contributors (*thank you thank you thank you*): first of all, Wallace
 
 *If you have contributed and I haven't acknowledged you, email me!*
 
-*Latest revision:* v3.12.0 (2016-10-30).
+*Latest revision:* v3.12.5 (2016-11-03).
 
 *Headline features*:
 
@@ -21,6 +21,7 @@ Additional contributors (*thank you thank you thank you*): first of all, Wallace
 - Added a command to search for LaTeX-commands in the whole document 
 - Added support for the glossary package
 - Improvements in CWL completions for environments
+- Added a command to check your system setup
 
 ## Introduction
 
@@ -179,11 +180,10 @@ Note that if you specify a relative path as the `TEXroot` in the project file, t
 
 ### Previewing
 
-**For technical reasons all preview functionalities are only available in Sublime Text Build 3118 and newer.**
+**For technical reasons, all preview functions are only available in Sublime Text Build 3118 and newer.**
 
-LaTeXTools has the ability to preview parts of the document using phantoms or popups.
-Those functionalities rely on [ImageMagick](http://www.imagemagick.org) to be installed and in your PATH.
-*You might need to install the [Fix Mac Path](https://github.com/int3h/SublimeFixMacPath) package on OSX.*
+LaTeXTools has the ability to preview parts of the document using phantoms or popups. These functions rely on [Ghostscript](http://www.ghostscript.com/) and [ImageMagick](http://www.imagemagick.org) being installed and available on your `texpath`.
+Ensure to install the `convert` command with ImageMagick. On Windows you should enable the *Install legacy utilities* check box.
 
 #### Math-Live preview
 
@@ -584,7 +584,9 @@ The following options are currently available (defaults in parentheses):
 - `cwl_autoload` (`true`): whether to load cwl completions based on packages (see the LaTeX-cwl feature) 
 - `cwl_completion` (`prefixed`): when to activate the cwl completion poput (see LaTeX-cwl feature above)
 - `cwl_list` (`["latex-document.cwl", "tex.cwl", "latex-dev", "latex-209.cwl", "latex-l2tabu.cwl", "latex-mathsymbols.cwl"]`): list of cwl files to load
-- `keep_focus` (`true`): if `true`, after compiling a tex file, ST retains the focus; if `false`, the PDF viewer gets the focus. Also note that you can *temporarily* toggle this behavior with `C-l,t,f`. **Note**: If you are on either Windows or Linux you may need to adjust the `sublime_executable` setting for this to work properly. See the **Platform settings** below. This can also be overridden via a key-binding by passing a `keep_focus` argument to `jump_to_pdf`.
+- `keep_focus` (`true`): if `true`, after compiling a tex file, ST retains the focus; if `false`, the PDF viewer gets the focus. Also note that you can *temporarily* toggle this behavior with `C-l,t,f`.This can also be overridden via a key-binding by passing a `keep_focus` argument to `jump_to_pdf`.
+ **Note**: In general, `keep_focus` set to `true` tries to mean "do not *change* the focus". This isn't always possible, since several of the viewers will steal focus by default. In those circumstances, LaTeXTools tries to actively return the focus to Sublime. To disable this, set the `disable_focus_hack` setting to `true`.
+ **Note**: If you are on either Windows or Linux you may need to adjust the `sublime_executable` setting for this to work properly. See the **Platform settings** below.
 - `forward_sync` (`true`): if `true`, after compiling a tex file, the PDF viewer is asked to sync to the position corresponding to the current cursor location in ST. You can also *temporarily* toggle this behavior with `C-l,t,s`. This can also be overridden via a key-binding by passing a `forward_sync` argument to `jump_to_pdf`.
 - `temp_files_exts`: list of file extensions to be considered temporary, and hence deleted using the `C-l, backspace` command.
 - `temp_files_ignored_folders`: subdirectories to skip when deleting temp files.
@@ -689,6 +691,8 @@ Any other value will be interpretted as the default.
  * `viewer` (`""`): the viewer you want to use. Leave blank (`""`) or set to `"default"`for the platform-specific viewer. Can also be set to `"preview"` if you want to use Preview on OS X, `"okular"` if you want to use Okular on Linux, `"zathura"` is you want to use Zathura on Linux, or `"command"` to run arbitrary commands. For details on the `"command"` option, see the section on the [Command Viewer](#command-viewer).
  * `viewer_settings`: these are viewer-specific settings. Please see the section on [Viewers](#viewers) or the documentation on [Alternate Viewers](#alternate-viewers) for details of what should be set here.
  * `open_pdf_on_build` (`true`): Controls whether LaTeXTools will automatically open the configured PDF viewer on a successful build. If set to `false`, the PDF viewer will only be launched if explicitly requested using `C-l,v` or `C-l,j`.
+ * `disable_focus_hack` (`false`): if `true`, the focus hack that LaTeXTools uses to return focus to Sublime in some circumstances will not be run. **Note**: This does not mean that the *viewer* won't steal the focus, only that LaTeXTools won't try to steal the focus back.
+
 
 ### Bibliographic references settings
 
@@ -941,6 +945,10 @@ If you are interested in developing your own builder, please see [our page on th
 
 The Preview.app viewer is very straight-forward. It simply launches Preview.app with the relevant PDF file. Please note that Preview.app *does not* support forward or reverse sync, so you will not have that functionality available. Nevertheless, if you want to avoid installing another PDF viewer, this may be an acceptable option.
 
+### Evince
+
+Strictly speaking, of course, Evince is the default viewer on Linux and its behavior is mostly described above. However, there is one feature that's been added that's unique to Evince. If the `bring_evince_forward` setting in the `viewer_settings` block is set to `true` and `keep_focus` remains set to `true`, Evince will first be brought to the foreground and then focus will be returned ST. 
+
 ### Okular
 
 The Okular viewer is quite similar to the Evince viewer and should work out of the box. However, for forward sync (i.e. from Sublime to Okular) to work properly, the PDF document *must* be opened in Okular's unique session. If it is not, each forward sync command will open a new copy of the PDF. This also means that you can only have a single PDF document opened by LaTeXTools at a time. If, when the Okular viewer is run, you get a message which reads `There's already a unique Okular instance running. This instance won't be the unique one.`, you will need to adjust your `sync_wait` settings, increasing the value until the error stops. See the [Linux](#linux2) platform settings.
@@ -1010,6 +1018,10 @@ The local cache also has a lifespan, after which it will be invalidated. The lif
 
 
 ## Troubleshooting
+
+### System Check
+
+To aid in troubleshooting a range of issues, we have added a feature that wil check your current system setup to give you an idea of what your current configuration looks like to LaTeXTools. In particular, it tests for key environment variables, the availability of key executables, the selected builder and the selected viewer. This command can be run by invoking **LaTeXTools: Check system** from the **Command Palette**. If it is run with a LaTeX document as the visible window, the information provided will reflect the settings for the current project.
 
 ### Path issues
 

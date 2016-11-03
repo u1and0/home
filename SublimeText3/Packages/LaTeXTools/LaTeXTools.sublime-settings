@@ -105,6 +105,7 @@
 	"preview_math_latex_compile_program": "pdflatex",
 
 	// The color of the text in the preview math phantoms.
+	// Ensure you have the latex xcolor package available to change the color.
 	// The format can either be RGB based "#RRGGBB" (e.g. "#FFFF00") 
 	// or a color name (e.g. "yellow")
 	// If it is the empty string "" it will be guessed based in the color scheme.
@@ -119,6 +120,7 @@
 
 	// An array of the used packages, from which the file for the live preview
 	// will be generated.
+	// (The xcolor package will be present, even if not in this list.)
 	"preview_math_template_packages": [
 		"\\usepackage{amsmath}",
 		"\\usepackage{amssymb}",
@@ -129,6 +131,7 @@
 	// An string of the remaining preamble (not packages) for the file,
 	// which generates the math live preview.
 	// Can also be an array, with an string for each line (as in the packages).
+	// For technical reasons DON'T include other files.
 	"preview_math_template_preamble": "",
 
 	// The preview functionality by default appends a star (*) to each
@@ -504,6 +507,12 @@
 	// successful build. If set to false, the PDF file won't be opened
 	// unless explicitly launched using C-l,v or C-l,j
 	"open_pdf_on_build": true,
+
+	// OPTION: "disable_focus_hack"
+	// if set to true, this will stop LaTeXTools from attempting to steal focus
+	// from the viewer. NOTE: This does not mean that the *viewer* won't steal
+	// the focus, only that LaTeXTools won't try to steal the focus back.
+	"disable_focus_hack": false,
 
 // ------------------------------------------------------------------
 // Opening files included into the tex source code

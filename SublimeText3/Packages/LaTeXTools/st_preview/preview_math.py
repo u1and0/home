@@ -1,4 +1,5 @@
 import base64
+import html
 import os
 import re
 import struct
@@ -11,12 +12,17 @@ import sublime_plugin
 
 
 from ..latextools_utils import cache, get_setting
+from ..latextools_utils.external_command import execute_command
 from . import preview_utils
-from .preview_utils import call_shell_command, convert_installed
+from .preview_utils import convert_installed, run_convert_command
 from . import preview_threading as pv_threading
 
 # export the listener
 exports = ["MathPreviewPhantomListener"]
+
+# increase this number if you change the convert command to mark the
+# generated images as expired
+_version = 1
 
 
 try:
@@ -36,9 +42,13 @@ except:
 # the default and usual template for the latex file
 default_latex_template = """
 \\documentclass[preview]{standalone}
+% import xcolor if available and not already present
+\\IfFileExists{xcolor.sty}{\\usepackage{xcolor}}{}%
 <<packages>>
 <<preamble>>
 \\begin{document}
+% set the foreground color
+\\IfFileExists{xcolor.sty}{<<set_color>>}{}%
 <<content>>
 \\end{document}
 """
@@ -49,6 +59,8 @@ temp_path = None
 
 # we use png files for the html popup
 _IMAGE_EXTENSION = ".png"
+# we add this extension to log error information
+_ERROR_EXTENSION = ".err"
 
 _scale_quotient = 1
 _density = 150
@@ -69,6 +81,7 @@ def _on_setting_change():
 
 
 def plugin_loaded():
+    print('plugin_loaded in preview_math called')
     global _lt_settings, temp_path
     _lt_settings = sublime.load_settings("LaTeXTools.sublime-settings")
 
@@ -107,12 +120,9 @@ def _create_image(latex_program, latex_document, base_name, color,
         f.write(latex_document)
 
     # compile the latex document to a pdf
-    call_shell_command(
-        "cd \"{temp_path}\" && "
-        "{latex_program} -interaction=nonstopmode "
-        "{rel_source_path}"
-        .format(temp_path=temp_path, **locals())
-    )
+    execute_command([
+        latex_program, '-interaction=nonstopmode', rel_source_path
+    ], cwd=temp_path)
 
     pdf_exists = os.path.exists(pdf_path)
     if not pdf_exists:
@@ -124,17 +134,24 @@ def _create_image(latex_program, latex_document, base_name, color,
     if pdf_exists:
         # convert the pdf to a png image
         density = _density
-        call_shell_command(
-            "convert "
+        run_convert_command([
             # set the image size/density
-            "-density {density}x{density} "
-            # change the color form black to the used defined
-            "-fuzz 99% -fill \"{color}\" -opaque black "
+            '-density', '{density}x{density}'.format(density=density),
             # trim the content to the real size
-            "-trim "
-            '"{pdf_path}" "{image_path}"'
-            .format(**locals())
-        )
+            '-trim',
+            pdf_path, image_path
+        ])
+
+    err_file_path = image_path + _ERROR_EXTENSION
+    if not pdf_exists:
+        with open(err_file_path, "w") as f:
+            f.write(
+                "Failed to run '{latex_program}' to create pdf to preview."
+                .format(**locals())
+            )
+    elif not os.path.exists(image_path):
+        with open(err_file_path, "w") as f:
+            f.write("Failed to convert pdf to png to preview.")
 
     # cleanup created files
     for ext in ["tex", "aux", "log", "pdf", "dvi"]:
@@ -185,7 +202,7 @@ def _run_image_jobs():
 
 
 def _wrap_html(html_content, color=None, background_color=None):
-    if background_color:
+    if color or background_color:
         style = "<style>"
         style += "body {"
         if color:
@@ -203,6 +220,17 @@ def _wrap_html(html_content, color=None, background_color=None):
         '</body>'
         .format(**locals())
     )
+    return html_content
+
+
+def _generate_error_html(view, image_path, style_kwargs):
+    content = "ERROR: "
+    with open(image_path + _ERROR_EXTENSION, "r") as f:
+        content += f.read()
+
+    html_content = html.escape(content, quote=False)
+
+    html_content = _wrap_html(html_content, **style_kwargs)
     return html_content
 
 
@@ -277,6 +305,7 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
                 self.preamble_str = self.preamble
             else:
                 self.preamble_str = "\n".join(self.preamble)
+
             if not init:
                 self.reset_phantoms()
 
@@ -315,12 +344,14 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
                 "call_after": update_preamble_str
             },
             "latex_template_file": {
-                "setting": "preview_math_latex_template_file",
+                "setting": "preview_math_template_file",
                 "call_after": update_template_file
             }
         }
+
         lt_attr = view_attr.copy()
-        # watch this attributes for setting changes to reset the phantoms
+
+        # watch these attributes for setting changes to reset the phantoms
         watch_attr = {
             "_watch_scale_quotient": {
                 "setting": "preview_math_scale_quotient",
@@ -423,28 +454,36 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
     #########
 
     def reset_phantoms(self):
+        self.delete_phantoms()
+        self.update_phantoms()
+
+    def delete_phantoms(self):
         view = self.view
         _cancel_image_jobs(view.id())
         with self._phantom_lock:
             for p in self.phantoms:
                 view.erase_phantom_by_id(p.id)
             self.phantoms = []
-        self.update_phantoms()
 
     def update_phantoms(self):
         with self._phantom_lock:
             self._update_phantoms()
 
     def _update_phantoms(self):
-        if not convert_installed():
-            return
         if not self.view.is_primary():
             return
+        # not sure why this happens, but ignore these cases
+        if self.view.window() is None:
+            return
+        if not convert_installed():
+            return
+
         view = self.view
-        # TODO we may only want to apply if the view is visible
+
         if not any(view.window().active_view_in_group(g) == view
                    for g in range(view.window().num_groups())):
             return
+        # TODO we may only want to apply if the view is visible
         # if view != view.window().active_view():
         #     return
 
@@ -526,10 +565,11 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
                 )
 
             # generate the latex template
-            latex_document = self._create_document(scope)
+            latex_document = self._create_document(scope, color)
 
             # create a string, which uniquely identifies the compiled document
             id_str = "\n".join([
+                str(_version),
                 self.latex_program,
                 str(_density),
                 color,
@@ -581,7 +621,7 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
             _extend_image_jobs(view.id(), self.latex_program, job_args)
             _run_image_jobs()
 
-    def _create_document(self, scope):
+    def _create_document(self, scope, color):
         view = self.view
         content = view.substr(scope)
         env = None
@@ -630,9 +670,16 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
         except:
             latex_template = default_latex_template
 
+        if color.startswith("#"):
+            color = color[1:].upper()
+            set_color = "\\color[HTML]{{{color}}}".format(color=color)
+        else:
+            set_color = "\\color{{{color}}}".format(color=color)
+
         latex_document = (
             latex_template
             .replace("<<content>>", document_content, 1)
+            .replace("<<set_color>>", set_color, 1)
             .replace("<<packages>>", self.packages_str, 1)
             .replace("<<preamble>>", self.preamble_str, 1)
         )
@@ -642,11 +689,16 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
     def _make_cont(self, p, image_path, update_time, style_kwargs):
         def cont():
             # if the image does not exists do nothing
-            if not os.path.exists(image_path):
+            if os.path.exists(image_path):
+                # generate the html
+                html_content = _generate_html(
+                    self.view, image_path, style_kwargs)
+            elif os.path.exists(image_path + _ERROR_EXTENSION):
+                # inform the user about the error
+                html_content = _generate_error_html(
+                    self.view, image_path, style_kwargs)
+            else:
                 return
-
-            # generate the html
-            html_content = _generate_html(self.view, image_path, style_kwargs)
             # move to main thread and update the phantom
             sublime.set_timeout(
                 self._update_phantom_content(p, html_content, update_time)
