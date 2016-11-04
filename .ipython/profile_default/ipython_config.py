@@ -631,6 +631,7 @@ c.AliasManager.user_aliases = [
 
     # git
     ('g', 'git'),
+    ('git', 'git'),
     ('gf', 'git flow'),
 
     # add,commit,push
