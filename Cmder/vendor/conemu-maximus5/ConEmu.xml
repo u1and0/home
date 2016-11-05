@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2016-11-02 23:22:22" build="161022">
+		<key name=".Vanilla" modified="2016-11-05 21:05:38" build="161022">
 			<value name="ColorTable00" type="dword" data="00000000"/>
 			<value name="ColorTable01" type="dword" data="00ee0000"/>
 			<value name="ColorTable02" type="dword" data="0000cd00"/>
@@ -124,11 +124,11 @@
 			<value name="ColorKeyValue" type="dword" data="00000000"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
 			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="0000005f"/>
-			<value name="ConWnd Height" type="dword" data="0000003d"/>
+			<value name="ConWnd Width" type="dword" data="00000061"/>
+			<value name="ConWnd Height" type="dword" data="00000042"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="245"/>
-			<value name="ConWnd Y" type="long" data="90"/>
+			<value name="ConWnd X" type="long" data="1941"/>
+			<value name="ConWnd Y" type="long" data="-149"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -524,38 +524,38 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Flags" type="dword" data="00000000"/>
 				</key>
-				<key name="Task5" modified="2016-10-05 09:50:19" build="161002">
+				<key name="Task5" modified="2016-11-05 21:32:48" build="161022">
 					<value name="Name" type="string" data="{IPython}"/>
 					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Hotkey" type="dword" data="00101238"/>
+					<value name="Hotkey" type="dword" data="00101237"/>
 					<value name="GuiArgs" type="string" data="/icon &quot;%Anaconda%\Menu\IPython.ico&quot;"/>
 					<value name="Cmd1" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot; -new_console:d:%HOME%\python &amp; ipython"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task6" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Jupyter}"/>
 					<value name="Flags" type="dword" data="00000000"/>
-					<value name="Hotkey" type="dword" data="00101239"/>
-					<value name="GuiArgs" type="string" data="/icon %Anaconda%\Menu\jupyter-qtconsole.ico&quot;"/>
+					<value name="Hotkey" type="dword" data="00101238"/>
+					<value name="GuiArgs" type="string" data="/icon &quot;%Anaconda%\Menu\jupyter.ico&quot;"/>
 					<value name="Cmd1" type="string" data="&quot;jupyter qtconsole --style=monokai&quot; -new_console:b -new_console:d:%HOME%\python"/>
 					<value name="Cmd2" type="string" data="-new_console:b"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task7" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task7" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Jupyter Notebook}"/>
 					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="00000000"/>
-					<value name="GuiArgs" type="string" data="/icon %Anaconda%\Menu\jupyter-qtconsole.ico&quot;"/>
-					<value name="Cmd1" type="string" data="jupyter notebook -new_console:t:&quot;Jupyter Notebook&quot; -new_console:b"/>
+					<value name="Hotkey" type="dword" data="00101239"/>
+					<value name="GuiArgs" type="string" data="/icon &quot;%Anaconda%\Menu\jupyter.ico&quot;"/>
+					<value name="Cmd1" type="string" data="jupyter notebook -new_console:t:&quot;Jupyter Notebook&quot; -new_console:b  -new_console:d:%HOME%\python"/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd2" type="string" data="-new_console:d:%HOME% set CHERE_INVOKING=1 &amp; %HOME%\msys64\usr\bin\bash.exe --login -i -new_console:C:&quot;%HOME%\msys64\msys2.ico&quot;  -new_console:t:&quot;MSYS2&quot;-new_console:s40V"/>
 					<value name="Cmd3" type="string" data="set CHERE_INVOKING=1 &amp; sh.exe --login -i -new_console:d:%HOME%\SublimeText3\Packages\User -new_console:C:&quot;%HOME%\Cmder\vendor\git-for-windows\bin\git.exe&quot; -new_console:s60H"/>
 					<value name="Cmd4" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console:d:%USERPROFILE% -new_console:s50H"/>
 				</key>
-				<key name="Task8" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task8" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Scripts::Chocolatey (Admin)}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -567,7 +567,7 @@
 					<value name="Cmd3" type="string" data="set CHERE_INVOKING=1 &amp; sh.exe --login -i -new_console:d:%HOME%\SublimeText3\Packages\User -new_console:C:&quot;%HOME%\Cmder\vendor\git-for-windows\bin\git.exe&quot; -new_console:s60H"/>
 					<value name="Cmd4" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console:d:%USERPROFILE% -new_console:s50H"/>
 				</key>
-				<key name="Task9" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task9" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Sublime&amp;MSYS2&amp;MINGW&amp;cmd}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -579,7 +579,7 @@
 					<value name="Cmd3" type="string" data="set CHERE_INVOKING=1 &amp; sh.exe --login -i -new_console:d:%HOME%\SublimeText3\Packages\User -new_console:C:&quot;%HOME%\Cmder\vendor\git-for-windows\bin\git.exe&quot; -new_console:s60H"/>
 					<value name="Cmd4" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot;  -new_console:d:%USERPROFILE% -new_console:s50H"/>
 				</key>
-				<key name="Task10" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task10" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{SAtraceView}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00101237"/>
@@ -589,7 +589,7 @@
 					<value name="Count" type="long" data="2"/>
 					<value name="Cmd2" type="string" data="cmd /k &quot;%ConEmuDir%\..\init.bat&quot; -new_console:d:%HOME%\python\SAtraceView &amp; ipython  -new_console:s80V -new_console:C:&quot;%Anaconda%\Menu\IPython.ico&quot;"/>
 				</key>
-				<key name="Task11" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task11" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{PowerShell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -599,7 +599,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
 				</key>
-				<key name="Task12" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task12" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -609,7 +609,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
 				</key>
-				<key name="Task13" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task13" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Shells::cmd (Admin)}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -619,7 +619,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
 				</key>
-				<key name="Task14" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task14" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Shells::cmd-32}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -631,7 +631,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task15" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task15" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Shells::cmd 64/32}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -642,7 +642,7 @@
 					<value name="Cmd2" type="string" data="&quot;%windir%\syswow64\cmd.exe&quot; /k &quot;&quot;%ConEmuBaseDir%\CmdInit.cmd&quot; &amp; echo This is 32 bit cmd.exe -new_console:s50V&quot;"/>
 					<value name="Cmd3" type="string" data="cmd -new_console:s3T50H"/>
 				</key>
-				<key name="Task16" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task16" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Shells::PowerShell (Admin)}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -651,7 +651,7 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task17" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Task17" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="{Tests::Show ANSI colors}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -664,7 +664,7 @@
 				</key>
 			</key>
 
-			<key name="Apps" modified="2016-10-05 09:52:06" build="161002">
+			<key name="Apps" modified="2016-11-05 21:54:15" build="161022">
 				<value name="Count" type="long" data="0"/>
 				<key name="App1" modified="2016-04-24 08:20:01" build="150913">
 					<value name="AppNames" type="string" data="cmd.exe"/>
@@ -691,8 +691,8 @@
 					<value name="ClipboardDeleteLeftWord" type="hex" data="00"/>
 				</key>
 			</key>
-			<key name="Colors" modified="2016-10-05 09:52:06" build="161002">
-				<key name="Palette1" modified="2016-10-05 09:52:06" build="161002">
+			<key name="Colors" modified="2016-11-05 21:54:15" build="161022">
+				<key name="Palette1" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="#Attached:ConEmu"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -734,7 +734,7 @@
 					<value name="ColorTable31" type="dword" data="00ffffff"/>
 				</key>
 				<value name="Count" type="long" data="2"/>
-				<key name="Palette2" modified="2016-10-05 09:52:06" build="161002">
+				<key name="Palette2" modified="2016-11-05 21:54:15" build="161022">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="ExtendColors" type="hex" data="00"/>
 					<value name="ExtendColorIdx" type="hex" data="0e"/>
@@ -1036,7 +1036,7 @@
 			<value name="ProcessCtrlZ" type="hex" data="00"/>
 			<value name="SuppressBells" type="hex" data="01"/>
 			<value name="JumpListAutoUpdate" type="hex" data="01"/>
-			<value name="LastMonitor" type="string" data="0,0,1920,1080"/>
+			<value name="LastMonitor" type="string" data="1920,-200,2862,1080"/>
 			<value name="CTS.ResetOnRelease" type="hex" data="00"/>
 			<value name="CTS.EraseBeforeReset" type="hex" data="01"/>
 			<value name="Anti-aliasing2" type="hex" data="00"/>
