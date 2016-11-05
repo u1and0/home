@@ -12,7 +12,7 @@ from ..getTeXRoot import get_tex_root
 from ..jumpto_tex_file import open_image, find_image
 from ..latextools_utils import cache, get_setting
 from . import preview_utils
-from .preview_utils import call_shell_command, convert_installed
+from .preview_utils import convert_installed, run_convert_command
 from . import preview_threading as pv_threading
 
 # export the listeners
@@ -23,6 +23,8 @@ temp_path = None
 
 # we use png files for the html popup
 _IMAGE_EXTENSION = ".png"
+# we add this extension to log error information
+_ERROR_EXTENSION = ".err"
 
 _lt_settings = {}
 
@@ -63,11 +65,15 @@ def create_thumbnail(image_path, thumbnail_path, width, height):
     # convert the image
     if os.path.exists(thumbnail_path):
         return
-    call_shell_command(
-        'convert -thumbnail {width}x{height} '
-        '"{image_path}" "{thumbnail_path}"'
-        .format(**locals())
-    )
+
+    run_convert_command([
+        '-thumbnail', '{width}x{height}'.format(**locals()),
+        image_path, thumbnail_path
+    ])
+
+    if not os.path.exists(thumbnail_path):
+        with open(thumbnail_path + _ERROR_EXTENSION, "w") as f:
+            f.write("Failed to create preview thumbnail.")
 
 
 # CONVERT THREADING
@@ -191,6 +197,8 @@ def _get_popup_html(thumbnail_path, width, height):
         )
     elif not convert_installed():
         img_tag = "Install ImageMagick to enable preview."
+    elif os.path.exists(thumbnail_path + _ERROR_EXTENSION):
+        img_tag = "ERROR: Failed to create preview thumbnail."
     else:
         img_tag = "Preparing image for preview..."
     html_content = """
@@ -411,6 +419,8 @@ class PreviewImagePhantomListener(sublime_plugin.ViewEventListener,
                 """.format(**locals())
             elif convert_installed():
                 html_content += """Preparing image for preview..."""
+            elif os.path.exists(p.thumbnail_path + _ERROR_EXTENSION):
+                img_tag = "ERROR: Failed to create preview thumbnail."
             else:
                 html_content += (
                     "Install ImageMagick to enable a preview for "
@@ -441,12 +451,15 @@ class PreviewImagePhantomListener(sublime_plugin.ViewEventListener,
             open_image_folder(p.image_path)
 
     def reset_phantoms(self):
+        self.delete_phantoms()
+        self.update_phantoms()
+
+    def delete_phantoms(self):
         view = self.view
         with self._phantom_lock:
             for p in self.phantoms:
                 view.erase_phantom_by_id(p.id)
             self.phantoms = []
-        self.update_phantoms()
 
     def update_phantom(self, p):
         with self._phantom_lock:

@@ -1,43 +1,50 @@
 import os
-import shutil
-import subprocess
 import threading
 import time
+import traceback
 
 import sublime
 
 
 from ..latextools_utils import cache, get_setting
+from ..latextools_utils.external_command import get_texpath, execute_command
+from ..latextools_utils.system import which
 
 
 _lt_settings = {}
 
 
-def plugin_loaded():
-    global _lt_settings
-    _lt_settings = sublime.load_settings("LaTeXTools.sublime-settings")
+def _get_convert_command():
+    if hasattr(_get_convert_command, "result"):
+        return _get_convert_command.result
+
+    texpath = get_texpath() or os.environ['PATH']
+    _get_convert_command.result = (
+        which('magick', path=texpath) or
+        which('convert', path=texpath)
+    )
+    return _get_convert_command.result
 
 
 def convert_installed():
     """Return whether ImageMagick/convert is available in the PATH."""
-    if hasattr(convert_installed, "result"):
-        return convert_installed.result
-
-    convert_installed.result = shutil.which("convert") is not None
-    return convert_installed.result
+    return _get_convert_command() is not None
 
 
-startupinfo = None
-if sublime.platform() == "windows":
-    startupinfo = subprocess.STARTUPINFO()
-    startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+def run_convert_command(args):
+    """Executes ImageMagick convert or magick command as appropriate with the
+    given args"""
+    if not isinstance(args, list):
+        raise TypeError('args must be a list')
 
+    convert_command = _get_convert_command()
+    if os.path.splitext(os.path.basename(convert_command))[0] == 'magick':
+        args.insert(0, convert_command)
+        args.insert(1, 'convert')
+    else:
+        args.insert(0, convert_command)
 
-def call_shell_command(command):
-    """Call the command with shell=True and wait for it to finish."""
-    subprocess.Popen(command,
-                     shell=True,
-                     startupinfo=startupinfo).wait()
+    execute_command(args, shell=sublime.platform() == 'windows')
 
 
 class SettingsListener(object):
@@ -51,10 +58,18 @@ class SettingsListener(object):
 
     def _init_list_add_on_change(self, key, view_attr, lt_attr):
         view = self.view
-        _lt_settings.add_on_change(
-            key, lambda: self._on_setting_change(False))
-        self.view.settings().add_on_change(
-            key, lambda: self._on_setting_change(True))
+
+        # this can end up being called *before* plugin_loaded() because
+        # ST creates the ViewEventListeners *before* calling plugin_loaded()
+        global _lt_settings
+        if not isinstance(_lt_settings, sublime.Settings):
+            try:
+                _lt_settings = sublime.load_settings(
+                    "LaTeXTools.sublime-settings"
+                )
+            except Exception:
+                traceback.print_exc()
+
         self.v_attr_updates = view_attr
         self.lt_attr_updates = lt_attr
 
