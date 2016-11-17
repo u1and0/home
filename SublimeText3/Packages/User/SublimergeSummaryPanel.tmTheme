@@ -31,7 +31,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 			</dict>
 		</dict>
 		<dict>
@@ -42,7 +42,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#747166</string>
 			</dict>
@@ -55,7 +55,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#747166</string>
 			</dict>
@@ -73,7 +73,23 @@
 				<string>#DDDDDD</string>
 			</dict>
 		</dict>
+<!-- 		This expression is same as "comment out"
 		<dict>
+			<key>name</key>
+			<string>Block comment</string>
+			<key>scope</key>
+			<string>source comment.block</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#070809</string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#747166</string>
+			</dict>
+		</dict>
+ -->		<dict>
 			<key>name</key>
 			<string>Operator</string>
 			<key>scope</key>
@@ -92,7 +108,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#00D2E5</string>
 			</dict>
@@ -107,7 +123,7 @@
 				<key>background</key>
 				<string>#351211</string>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#E23D36</string>
 			</dict>
@@ -155,7 +171,7 @@
 				<key>background</key>
 				<string>#4A0A2F</string>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#F26FBC</string>
 			</dict>
@@ -170,7 +186,7 @@
 				<key>background</key>
 				<string>#4A0A2F</string>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#F26FBC</string>
 			</dict>
@@ -185,7 +201,7 @@
 				<key>background</key>
 				<string>#4A0A2F</string>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#F26FBC</string>
 			</dict>
@@ -198,7 +214,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#F26FBC</string>
 			</dict>
@@ -213,7 +229,7 @@
 				<key>background</key>
 				<string>#00312F</string>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#00F6FF</string>
 			</dict>
@@ -226,7 +242,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#99CC66</string>
 			</dict>
@@ -239,7 +255,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#E882B2</string>
 			</dict>
@@ -252,7 +268,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#3399CC</string>
 			</dict>
@@ -265,7 +281,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#34A2D9</string>
 			</dict>
@@ -289,7 +305,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#3399CC</string>
 			</dict>
@@ -302,7 +318,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#A9D158</string>
 			</dict>
@@ -315,7 +331,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#7ACA3B</string>
 			</dict>
@@ -328,7 +344,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#6E9CBE</string>
 			</dict>
@@ -341,7 +357,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#99CC33</string>
 			</dict>
@@ -354,7 +370,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#FFCC33</string>
 			</dict>
@@ -380,7 +396,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 				<key>foreground</key>
 				<string>#797BE6</string>
 			</dict>
@@ -428,7 +444,7 @@
 				<key>background</key>
 				<string>#0b437a</string>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 			</dict>
 		</dict>
 		<dict>
@@ -441,7 +457,7 @@
 				<key>background</key>
 				<string>#4e1c6b</string>
 				<key>fontStyle</key>
-				<string />
+				<string></string>
 			</dict>
 		</dict>
 		<dict>
@@ -477,67 +493,7 @@
 				<string>#FFCC33</string>
 			</dict>
 		</dict>
-	<dict>
-            <key>name</key>
-            <string>SublimeLinter Error</string>
-            <key>scope</key>
-            <string>sublimelinter.mark.error</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#DA2000</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>SublimeLinter Gutter Mark</string>
-            <key>scope</key>
-            <string>sublimelinter.gutter-mark</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#FFFFFF</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>SublimeLinter Warning</string>
-            <key>scope</key>
-            <string>sublimelinter.mark.warning</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#EDBA00</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>SublimePythonIDE Error</string>
-            <key>scope</key>
-            <string>sublimepythonide.mark.error</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#DA2000</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>SublimePythonIDE Warning</string>
-            <key>scope</key>
-            <string>sublimepythonide.mark.warning</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#EDBA00</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
-            <string>SublimePythonIDE Gutter Mark</string>
-            <key>scope</key>
-            <string>sublimepythonide.gutter-mark</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#FFFFFF</string>
-            </dict>
-        </dict>
+	
 		<dict>
 			<key>scope</key>
 			<string>sublimerge.diff_block_changed</string>
