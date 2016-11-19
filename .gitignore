@@ -44,8 +44,7 @@
 !/.matplotlib/
 /.matplotlib/*.cache
 
-
-
+!/.jupyter/
 
 !/Cmder/
 /Cmder/*
