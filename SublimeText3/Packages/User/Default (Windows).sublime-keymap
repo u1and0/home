@@ -58,7 +58,7 @@ Close work space as ["ctrl+k","ctrl+c"]
 //selection
 	{ "keys": ["alt+t"], "command": "open_terminal" },
 	{"keys": ["ctrl+alt+m"], "command": "expand_selection_to_quotes"},
-	{ "keys": ["ctrl+k", "ctrl+m"], "command": "expand_selection_to_whitespace" },
+	{ "keys": ["alt+shift+m"], "command": "expand_selection_to_whitespace" },
 //evernote
 	{ "keys": ["ctrl+alt+e"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Evernote: "} },
 	{ "keys": ["ctrl+e", "ctrl+f"], "command": "search_note" },
