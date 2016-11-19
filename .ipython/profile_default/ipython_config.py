@@ -627,7 +627,7 @@ c.AliasManager.user_aliases = [
     ('ls', 'ls  --show-control-chars -F --color'),
     ('grep', 'grep --color'),
     ('grepx', 'grep --color -nriC'),
-    ('find', 'find . -name'),
+    ('findx', 'find . -name'),
 
     # git
     ('g', 'git'),
@@ -639,7 +639,7 @@ c.AliasManager.user_aliases = [
     ('gaa', 'git add .'),
     ('gan', 'git add -n .'),
     ('gaundo', 'git reset HEAD'),
-    ('gc', 'git commit'),
+    ('gc', 'git commit -m'),
     ('gac', 'git commit -am'),
     ('gcundo', 'git commit --amend'),
     ('gp', 'git push'),
