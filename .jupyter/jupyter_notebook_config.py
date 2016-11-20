@@ -511,6 +511,22 @@ c.NotebookApp.browser = 'chrome'
 #  - path: the filesystem path to the file just written - model: the model
 #  representing the file - contents_manager: this ContentsManager instance
 #c.FileContentsManager.post_save_hook = None
+import os
+from subprocess import check_call
+
+def post_save(model, os_path, contents_manager):
+    """post-save hook for converting notebooks to .py scripts
+    ipynbが保存されるたびに[py, html, md, tex, pdf]を作成する。"""
+    if model['type'] != 'notebook':
+        return # only do this for notebooks
+    d, fname = os.path.split(os_path)
+    check_call(['jupyter', 'nbconvert', '--to', 'script', fname], cwd=d)
+    check_call(['jupyter', 'nbconvert', '--to', 'html', fname], cwd=d)
+    check_call(['jupyter', 'nbconvert', '--to', 'markdown', fname], cwd=d)
+    check_call(['jupyter', 'nbconvert', '--to', 'latex', '--template', 'jsarticle.tplx', 'lualatex', fname], cwd=d)
+
+c.FileContentsManager.post_save_hook = post_save
+
 
 ## 
 #c.FileContentsManager.root_dir = ''
@@ -559,20 +575,18 @@ c.NotebookApp.browser = 'chrome'
 #  By default, all installed kernels are allowed.
 #c.KernelSpecManager.whitelist = set()
 
-
-
-# __USER CONFIG__________________________
 import os
 from subprocess import check_call
 
 def post_save(model, os_path, contents_manager):
     """post-save hook for converting notebooks to .py scripts
-    ipynbが保存されるたびにpyとhtmlを作成する。"""
+    ipynbが保存されるたびに[py, html, md, tex, pdf]を作成する。"""
     if model['type'] != 'notebook':
         return # only do this for notebooks
     d, fname = os.path.split(os_path)
     check_call(['jupyter', 'nbconvert', '--to', 'script', fname], cwd=d)
     check_call(['jupyter', 'nbconvert', '--to', 'html', fname], cwd=d)
-    # check_call(['jupyter', 'nbconvert', '--to', 'pdf', fname], cwd=d)
+    check_call(['jupyter', 'nbconvert', '--to', 'markdown', fname], cwd=d)
+    check_call(['jupyter', 'nbconvert', '--to', 'latex', '--template', 'jsarticle.tplx', 'lualatex', fname], cwd=d)
 
 c.FileContentsManager.post_save_hook = post_save
