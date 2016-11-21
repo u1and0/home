@@ -525,9 +525,9 @@ def post_save(model, os_path, contents_manager):
     check_call(['jupyter', 'nbconvert', '--to', 'html', fname], cwd=d)
     check_call(['jupyter', 'nbconvert', '--to', 'markdown', fname], cwd=d)
     check_call(['jupyter-nbconvert', '--to', 'latex', fname, '--template', 'jsarticle.tplx'], cwd=d)
-    check_call(['extractbb', base+'_files/*.png'], cwd=d)
-    check_call(['platex', '-interaction=nonstopmode', '-synctex=1', '-kanji=utf8', '-guess-input-enc' , base+'.tex'], cwd=d)
-    check_call(['dvipdfmx', base+'.dvi'], cwd=d)
+    # check_call(['extractbb', base+'_files/*.png'], cwd=d)
+    # check_call(['platex', '-interaction=nonstopmode', '-synctex=1', '-kanji=utf8', '-guess-input-enc' , base+'.tex'], cwd=d)
+    # check_call(['dvipdfmx', base+'.dvi'], cwd=d)
 
 c.FileContentsManager.post_save_hook = post_save
 
