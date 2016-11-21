@@ -1,0 +1,10 @@
+"""
+seaborn setting
+
+#import seaborn as sns
+"""
+if sns:
+    sns.set(font="IPAMincho",
+            font_scale=1.5,
+            style="whitegrid",
+            rc={'grid.linestyle': '--'})
