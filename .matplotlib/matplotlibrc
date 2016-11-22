@@ -243,7 +243,7 @@ font.family          : IPAMincho
 #axes.facecolor      : white   # axes background color
 #axes.edgecolor      : black   # axes edge color
 #axes.linewidth      : 1.0     # edge linewidth
-#axes.grid           : False   # display grid or not
+axes.grid           : True   # display grid or not
 #axes.titlesize      : large   # fontsize of the axes title
 #axes.labelsize      : medium  # fontsize of the x any y labels
 #axes.labelpad       : 5.0     # space between label and axis
@@ -271,7 +271,7 @@ font.family          : IPAMincho
                                # rather than hyphen.  See
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
 #axes.prop_cycle    : cycler('color', 'bgrcmyk')
-axes.prop_cycle    : cycler('color', 'rbgcmky')
+axes.prop_cycle    : cycler('color', 'rbgkmcy')
                                             # color cycle for plot lines
                                             # as list of string colorspecs:
                                             # single letter, long name, or
