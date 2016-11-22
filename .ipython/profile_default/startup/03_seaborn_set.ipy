@@ -3,8 +3,10 @@ seaborn setting
 
 #import seaborn as sns
 """
-if sns:
+try:
     sns.set(font="IPAMincho",
             font_scale=1.5,
             style="whitegrid",
             rc={'grid.linestyle': '--'})
+except:
+    pass
