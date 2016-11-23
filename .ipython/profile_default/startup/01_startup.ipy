@@ -6,7 +6,7 @@ and print importing modules to stdout.
 __modules__ = ('numpy',
            'pandas',
            'matplotlib.pyplot',
-           # 'seaborn'
+           'seaborn'
            )
 __standfor__ = {'numpy': 'np',
             'pandas': 'pd',
