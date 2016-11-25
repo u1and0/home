@@ -272,7 +272,11 @@ font.family          : IPAMincho
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
 #axes.prop_cycle    : cycler('color', 'bgrcmyk')
 
+<<<<<<< HEAD
 axes.prop_cycle    : cycler('color', 'rbgymcw')
+=======
+axes.prop_cycle    : cycler('color', 'rbgkmc')
+>>>>>>> 876e3c7cfec209aef78e1f1acee79e7eefb5ddd0
 
                                             # color cycle for plot lines
                                             # as list of string colorspecs:
@@ -359,7 +363,7 @@ axes.prop_cycle    : cycler('color', 'rbgymcw')
 ### IMAGES
 #image.aspect : equal             # equal | auto | a number
 #image.interpolation  : bilinear  # see help(imshow) for options
-#image.cmap   : jet               # gray | jet etc...
+image.cmap   : jet               # gray | jet etc...
 #image.lut    : 256               # the size of the colormap lookup table
 #image.origin : upper             # lower | upper
 #image.resample  : False
