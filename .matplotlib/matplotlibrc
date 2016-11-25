@@ -272,11 +272,8 @@ font.family          : IPAMincho
                                # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
 #axes.prop_cycle    : cycler('color', 'bgrcmyk')
 
-<<<<<<< HEAD
-axes.prop_cycle    : cycler('color', 'rbgymcw')
-=======
+# axes.prop_cycle    : cycler('color', 'rbgymcw')
 axes.prop_cycle    : cycler('color', 'rbgkmc')
->>>>>>> 876e3c7cfec209aef78e1f1acee79e7eefb5ddd0
 
                                             # color cycle for plot lines
                                             # as list of string colorspecs:
