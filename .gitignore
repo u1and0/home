@@ -35,7 +35,7 @@
 /.ipython/*
 !/.ipython/profile_default/
 /.ipython/profile_default/*/
-/.ipython/profile_default/history.sqlite
+/.ipython/profile_default/history.sqlite*
 !/.ipython/profile_default/startup/
 
 # バイナリファイル

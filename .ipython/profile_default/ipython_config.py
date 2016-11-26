@@ -658,7 +658,7 @@ c.AliasManager.user_aliases = [
     ('gt', 'git tag'),
 ]
 
-# c.InteractiveShellApp.exec_lines = ['%matplotlib inline']
+c.InteractiveShellApp.exec_lines = ['%load_ext autoreload', '%autoreload 2']
 c.InlineBackend.rc = {'font.family': 'IPAMincho',
                       'figure.facecolor': (1, 1, 1, 1),
                       'savefig.dpi': 72,
