@@ -21,16 +21,16 @@
 	// { "button": "scroll_down", "modifiers": ["button2","ctrl","shift"], "command": "move", "args": {"by": "pages", "forward": true, "extend": true} },
 	// { "button": "scroll_up", "modifiers": ["button2","ctrl","shift"], "command": "move", "args": {"by": "pages", "forward": false, "extend": true} },
 //jump
-	{"button": "button4", "count": 1, "command": "jump_forward"},
-	{"button": "button5", "count": 1, "command": "jump_back"},
-	{ "button": "scroll_down", "modifiers": ["button4"], "command": "jump_forward" },
-	{ "button": "scroll_up", "modifiers": ["button4"], "command": "jump_back" },
+	{"button": "button5", "count": 1, "command": "jump_forward"},
+	{"button": "button4", "count": 1, "command": "jump_back"},
+	{ "button": "scroll_up", "modifiers": ["button4"], "command": "jump_forward" },
+	{ "button": "scroll_down", "modifiers": ["button4"], "command": "jump_back" },
 //soft undo & soft redo
-	{ "button": "scroll_down", "modifiers": ["button5"], "command": "soft_redo" },
-	{ "button": "scroll_up", "modifiers": ["button5"], "command": "soft_undo" },
+	{ "button": "scroll_up", "modifiers": ["button5"], "command": "soft_redo" },
+	{ "button": "scroll_down", "modifiers": ["button5"], "command": "soft_undo" },
 //undo & redo
-	{ "button": "scroll_down", "modifiers": ["button4","button2"], "command": "redo_or_repeat" },
-	{ "button": "scroll_up", "modifiers": ["button4","button2"], "command": "undo" },
+// 	{ "button": "scroll_down", "modifiers": ["button4","button2"], "command": "redo_or_repeat" },
+// 	{ "button": "scroll_up", "modifiers": ["button4","button2"], "command": "undo" },
 
 // Change tabs
 	{ "button": "scroll_down", "modifiers": ["ctrl"], "command": "next_view" },

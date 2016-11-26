@@ -33,7 +33,7 @@ try:
                 'grid.color': 'gray'})
 except:
     pass
-# plt.style.use('dark_background')
+plt.style.use('dark_background')
 
 
 
