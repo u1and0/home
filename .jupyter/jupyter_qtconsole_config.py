@@ -122,7 +122,7 @@
 
 #     Whether to display a banner upon starting the QtConsole.
 
-JupyterQtConsoleApp.hide_menubar = True
+c.JupyterQtConsoleApp.hide_menubar = True
 # JupyterQtConsoleApp.hide_menubar : CBool
 #     Default: ``False``
 
@@ -340,7 +340,7 @@ JupyterQtConsoleApp.hide_menubar = True
 #         3. QtConsole: .error, .in-prompt, .out-prompt, etc
 
 
-JupyterWidget.syntax_style = 'monokai'
+c.JupyterWidget.syntax_style = 'monokai'
 # JupyterWidget.syntax_style : Unicode
 #     Default: ``''``
 
