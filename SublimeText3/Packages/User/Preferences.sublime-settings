@@ -21,8 +21,8 @@
 		"*.ex4old"
 	],
 	"find_selected_text": true,
-	"font_face": "Myrica M",
-	"font_size": 11,
+	"font_face": "IPAMincho",
+	"font_size": 10.5,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
