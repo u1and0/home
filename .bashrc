@@ -207,12 +207,29 @@ fi
 
 
 
+# __USER SETTING__________________________
 
 
 
 
 
-# --LESS envpath--
+
+
+
+# __GIT SETTINGS__
+# indicate branch name at current terminal
+if [ -f "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash" ]; then
+  source "${HOME}/msys64/usr/local/git/contrib/completion/git-prompt.sh"
+  source "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash"
+  GIT_PS1_SHOWDIRTYSTATE=true
+  export PS1="\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ "
+fi
+
+
+
+
+
+# __LESS ENVPATH__
 # -g  検索したとき、ヒットした全ての文字列を反転するのではなく、現在カーソルがある行のみ反転する。
 # -i  検索時に全部小文字で入力したときだけ、大文字小文字を無視する。
 # -M  詳しいプロンプトを表示する。
