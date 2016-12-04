@@ -228,7 +228,7 @@ if [ -f "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash" ];
   PS1="\[\033[33m\]"      # change to brownish yellow
   PS1="$PS1""\w"                # current working directory
   PS1="$PS1""\[\033[31m\]"      # change to red
-  PS1="$PS1""$(__git_ps1)"      # branch state (bash function)
+  PS1="$PS1""`__git_ps1`"      # branch state (bash function)
   PS1="$PS1""\[\033[35m\]"      # change to purple
   PS1="$PS1""\n\$ "             # new line & $
   PS1="$PS1""\[\033[00m\]"      # change to white
