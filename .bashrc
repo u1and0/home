@@ -212,8 +212,18 @@ fi
 
 
 
-
-
+# LESS envpath
+export LESS='-g -i -M -R -S -W -z-4 -x4'
+# man などの様々なコマンドがページャーとして less を使うようになります
+export PAGER=less
+# $PAGER を設定した状態で以下の環境変数を指定すると man ページに色が付きます。
+export LESS_TERMCAP_mb=$'\E[01;31m'      # Begins blinking.
+export LESS_TERMCAP_md=$'\E[01;31m'      # Begins bold.
+export LESS_TERMCAP_me=$'\E[0m'          # Ends mode.
+export LESS_TERMCAP_se=$'\E[0m'          # Ends standout-mode.
+export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
+export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
+export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
 
 # gitの本にかいってあったけどよくわかんない
