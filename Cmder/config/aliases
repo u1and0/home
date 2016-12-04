@@ -1,5 +1,7 @@
 ::shell=
 ls=ls --show-control-chars -F --color $*
+ll=ls -lA $*
+la=ls -A $*
 pwd=cd
 clear=cls
 history=cat %CMDER_ROOT%\config\.history
@@ -48,4 +50,4 @@ gch=git checkout $*
 gb=git branch $*
 gm=git merge $*
 gt=git tag $*
-grst-h=git reset --hard  HEAD  
+grst-h=git reset --hard HEAD

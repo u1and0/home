@@ -625,6 +625,8 @@
 c.AliasManager.user_aliases = [
     # shell command
     ('ls', 'ls  --show-control-chars -F --color'),
+    ('ll', 'ls -lA'),
+    ('la', 'ls -A'),
     ('grep', 'grep --color'),
     ('grepx', 'grep --color -nriC'),
     ('findx', 'find . -name'),
@@ -656,6 +658,7 @@ c.AliasManager.user_aliases = [
     ('gch', 'git checkout'),
     ('gm', 'git merge'),
     ('gt', 'git tag'),
+    ('grst-h', 'git reset --hard HEAD'),
 ]
 
 c.InteractiveShellApp.exec_lines = ['%load_ext autoreload', '%autoreload 2']
