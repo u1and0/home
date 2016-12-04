@@ -222,15 +222,16 @@ if [ -f "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash" ];
   source "${HOME}/msys64/usr/local/git/contrib/completion/git-prompt.sh"
   source "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash"
   GIT_PS1_SHOWDIRTYSTATE=true
-  PS1="\[\033[32m\]"            # change to green
-  PS1="$PS1""\u@\h"             # user@host<space>
-  PS1="$PS1""\[\033[00m\]:"     # change to white
-  PS1="$PS1""\[\033[34m\]"      # change to dark blue
+  # PS1="\[\033[32m\]"            # change to green
+  # PS1="$PS1""\u@\h"             # user@host<space>
+  # PS1="$PS1""\[\033[00m\]:"     # change to white & ":"
+  PS1="\[\033[33m\]"      # change to brownish yellow
   PS1="$PS1""\w"                # current working directory
   PS1="$PS1""\[\033[31m\]"      # change to red
   PS1="$PS1""$(__git_ps1)"      # branch state (bash function)
+  PS1="$PS1""\[\033[35m\]"      # change to purple
+  PS1="$PS1""\n\$ "             # new line & $
   PS1="$PS1""\[\033[00m\]"      # change to white
-  PS1="$PS1""\n\$ "             # new line & 
   export PS1
 
 
