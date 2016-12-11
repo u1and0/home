@@ -82,7 +82,6 @@ backend        : Qt5Agg
 #lines.linewidth   : 1.0     # line width in points
 #lines.linestyle   : -       # solid line
 #lines.color       : blue    # has no affect on plot(); see axes.prop_cycle
-lines.color       : red
 #lines.marker      : None    # the default marker
 #lines.markeredgewidth  : 0.5     # the line width around the marker symbol
 #lines.markersize  : 6            # markersize, in points
