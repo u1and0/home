@@ -21,7 +21,7 @@ py="python" $*
 ipy=ipython
 jpy=cmd /k "jupyter qtconsole --style=monokai" -new_console:t:"Jupyter" -new_console:b -new_console:C:"%Anaconda%\Menu\jupyter.ico"
 spy=spyder -new_console:t:"Spyder" -new_console:b -new_console:C:"%Anaconda%\Menu\spyder.ico"
-jpyn=jupyter notebook -new_console:t:"Jupyter Notebook" -new_console:b -new_console:C:"%Anaconda%\Menu\jupyter.ico"
+jpyn=jupyter notebook -new_console:t:"Jupyter Notebook"  -new_console:C:"%Anaconda%\Menu\jupyter.ico"
 
 
 ::git=
