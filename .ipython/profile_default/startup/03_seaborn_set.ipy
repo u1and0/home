@@ -8,14 +8,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-print('''\n---------PLOT SETTING----------
-If you'd like RESET ORIGINAL, type below
-```
-sns.reset_orig()
-```
-''')
-
-
 def __plottest__(flip=8):
     """TEST PLOT"""
     x = np.linspace(0, 14, 100)
@@ -23,35 +15,37 @@ def __plottest__(flip=8):
         plt.plot(x, np.sin(x + i * .5) * (flip - i))
 
 
-
 try:
-    sns.set(font="IPAMincho",
-            font_scale=1.5,
-            style="whitegrid",
-            palette='husl',
-            rc={'grid.linestyle': ':',
-                'grid.color': 'gray'})
+    sns.set(font="IPAMincho", font_scale=1.5, palette='husl',
+            rc={'grid.linestyle': ':', 'grid.color': 'gray'})
 except:
     pass
-# plt.style.use('dark_background')
-
-
-
 
 print('''
-Now using 'dark_background'
 
-```
-plt.style.use('dark_background')
-```
+---------PLOT SETTING----------
 
-* Recomendation:
-  * original: 'ggplot'
-  * also dark back ground high contrusted: 'seaborn-dark-palette'
-
-If you'd like to know available style ,type below
-
-```
-plt.style.available
-```
+* Test like `__plottest__()`
+* If you'd like to know available style ,type ` plt.style.available `
+* and type as ` plt.style.use('dark_background') `
+* If you'd like RESET ORIGINAL, type `sns.reset_orig()`
+* and also, reset seaborn style using ` sns.set() `
 ''')
+
+# print('''
+# Now using 'dark_background'
+
+# ```
+# plt.style.use('dark_background')
+# ```
+
+# * Recomendation:
+#   * original: 'ggplot'
+#   * also dark back ground high contrusted: 'seaborn-dark-palette'
+
+# If you'd like to know available style ,type below
+
+# ```
+# plt.style.available
+# ```
+# ''')
