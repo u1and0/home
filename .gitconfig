@@ -11,9 +11,12 @@
 	autoCRLF = false
 	whitespace = cr-at-eol
 	excludesfile = ~/.globalgitignore
+	quotepath = false
 [pack]
 	packSizeLimit = 2g
 [diff]
 	renames = true
 [rebase]
 	autosquash = true
+[gui]
+	encoding = utf-8
