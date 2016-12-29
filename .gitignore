@@ -51,7 +51,7 @@
 !/Cmder/config/
 /Cmder/config/*
 !/Cmder/config/aliases
-!/Cmder/config/ConEmu.xml
+# !/Cmder/config/ConEmu.xml
 !/Cmder/config/user-startup.cmd
 !/Cmder/vendor
 /Cmder/vendor/*
