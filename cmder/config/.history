@@ -42,3 +42,21 @@ gan
 gls
 gs
 mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+gs
+gan
+gls
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+g add cmder/
+gaa
+gc "実体はdropbox, シンボリックリンクをC:/tools/cmderにした"
+gs
+choco update all
+choco uninstall git
+gl
+where git
+where git
+gl
+tig
+choco --version
+choco update cmder
+gs
