@@ -46,14 +46,14 @@
 
 !/.jupyter/
 
-!/Cmder/
-/Cmder/*
-!/Cmder/config/
-!/Cmder/vendor
-/Cmder/vendor/*
-!/Cmder/vendor/conemu-maximus5/
-/Cmder/vendor/conemu-maximus5/*
-!/Cmder/vendor/conemu-maximus5/ConEmu.xml
+!/cmder/
+/cmder/*
+!/cmder/config/
+!/cmder/vendor
+/cmder/vendor/*
+!/cmder/vendor/conemu-maximus5/
+/cmder/vendor/conemu-maximus5/*
+!/cmder/vendor/conemu-maximus5/ConEmu.xml
 
 !/.spyder-py3/
 /.spyder-py3/*

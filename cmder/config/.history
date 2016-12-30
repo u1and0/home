@@ -1,0 +1,44 @@
+ddjfjk 
+cd %HOME%
+E:
+gls Cmder
+aliases
+alias
+@prompt $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m$$$S$E[0m
+gs
+gs
+::λを$マークに変更
+ddjfjk 
+cd %HOME%
+E:
+aliases
+alias
+@prompt $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m$$$S$E[0m
+gs
+::λを$マークに変更
+subl .gitignore 
+g add Cmder\config\prompt.lua 
+g mv  Cmder/config/aliases Cmder\config\user-aliases.cmd
+g mv --cached  Cmder/config/aliases Cmder\config\user-aliases.cmd
+g add .gitignore 
+g add Cmder\config\aliases
+g add  Cmder/config/aliases
+g add -u
+gc "remove old cmder files"
+gd
+gaa
+gc "<Add> pairent Cmder directory"
+gls Cmder
+gls Cmder/
+git config --global  core.symlinks true
+g config --list
+g config -h
+g config -f
+g config --get
+where .gitconfit
+where .gitconfig
+gs
+gan
+gls
+gs
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder

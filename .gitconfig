@@ -11,6 +11,7 @@
 	autoCRLF = false
 	whitespace = cr-at-eol
 	excludesfile = ~/.globalgitignore
+	symlinks = true
 [pack]
 	packSizeLimit = 2g
 [diff]
