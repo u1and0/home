@@ -47,18 +47,11 @@
 !/.jupyter/
 
 !/Cmder/
-
 /Cmder/*
 !/Cmder/config/
-
-/Cmder/config/*
-!/Cmder/config/user-*.cmd
-!/Cmder/config/prompt.lua
 !/Cmder/vendor
-
 /Cmder/vendor/*
 !/Cmder/vendor/conemu-maximus5/
-
 /Cmder/vendor/conemu-maximus5/*
 !/Cmder/vendor/conemu-maximus5/ConEmu.xml
 
