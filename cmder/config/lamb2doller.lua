@@ -1,3 +1,4 @@
+-- "λ"を"$"に変える
 function set_my_prompt_filter()
     -- get_cwd() is differently encoded than the clink.prompt.value, so everything other than
     -- pure ASCII will get garbled. So try to parse the current directory from the original prompt

@@ -60,3 +60,178 @@ tig
 choco --version
 choco update cmder
 gs
+g config --list
+g config -h
+g config -f
+g config --get
+where .gitconfit
+gs
+gan
+gls
+gs
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+gs
+gan
+gls
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+g add cmder/
+gc "実体はdropbox, シンボリックリンクをC:/tools/cmderにした"
+gs
+choco update all
+choco uninstall git
+gl
+where git
+tig
+choco --version
+choco update cmder
+home
+g add
+gaa
+git --version
+git config --list
+git config --list | xargs sort
+sort  | git config --list 
+ git config --list  | sort
+where .gitconfig
+where gitconfig
+git config --name-only
+git config --local
+git config -l
+git log
+gc "<Update>@cmder: cmder 1.3.2"
+g stash clear
+g config -l | sort
+ git config --local core.quotepath false
+g status
+cd ..\Document\
+alias
+あ
+cd ..\Program\
+rm q
+pwd
+find /?
+chcp 932
+chcp 65001
+gs
+where ssh
+where git
+gl
+ssh
+ssh -F
+chcp.com 65001
+ls
+ssh -F
+chcp.com 65001
+gs
+gl
+chcp 932
+choco
+choco --list
+choco -h
+less "Rainmeter\FX News.txt" 
+less "Rainmeter\Free.txt" 
+less Rainmeter\Free.txt
+alias
+ls
+ls
+exit
+ls
+exit
+ls
+cmder
+exit
+less Rainmeter\Free.txt
+alias
+ls
+ls
+exit
+ls
+exit
+cmder
+exit
+chcp 65001 & cmd
+chcp utf8
+chcp 16
+chcp EUC
+chcp 932
+chcp 65001
+ls
+ConEmuC -CheckUnicode
+cmder -h
+cmder -v
+chcp 65001
+ConEmuC -CheckUnicode
+ls
+gl
+grep あ
+grepx -1 あ
+grepx 1 あ
+gls
+gls cmder
+g archive
+g archive -o cmder_config.zip cmder/
+g archive -l -o cmder_config.zip cmder/
+g archive -l -
+g archive -l 
+g archive cmder/
+g archive -h
+g archive ./cmder/*
+g archive --format zip  ./cmder/*
+g archive --format zip  
+g archive 
+g archive HEAD -o ..\Document\cmder_config.zip 
+cup cmder
+choco uninstall cmder
+conemu --version
+cmder --version
+cmder --v
+cmder --version
+cmder --v
+cd python\
+jpyn
+cd deep-learning-from-scratch\
+gaa
+gc "ch3.4 End. Newral Network Implementation"
+gs
+gl
+g archive ./cmder/*
+g archive --format zip  ./cmder/*
+g archive --format zip  
+g archive 
+g archive HEAD -o ..\Document\cmder_config.zip 
+choco uninstall cmder
+conemu --version
+cmder --version
+cmder --v
+cmder --version
+cmder --v
+cd python\
+jpyn
+cd deep-learning-from-scratch\
+gc "ch3.4 End. Newral Network Implementation"
+subl .gitignore 
+ls cmder\config\
+ls
+ls -a  cmder/config
+gd
+gls
+gs
+gaa
+gc "cmder update 1.3.2"
+gl
+cup cmder
+choco uninstall cmder 
+gc "cmder update 1.3.2"
+cup cmder
+choco uninstall cmder 
+gls
+g add cmder/*
+gs
+gd
+gl
+gl
+gl
+gs
+gl
+gs
+gl
