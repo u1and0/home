@@ -41,7 +41,7 @@ case "${MSYS2_PATH_TYPE:-minimal}" in
     # Do not inherit any path configuration but configure a default Windows path
     # suitable for normal usage with minimal external interference.
     WIN_ROOT="$(PATH=${MSYS2_PATH} cygpath -Wu)"
-    ORIGINAL_PATH="${WIN_ROOT}/System32:${WIN_ROOT}:${WIN_ROOT}/System32/Wbem:${WIN_ROOT}/System32/WindowsPowerShell/v1.0/:/Anaconda3:/conda:/subl:/gnuplot"
+    ORIGINAL_PATH="${WIN_ROOT}/System32:${WIN_ROOT}:${WIN_ROOT}/System32/Wbem:${WIN_ROOT}/System32/WindowsPowerShell/v1.0/:/Anaconda3:/conda:/subl:/gnuplot:/choco"
 esac
 
 unset MINGW_MOUNT_POINT

@@ -265,3 +265,17 @@ gm origin/master
 gch --ours cmder/vendor/conemu-maximus5/ConEmu.xml
 gch  cmder/vendor/conemu-maximus5/ConEmu.xml cmder/vendor/conemu-maximus5/ConEmu.xml
 gch  cmder/vendor/conemu-maximus5/ConEmu.xml --ours
+gm origin/master
+gch --ours cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml --ours
+subl .gitconfig
+gaa
+gc "<modify>merge conflict"
+g pull
+gd
+gd --name-only
+gs
+gd msys64/etc/profile
+gd HEAD~~ msys64/etc/profile
+gd cmder/config/user-aliases.cmd
