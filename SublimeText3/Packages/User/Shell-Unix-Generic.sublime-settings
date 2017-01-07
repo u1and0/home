@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		".gitignore",
-		".viminfo"
+		".viminfo",
+		".gitconfig"
 	]
 }

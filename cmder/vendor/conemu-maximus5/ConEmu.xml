@@ -1037,7 +1037,7 @@
 			<value name="ProcessCtrlZ" type="hex" data="00"/>
 			<value name="SuppressBells" type="hex" data="01"/>
 			<value name="JumpListAutoUpdate" type="hex" data="01"/>
-			<value name="LastMonitor" type="string" data="1920,-200,2944,1080"/>
+			<value name="LastMonitor" type="string" data="0,0,1920,1040"/>
 			<value name="CTS.ResetOnRelease" type="hex" data="00"/>
 			<value name="CTS.EraseBeforeReset" type="hex" data="01"/>
 			<value name="Anti-aliasing2" type="hex" data="00"/>

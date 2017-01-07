@@ -235,3 +235,33 @@ gs
 gl
 gs
 gl
+path | sed  s/\\/\//g | sed -e   s/;/\n/g
+where vim
+choco msys
+cinst msys
+cinst msys2
+where cmd
+%PATH%
+rapidee
+path
+echo %PATH%
+C:\tools\msys64\msys2.exe
+mklink /d  C:\tools\msys64 E:\Users\U1and0\Dropbox\Program\msys64
+gd msys64\*
+gd cmder/
+gd msys64\
+grst-h 
+vim python\average_remove_empty.py 
+g stash
+g pull
+gpo
+gs
+gaa
+gc "_vimrc"
+gpo master
+gd
+gl
+gm origin/master
+gch --ours cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml --ours

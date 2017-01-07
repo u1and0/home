@@ -12,9 +12,12 @@
 	whitespace = cr-at-eol
 	excludesfile = ~/.globalgitignore
 	symlinks = true
+	quotepath = false
 [pack]
 	packSizeLimit = 2g
 [diff]
 	renames = true
 [rebase]
 	autosquash = true
+[gui]
+	encoding = utf-8

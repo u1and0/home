@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 set encoding=utf-8
 scriptencoding utf-8
 " ↑1行目は読み込み時の文字コードの設定
@@ -230,3 +231,9 @@ if executable('ag')
   let g:ctrlp_use_caching=0 " CtrlPのキャッシュを使わない
   let g:ctrlp_user_command='ag %s -i --hidden -g ""' " 「ag」の検索設定
 endif
+=======
+set encoding=cp932
+set termencoding=cp932
+set fileencoding=utf-8
+set fileencodings=utf-8,cp932
+>>>>>>> origin/master
