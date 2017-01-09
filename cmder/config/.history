@@ -1,0 +1,90 @@
+g
+g --version
+where git
+where cmder
+pwd
+gs
+%home%
+%HOME%
+cd %HOME%
+gs
+@prompt $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m$$$S$E[0m
+gl
+gs
+alias
+where alias
+cd C:\home\_Cmder
+grep lamb
+grepx 1  lamb
+gs
+gs
+alias
+where alias
+cd C:\home\_Cmder
+grep lamb
+grepx 1  lamb
+gl
+cinsto msys2
+cint
+ahttp://192.168.0.3/skyboard/
+choco upgrade choco -y
+choco upgrade chocolatey -y
+cinst msys2
+subl C:\ProgramData\chocolatey\logs\chocolatey.log
+rapidee
+gls msys64/
+choco uninstall msys2
+gaa
+gs
+gls
+gls Cmder
+gls msys64/
+choco uninstall msys2
+gls
+gls Cmder
+gaa
+alias
+gd
+gc "@Cmder symbolic link <-C:\tools, entity <-C:\home"
+gpo master
+gs
+gl
+cup msys2
+path
+pwd
+gs
+gd
+gpo
+py
+gpo master
+gs
+cup msys2
+path
+pwd
+py
+mklink -d msys64\ C:\tools\msys64\
+mklink -d  C:\tools\msys64\ msys64\
+mklink -d  C:\tools\msys64\ .\msys64\
+mklink -d  C:\tools\msys64\ C:\home\msys64\
+mklink -d  C:\home\msys64\ C:\tools\msys64\
+mklink /d  C:\home\msys64\ C:\tools\msys64\
+mklink /d  C:\tools\msys64\ msys64\
+mklink /d  C:\tools\msys64\ ./msys64\
+mklink /d  C:\tools\msys64\ C:\home\msys64\
+choco upgrade msys2
+g pull
+gd msys64/
+gch HEAD^ msys64/etc/fstab
+gch HEAD^ msys64/etc/profile 
+gd
+gaa
+gc "@sublimetext: update LaTeXtools"
+gpo
+gs
+gl
+g fetch
+m origin/master
+gm origin/master
+gls cmder
+gls
+gls origin/master

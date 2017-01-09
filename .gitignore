@@ -49,10 +49,10 @@
 !/cmder/
 /cmder/*
 !/cmder/config/
-/cmder/config/*
-!/cmder/config/aliases
-!/cmder/config/ConEmu.xml
-!/cmder/config/user-startup.cmd
+# /cmder/config/*
+# !/cmder/config/aliases
+# !/cmder/config/ConEmu.xml
+# !/cmder/config/user-startup.cmd
 !/cmder/vendor
 /cmder/vendor/*
 !/cmder/vendor/conemu-maximus5/
