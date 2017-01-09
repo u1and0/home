@@ -289,3 +289,6 @@ gs
 gd
 cup msys2
 choco upgrade all
+gl
+gs
+gpo 
