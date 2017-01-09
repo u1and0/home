@@ -279,3 +279,13 @@ gs
 gd msys64/etc/profile
 gd HEAD~~ msys64/etc/profile
 gd cmder/config/user-aliases.cmd
+gs
+gac "<Merge> office setting @cmder: task change"
+gd
+gl
+gls msys64\
+py
+gs
+gd
+cup msys2
+choco upgrade all
