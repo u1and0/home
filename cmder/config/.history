@@ -1,90 +1,294 @@
-g
-g --version
-where git
-where cmder
-pwd
-gs
-%home%
-%HOME%
+ddjfjk 
 cd %HOME%
-gs
+E:
+gls Cmder
+aliases
+alias
 @prompt $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m$$$S$E[0m
-gl
 gs
+gs
+::λを$マークに変更
+ddjfjk 
+cd %HOME%
+E:
+aliases
 alias
-where alias
-cd C:\home\_Cmder
-grep lamb
-grepx 1  lamb
+@prompt $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m$$$S$E[0m
 gs
-gs
-alias
-where alias
-cd C:\home\_Cmder
-grep lamb
-grepx 1  lamb
-gl
-cinsto msys2
-cint
-ahttp://192.168.0.3/skyboard/
-choco upgrade choco -y
-choco upgrade chocolatey -y
-cinst msys2
-subl C:\ProgramData\chocolatey\logs\chocolatey.log
-rapidee
-gls msys64/
-choco uninstall msys2
+::λを$マークに変更
+subl .gitignore 
+g add Cmder\config\prompt.lua 
+g mv  Cmder/config/aliases Cmder\config\user-aliases.cmd
+g mv --cached  Cmder/config/aliases Cmder\config\user-aliases.cmd
+g add .gitignore 
+g add Cmder\config\aliases
+g add  Cmder/config/aliases
+g add -u
+gc "remove old cmder files"
+gd
 gaa
-gs
-gls
+gc "<Add> pairent Cmder directory"
 gls Cmder
-gls msys64/
-choco uninstall msys2
+gls Cmder/
+git config --global  core.symlinks true
+g config --list
+g config -h
+g config -f
+g config --get
+where .gitconfit
+where .gitconfig
+gs
+gan
 gls
-gls Cmder
+gs
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+gs
+gan
+gls
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+g add cmder/
 gaa
+gc "実体はdropbox, シンボリックリンクをC:/tools/cmderにした"
+gs
+choco update all
+choco uninstall git
+gl
+where git
+where git
+gl
+tig
+choco --version
+choco update cmder
+gs
+g config --list
+g config -h
+g config -f
+g config --get
+where .gitconfit
+gs
+gan
+gls
+gs
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+gs
+gan
+gls
+mklink /d C:\tools\cmder E:\Users\U1and0\Dropbox\Program\cmder
+g add cmder/
+gc "実体はdropbox, シンボリックリンクをC:/tools/cmderにした"
+gs
+choco update all
+choco uninstall git
+gl
+where git
+tig
+choco --version
+choco update cmder
+home
+g add
+gaa
+git --version
+git config --list
+git config --list | xargs sort
+sort  | git config --list 
+ git config --list  | sort
+where .gitconfig
+where gitconfig
+git config --name-only
+git config --local
+git config -l
+git log
+gc "<Update>@cmder: cmder 1.3.2"
+g stash clear
+g config -l | sort
+ git config --local core.quotepath false
+g status
+cd ..\Document\
 alias
-gd
-gc "@Cmder symbolic link <-C:\tools, entity <-C:\home"
-gpo master
+あ
+cd ..\Program\
+rm q
+pwd
+find /?
+chcp 932
+chcp 65001
+gs
+where ssh
+where git
+gl
+ssh
+ssh -F
+chcp.com 65001
+ls
+ssh -F
+chcp.com 65001
 gs
 gl
-cup msys2
-path
-pwd
-gs
-gd
-gpo
-py
-gpo master
-gs
-cup msys2
-path
-pwd
-py
-mklink -d msys64\ C:\tools\msys64\
-mklink -d  C:\tools\msys64\ msys64\
-mklink -d  C:\tools\msys64\ .\msys64\
-mklink -d  C:\tools\msys64\ C:\home\msys64\
-mklink -d  C:\home\msys64\ C:\tools\msys64\
-mklink /d  C:\home\msys64\ C:\tools\msys64\
-mklink /d  C:\tools\msys64\ msys64\
-mklink /d  C:\tools\msys64\ ./msys64\
-mklink /d  C:\tools\msys64\ C:\home\msys64\
-choco upgrade msys2
-g pull
-gd msys64/
-gch HEAD^ msys64/etc/fstab
-gch HEAD^ msys64/etc/profile 
-gd
-gaa
-gc "@sublimetext: update LaTeXtools"
-gpo
-gs
+chcp 932
+choco
+choco --list
+choco -h
+less "Rainmeter\FX News.txt" 
+less "Rainmeter\Free.txt" 
+less Rainmeter\Free.txt
+alias
+ls
+ls
+exit
+ls
+exit
+ls
+cmder
+exit
+less Rainmeter\Free.txt
+alias
+ls
+ls
+exit
+ls
+exit
+cmder
+exit
+chcp 65001 & cmd
+chcp utf8
+chcp 16
+chcp EUC
+chcp 932
+chcp 65001
+ls
+ConEmuC -CheckUnicode
+cmder -h
+cmder -v
+chcp 65001
+ConEmuC -CheckUnicode
+ls
 gl
-g fetch
-m origin/master
-gm origin/master
+grep あ
+grepx -1 あ
+grepx 1 あ
+gls
 gls cmder
+g archive
+g archive -o cmder_config.zip cmder/
+g archive -l -o cmder_config.zip cmder/
+g archive -l -
+g archive -l 
+g archive cmder/
+g archive -h
+g archive ./cmder/*
+g archive --format zip  ./cmder/*
+g archive --format zip  
+g archive 
+g archive HEAD -o ..\Document\cmder_config.zip 
+cup cmder
+choco uninstall cmder
+conemu --version
+cmder --version
+cmder --v
+cmder --version
+cmder --v
+cd python\
+jpyn
+cd deep-learning-from-scratch\
+gaa
+gc "ch3.4 End. Newral Network Implementation"
+gs
+gl
+g archive ./cmder/*
+g archive --format zip  ./cmder/*
+g archive --format zip  
+g archive 
+g archive HEAD -o ..\Document\cmder_config.zip 
+choco uninstall cmder
+conemu --version
+cmder --version
+cmder --v
+cmder --version
+cmder --v
+cd python\
+jpyn
+cd deep-learning-from-scratch\
+gc "ch3.4 End. Newral Network Implementation"
+subl .gitignore 
+ls cmder\config\
+ls
+ls -a  cmder/config
+gd
 gls
-gls origin/master
+gs
+gaa
+gc "cmder update 1.3.2"
+gl
+cup cmder
+choco uninstall cmder 
+gc "cmder update 1.3.2"
+cup cmder
+choco uninstall cmder 
+gls
+g add cmder/*
+gs
+gd
+gl
+gl
+gl
+gs
+gl
+gs
+gl
+path | sed  s/\\/\//g | sed -e   s/;/\n/g
+where vim
+choco msys
+cinst msys
+cinst msys2
+where cmd
+%PATH%
+rapidee
+path
+echo %PATH%
+C:\tools\msys64\msys2.exe
+mklink /d  C:\tools\msys64 E:\Users\U1and0\Dropbox\Program\msys64
+gd msys64\*
+gd cmder/
+gd msys64\
+grst-h 
+vim python\average_remove_empty.py 
+g stash
+g pull
+gpo
+gs
+gaa
+gc "_vimrc"
+gpo master
+gd
+gl
+gm origin/master
+gch --ours cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml --ours
+gm origin/master
+gch --ours cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml cmder/vendor/conemu-maximus5/ConEmu.xml
+gch  cmder/vendor/conemu-maximus5/ConEmu.xml --ours
+subl .gitconfig
+gaa
+gc "<modify>merge conflict"
+g pull
+gd
+gd --name-only
+gs
+gd msys64/etc/profile
+gd HEAD~~ msys64/etc/profile
+gd cmder/config/user-aliases.cmd
+gs
+gac "<Merge> office setting @cmder: task change"
+gd
+gl
+gls msys64\
+py
+gs
+gd
+cup msys2
+choco upgrade all
+gl
+gs
+gpo 
