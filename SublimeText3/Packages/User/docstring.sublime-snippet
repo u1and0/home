@@ -1,8 +1,6 @@
 <snippet>
 	<content><![CDATA[
-"""
-${1:docstring...}
-""
+"""${1:docstring...}""
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>"</tabTrigger>
