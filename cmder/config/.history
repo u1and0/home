@@ -292,3 +292,58 @@ choco upgrade all
 gl
 gs
 gpo 
+py 
+ga
+gd
+grst-h 
+cd python\
+cd SAtraceView\
+conda update --all -y
+conda install nbbrowserpdf
+conda install --channel anaconda-nb-extensions nbbrowserpdf
+cd ../../
+gs
+gaa
+gaundo
+cd ../../
+gaa
+gaundo
+gd
+subl .jupyter/nbconfig/jupyter_notebook_config.json
+cd python\
+conda update jupyter
+conda update jupyternotebook
+jpyn
+rm ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
+mv ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
+gs
+date
+time
+lsof
+subl .jupyter/nbconfig/jupyter_notebook_config.json
+cd python\
+conda update jupyter
+conda update jupyternotebook
+rm ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
+mv ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
+date
+time
+lsof
+conda install jinja2
+where git
+cd python\SAtraceGraph\
+jupyter notebook
+cd ..\SAtraceView\
+cd SAtraceGGraph\
+cd ..
+conda uninstall jupyter
+conda install jupyter
+jpyn
+ipy
+gs
+gl
+gls
+gs
+gd
+less  .jupyter/nbconfig/common.json
+ipy
