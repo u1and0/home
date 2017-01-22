@@ -292,3 +292,16 @@ choco upgrade all
 gl
 gs
 gpo 
+jpyn
+cinst googlechrome
+cup googlechrome
+exirt
+exirt
+cd python\deep-learning-from-scratch\ch04
+gss
+gd
+rm q
+grst-h 
+g pull
+gs
+py
