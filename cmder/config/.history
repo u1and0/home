@@ -347,3 +347,7 @@ gs
 gd
 less  .jupyter/nbconfig/common.json
 ipy
+gs
+gaa
+gc "<add> .jupyter/nbconfig/common.json"
+gpo
