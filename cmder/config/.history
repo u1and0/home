@@ -351,3 +351,8 @@ gs
 gaa
 gc "<add> .jupyter/nbconfig/common.json"
 gpo
+gs
+gaa
+gc "<Auto Update> @sublimetext: Anaconda 2.1.13"
+gl
+gpo
