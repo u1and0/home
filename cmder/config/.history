@@ -292,31 +292,68 @@ choco upgrade all
 gl
 gs
 gpo 
+py 
+ga
+gd
+grst-h 
+cd python\
+cd SAtraceView\
+conda update --all -y
+conda install nbbrowserpdf
+conda install --channel anaconda-nb-extensions nbbrowserpdf
+cd ../../
+gs
+gaa
+gaundo
+cd ../../
+gaa
+gaundo
+gd
+subl .jupyter/nbconfig/jupyter_notebook_config.json
+cd python\
+conda update jupyter
+conda update jupyternotebook
 jpyn
-cinst googlechrome
-cup googlechrome
-exirt
-exirt
-cd python\deep-learning-from-scratch\ch04
-gss
-gd
-rm q
-grst-h 
-g pull
+rm ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
+mv ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
 gs
-py
-cd python\deep-learning-from-scratch\ch04
-gss
-rm q
-grst-h 
-cup all -y
-g add SublimeText3\
-gc "<AUTO><update> @sublimetext oscrypto-ca-bundle.crt MarkdownTOC.sublime-package Sublimerge 3.sublime-package"
-gd
-gd cmder\vendor\conemu-maximus5\\ConEmu.xml
+date
+time
+lsof
+subl .jupyter/nbconfig/jupyter_notebook_config.json
+cd python\
+conda update jupyter
+conda update jupyternotebook
+rm ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
+mv ../.jupyter/nbconfig/jupyter_notebook_config.json ../.jupyter/nbconfig/jupyter_notebook_config.j
+date
+time
+lsof
+conda install jinja2
+where git
+cd python\SAtraceGraph\
+jupyter notebook
+cd ..\SAtraceView\
+cd SAtraceGGraph\
+cd ..
+conda uninstall jupyter
+conda install jupyter
+jpyn
+ipy
 gs
-gaa cmder
-gc "cmder auto"
+gl
+gls
+gs
+gd
+less  .jupyter/nbconfig/common.json
+ipy
+gs
+gaa
+gc "<add> .jupyter/nbconfig/common.json"
 gpo
-g pull
-py
+gs
+gaa
+gc "<Auto Update> @sublimetext: Anaconda 2.1.13"
+gl
+gpo
+gpo

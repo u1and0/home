@@ -189,6 +189,14 @@ color ------------------------------------------------------------------------- 
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>ダラーマーク内(LaTeX形式)</string>
+			<key>match</key>
+			<string>\$+[^\$]+(\s|\$|.|$)</string>
+			<key>name</key>
+			<string>markup.inserted</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>行頭のhttp:かhttps:以下</string>
 			<key>match</key>
 			<string>(^|\s)http(:|s:)\S+</string>

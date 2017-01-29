@@ -240,6 +240,10 @@ Color Scheme-Tubnil_kai << customed Tubnil (Sankasan)
        "name": "meta.diff.header",
        "comment": "バッククォート内(Markdownのコード)"
        },
+       {"match": "\\$+[^\\$]+(\\s|\\$|.|$)",
+       "name": "markup.inserted",
+       "comment": "ダラーマーク内(LaTeX形式)"
+       },
 
 
 
