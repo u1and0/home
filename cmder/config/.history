@@ -305,3 +305,18 @@ grst-h
 g pull
 gs
 py
+cd python\deep-learning-from-scratch\ch04
+gss
+rm q
+grst-h 
+cup all -y
+g add SublimeText3\
+gc "<AUTO><update> @sublimetext oscrypto-ca-bundle.crt MarkdownTOC.sublime-package Sublimerge 3.sublime-package"
+gd
+gd cmder\vendor\conemu-maximus5\\ConEmu.xml
+gs
+gaa cmder
+gc "cmder auto"
+gpo
+g pull
+py

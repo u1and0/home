@@ -151,12 +151,12 @@
     //Set to false if you don't want to automatically "jump" to the next change after merge
     "go_to_next_after_merge": false,
 
+    //Starts diff view in swapped mode where new changes are displayed on the left-hand side panel.
+    "start_swapped": false,
+
     // ########################################################################################################
     // # BEGIN OF UNIMPLEMENTED FEATURES' SETTINGS. THEY WILL BE IMPLEMENTED IN FUTURE RELEASES               #
     // ########################################################################################################
-
-    //Starts diff view in swapped mode where new changes are displayed on the left-hand side panel.
-    // "start_swapped": false,
 
     //Set to true if you want diff window to be opened in full screen mode
     //"full_screen": false,
