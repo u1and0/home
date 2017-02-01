@@ -4,6 +4,20 @@
 "comment": "
 # EnhancedText v3.8
 ダラーマーク($)のsyntax(Markdown - LaTeX)追加
+  ## TEST
+   # ハイライト
+  $$
+  1なんが
+  $$
+
+  $hoge$と$foo$
+  $$hoge$$と$$foo$$
+  $hoge$だｋｆｊ；ｄｋｌｆ$youya$dasfa;lkdj$
+
+   # notハイライト
+  $
+  $agjp
+
 
 # EnhancedText ver3.7
 3.6の機能削除
