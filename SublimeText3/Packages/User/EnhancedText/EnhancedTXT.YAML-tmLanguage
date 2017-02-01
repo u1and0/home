@@ -2,6 +2,9 @@
 "scopeName": "text.enhanced",
 "fileTypes": ["txt","md"],
 "comment": "
+# EnhancedText v3.8
+ダラーマーク($)のsyntax(Markdown - LaTeX)追加
+
 # EnhancedText ver3.7
 3.6の機能削除
 
@@ -240,9 +243,13 @@ Color Scheme-Tubnil_kai << customed Tubnil (Sankasan)
        "name": "meta.diff.header",
        "comment": "バッククォート内(Markdownのコード)"
        },
-       {"match": "\\$+[^\\$]+(\\s|\\$|.|$)",
+       {"match": "\\$+[^\\$]+\\$",
        "name": "markup.inserted",
-       "comment": "ダラーマーク内(LaTeX形式)"
+       "comment": "ダラーマーク内(MarkdonwのLaTeX形式)"
+       },
+       {"match": "\\$\\$\\s",
+       "name": "markup.inserted",
+       "comment": "ダラーマーク複数行(MarkdonwのLaTeX形式)"
        },
 
 

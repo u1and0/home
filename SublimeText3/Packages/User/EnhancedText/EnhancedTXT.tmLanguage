@@ -191,7 +191,15 @@ color ------------------------------------------------------------------------- 
 			<key>comment</key>
 			<string>ダラーマーク内(LaTeX形式)</string>
 			<key>match</key>
-			<string>\$+[^\$]+(\s|\$|.|$)</string>
+			<string>\$+[^\$]+\$</string>
+			<key>name</key>
+			<string>markup.inserted</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>ダラーマーク複数行(LaTeX形式)</string>
+			<key>match</key>
+			<string>\$\$\s</string>
 			<key>name</key>
 			<string>markup.inserted</string>
 		</dict>
