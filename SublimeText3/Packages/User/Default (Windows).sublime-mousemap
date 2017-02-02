@@ -40,5 +40,7 @@
 	{"button": "button1", "count": 1, "modifiers": ["button2"], "command": "expand_selection", "args": {"to": "scope"} },
 	// {"button": "button1", "count": 1, "modifiers": ["button2"], "command": "select_all"},
 	{"button": "button1", "count": 2, "modifiers": ["button2"], "command": "move_to", "args": {"to": "bof", "extend": false}},
-	{"button": "button1", "count": 3, "modifiers": ["button2"], "command": "move_to", "args": {"to": "eof", "extend": false}}
+	{"button": "button1", "count": 3, "modifiers": ["button2"], "command": "move_to", "args": {"to": "eof", "extend": false}},
+	//clickableURLs
+	{"button": "button1", "count": 2, "modifiers": ["ctrl"], "command": "open_url_under_cursor"},
 ]
