@@ -361,3 +361,283 @@ GS
 GD
 grst-h 
 gpo
+gl
+gl
+less  .jupyter/nbconfig/common.json
+ipy
+gs
+gaa
+gc "<add> .jupyter/nbconfig/common.json"
+gpo
+gs
+gc "<Auto Update> @sublimetext: Anaconda 2.1.13"
+gpo
+gpo
+GS
+GD
+grst-h 
+gpo
+cd pack
+gd cmder/*
+grst-h 
+cd PRODUCT\
+cd N-AS-183\pack
+g init
+gf init
+echo *.pdf > .gitignore
+gc "first commit"
+gaa
+gd
+less SD-99-Y-092仕様書別紙NAS183木箱.dwg
+gac "桟の追加"
+gs
+gl
+export LESSCHARSET=utf-8
+gl
+gl
+less less .bash_aliases 
+less .bash_aliases 
+less .bash_aliases 
+less _vimrc 
+subl _vimrc 
+gd
+vim .\S仕事記録\仕事日誌.txt 
+gpo
+gs
+gaa
+gc "<Auto Update> @sublimetext: Anaconda 2.1.13"
+gl
+gpo
+gpo
+GS
+GD
+grst-h 
+gpo
+gl
+gl
+less  .jupyter/nbconfig/common.json
+ipy
+gs
+gaa
+gc "<add> .jupyter/nbconfig/common.json"
+gpo
+gs
+gc "<Auto Update> @sublimetext: Anaconda 2.1.13"
+gpo
+gpo
+GS
+GD
+grst-h 
+gpo
+cd pack
+gd cmder/*
+grst-h 
+cd PRODUCT\
+cd N-AS-183\pack
+g init
+gf init
+echo *.pdf > .gitignore
+gc "first commit"
+less SD-99-Y-092仕様書別紙NAS183木箱.dwg
+gac "桟の追加"
+export LESSCHARSET=utf-8
+localedef -f UTF-8 -i ja_JP ja_JP
+rapidee
+less -help
+less --help
+cd PRODUCT\N-AS-183\pack\
+gd 602d944
+gac "梁の追加"
+git gc -h
+git gc --help
+less ~/gitconfig
+less ~/.gitconfig
+echo *.dwg binary > .gitattributes
+less .gitattributes 
+vim .gitconfig
+vim ~/.gitconfig
+gd
+gac "change direction from here"
+gf feature start fillet
+gac "R Support"
+gf feature finish fillet
+gac "outer box"
+gl
+gac "change upper lower"
+subl .gitignore 
+gaa
+gc "other file add"
+g rm SD-99-Y-092仕様書別紙NAS18.pdf
+g rm 170202_26DD発注仕様書SD99Y092_梱包作業.pdf
+g rm  170201_26DD発注仕様書SD99Y092_梱包作業_1.pdf
+gc "remove pdf"
+gs
+gs
+gl
+gl
+less  .jupyter/nbconfig/common.json
+ipy
+gs
+gaa
+gc "<add> .jupyter/nbconfig/common.json"
+gpo
+gs
+gc "<Auto Update> @sublimetext: Anaconda 2.1.13"
+gpo
+gpo
+GS
+GD
+grst-h 
+gpo
+cd pack
+gd cmder/*
+grst-h 
+cd PRODUCT\
+cd N-AS-183\pack
+g init
+gf init
+echo *.pdf > .gitignore
+gc "first commit"
+less SD-99-Y-092仕様書別紙NAS183木箱.dwg
+gac "桟の追加"
+export LESSCHARSET=utf-8
+localedef -f UTF-8 -i ja_JP ja_JP
+rapidee
+less -help
+less --help
+cd PRODUCT\N-AS-183\pack\
+gd 602d944
+gac "梁の追加"
+git gc -h
+git gc --help
+less ~/gitconfig
+less ~/.gitconfig
+echo *.dwg binary > .gitattributes
+less .gitattributes 
+vim .gitconfig
+vim ~/.gitconfig
+gac "change direction from here"
+gf feature start fillet
+gac "R Support"
+gf feature finish fillet
+gac "outer box"
+gac "change upper lower"
+subl .gitignore 
+gc "other file add"
+g rm SD-99-Y-092仕様書別紙NAS18.pdf
+g rm 170202_26DD発注仕様書SD99Y092_梱包作業.pdf
+g rm  170201_26DD発注仕様書SD99Y092_梱包作業_1.pdf
+gc "remove pdf"
+cd PRODUCT\N-AS-183\
+cd pack\
+gc "guide rail"
+gac "re-measure"
+gac "rail re-measure"
+gac "support R change"
+gf feature start inventor
+g add
+gc "<add> NAS183.ipt"
+gc "NAS183 surface close"
+py
+gc "<Add> box"
+gc "<Add> support"
+gc "make a hole at box"
+gaa 
+gc "<Add> Assembly"
+gc "attatch all"
+gc "coloring"
+gc "kantsu kanamono"
+gc "attatch support 2"
+gc "<Ass bolt>"
+gc "<Add> cover"
+gc "<revision> cover size"
+gc "1 bolt"
+gf feature finish inventor
+gac "finish feature"
+gc "<Add> README"
+gf release finish v1.0
+gd
+gch a307a1c
+gch 8f1a43f
+gm 8f1a43f
+gaa
+gc "merge feature/inventor 8f1a43f"
+gf release start v1.0
+gf hotfix start
+gf hotfix start v1.1
+gch develop
+gch hotfix/v1.1
+gm develop
+gf hotfix finish v1.1
+gs
+gl
+g rm 170202_26DD発注仕様書SD99Y092_梱包作業.pdf
+g rm  170201_26DD発注仕様書SD99Y092_梱包作業_1.pdf
+gc "remove pdf"
+cd PRODUCT\N-AS-183\
+cd pack\
+gc "guide rail"
+gac "re-measure"
+gac "rail re-measure"
+gac "support R change"
+gf feature start inventor
+g add
+gc "<add> NAS183.ipt"
+gc "NAS183 surface close"
+gc "<Add> box"
+gc "<Add> support"
+gc "make a hole at box"
+gaa 
+gc "<Add> Assembly"
+gc "attatch all"
+gc "coloring"
+gc "kantsu kanamono"
+gc "attatch support 2"
+gc "<Ass bolt>"
+gc "<Add> cover"
+gc "<revision> cover size"
+gc "1 bolt"
+gf feature finish inventor
+gac "finish feature"
+gc "<Add> README"
+gf release finish v1.0
+gd
+gch a307a1c
+gch 8f1a43f
+gm 8f1a43f
+gc "merge feature/inventor 8f1a43f"
+gf release start v1.0
+gf hotfix start
+gf hotfix start v1.1
+gch develop
+gch hotfix/v1.1
+gm develop
+gf hotfix finish v1.1
+gd _vimrc 
+less _vimrc
+cd PRODUCT\N-AS-183\pack\
+g stash
+grst-h 
+gf feature start 4bolt
+gc "4bolt first commit"
+gf feature finish 5bolt
+gf feature finish 4bolt
+g stash clear
+hd
+gc "box length 420"
+gc "@.deg: box's 420 innner length "
+gls
+gac "delete support"
+gc "outer box size"
+gc "bolt point drow"
+gc "fix bolt @Assembly"
+gf release v2.0
+gf release start  v2.0
+gc "modify delete some refs"
+gc "print pdf"
+py
+gaa
+gc "wide box"
+gf release finish v2.0
+gs
+gl
