@@ -367,7 +367,7 @@
         default as this rule has been deprecated.
 
         D203: 1 blank line before class docstring is ignored by default, as
-        this rule has been dprecated.
+        this rule has been deprecated.
     */
     "pep257_ignore":
     [
@@ -511,6 +511,15 @@
 		Type check the interior of functions without type annotations.
 	*/
 	"mypy_check_untyped_defs": false,
+
+    /*
+        MyPy Fast Parser
+
+        Enable the experimental fast parser module of MyPy. In practice
+        this seems to be slower, however is required for support of some
+        recent syntax changes in Python.
+    */
+    "mypy_fast_parser": false,
 
 	/*
 		MyPy Custom Typing

@@ -2,6 +2,7 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"OmniMarkupPreviewer"
 	],
 	"installed_packages":
 	[
@@ -30,7 +31,6 @@
 		"Match",
 		"MetaQuotes (MQL4) Compiler",
 		"MetaQuotes (MQL4) Language Package",
-		"OmniMarkupPreviewer",
 		"Package Control",
 		"PackageDev",
 		"RealityCheck",

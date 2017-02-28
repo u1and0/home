@@ -647,3 +647,38 @@ py
 gs
 py
 py
+ipy
+ls E:\Users\U1and0\Desktop\iPodPhotoCache\SetUp_ini\info\info\credit\cc
+ipy
+grst-h 
+gs
+g pull
+gl
+conda upgrade --all
+cup all -y
+choco install cymo
+cup all -y
+choco install cymo
+cd python\
+cd deep-learning-from-scratch\
+ls
+cd ch04
+gs
+ipy
+cd ch04
+cd python\deep-learning-from-scratch\cd04
+cd python\deep-learning-from-scratch\ch04
+gs
+ipy
+py
+cd python\deep-learning-from-scratch\ch04
+ipy
+py
+cd python\deep-learning-from-scratch\
+cd ch05
+conda install yapf
+conda install -c conda-forge yapf=0.13.2
+gs
+gaa
+gc "sigmoid class modify"
+gl
