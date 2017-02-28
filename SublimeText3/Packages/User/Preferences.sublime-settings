@@ -22,14 +22,13 @@
 	],
 	"find_selected_text": true,
 	"font_face": "Mirica M",
-	"font_size": 16,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"GitGutter",
 		"GotoRecent",
-		"OmniMarkupPreviewer",
 		"SublimeEvernote",
 		"Theme - Flatland",
 		"Vintage"
