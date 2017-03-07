@@ -682,3 +682,281 @@ gs
 gaa
 gc "sigmoid class modify"
 gl
+cd python\
+cd deep-learning-from-scratch\
+cd ch04
+gs
+ipy
+cd ch04
+cd python\deep-learning-from-scratch\cd04
+cd python\deep-learning-from-scratch\ch04
+gs
+ipy
+py
+cd python\deep-learning-from-scratch\ch04
+py
+cd python\deep-learning-from-scratch\
+cd ch05
+conda install yapf
+conda install -c conda-forge yapf=0.13.2
+gc "sigmoid class modify"
+mklink /?
+mklink /d C:\Users\U1and0\Dropbox\Program\MT4\profiles C:\Users\U1and0\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\profiles
+mklink /d  C:\Users\U1and0\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\profiles  C:\Users\U1and0\Dropbox\Program\MT4\profiles
+mklink /d  C:\Users\U1and0\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\MQL4  C:\Users\U1and0\Dropbox\Program\MT4\MQL4
+mklink /d  C:\Users\U1and0\AppData\Roaming\MetaQuotes\Terminal\50CA3DFB510CC5A8F28B48D1BF2A5702\templates  C:\Users\U1and0\Dropbox\Program\MT4\templates
+gc "anaconda 2.1.14"
+gd
+gaundo
+gc "@sublimetext: Anaconda 2.1.13, 2.1.14"
+g pull
+gc "<Add> @sublimetext: OmniMarkupPreviewer"
+gpo
+cd ..\Document\
+ls
+bash
+ipy
+cd k会社\NewJersey_America\報告書
+gf init -f
+g init
+gf init
+gaa
+gc "first commit"
+gs
+gl
+cd ..\Document\
+bash
+ipy
+cd k会社\NewJersey_America\報告書
+gf init -f
+g init
+gf init
+gc "first commit"
+cd ..\Document\k会社\NewJersey_America\報告書
+"gs
+g add mynote.md
+gc "write markdown  28Feb2017"
+mv mynote_170228142952.html mynote.html
+ls
+g add mynote_170301012315.html 
+gc "mynote_170301012315.html"
+g mv mynote_170301012315.html mynote.html 
+g mv mynote_170301012315.html  mynote.html
+gaa
+gc "28Feb2017 html"
+gs
+gl
+g add mynote_170301012315.html 
+gc "mynote_170301012315.html"
+g mv mynote_170301012315.html mynote.html 
+g mv mynote_170301012315.html  mynote.html
+gc "28Feb2017 html"
+cd ..\Document\k会社\NewJersey_America\報告書
+mv mynote_170302012821.html 　mynote.html
+mv mynote_170302012821.html  mynote.html
+ipy
+!type ls
+ls
+PS1='>'
+bash
+PS1='&'
+rm '
+rm 'gs
+gaa
+gc "note 1Mar2017"
+gs
+gl
+exit
+PS1='>'
+PS1='&'
+rm '
+rm 'gs
+gc "note 1Mar2017"
+exit
+cd ..\Document\k会社\NewJersey_America\報告書
+gac "27Feb continue"
+gd
+bash
+ls
+gaa
+gc "Note 2Mar2017"
+mv mynote_170303041912.html  mynote.html 
+gac "Note 2Mar2017 change decending"
+gs
+gl
+mv mynote_170303041912.html  mynote.html 
+gac "Note 2Mar2017 change decending"
+cd ..\Document\k会社/報告書
+cd ..\Document\k会社\NewJersey_America\/報告書
+gaa
+gc "note 3Mar2017"
+mv mynote_170303231623.html  mynote.html
+gs
+gac "mynote html publish"
+gl
+gac "Note 2Mar2017 change decending"
+gs
+gl
+mv mynote_170303041912.html  mynote.html 
+gac "Note 2Mar2017 change decending"
+cd ..\Document\k会社/報告書
+gc "note 3Mar2017"
+mv mynote_170303231623.html  mynote.html
+gac "mynote html publish"
+ipconfig
+cd ..\Document\k会社\NewJersey_America\/報告書
+mv mynote_17030401.html mynote.html 
+rm mynote_*
+gaa
+ls
+gc "27Feb2017"
+gd
+gf feature start v1
+gch develop
+gb -D feature/v1
+gb
+gf release start v1
+mv mynote_170304023156.html  mynote.html 
+gac "mail 1"
+gs
+gf release finish v1
+gl
+subl
+subl 
+rapidee
+subl
+path
+path | sed s/;/\n/g
+rapidee
+path | sed s/;/\n/g
+subl
+path | sed s/;/\n/g
+path | sed s/;/\n/g
+subl
+"C:\Program Files\Sublime Text 3\sublime_text.exe"
+PS1='>'
+bash
+PS1='&'
+rm '
+rm 'gs
+gaa
+gc "note 1Mar2017"
+gs
+gl
+exit
+PS1='>'
+PS1='&'
+rm '
+rm 'gs
+gc "note 1Mar2017"
+exit
+cd ..\Document\k会社\NewJersey_America\報告書
+gac "27Feb continue"
+gd
+bash
+ls
+gaa
+gc "Note 2Mar2017"
+mv mynote_170303041912.html  mynote.html 
+gac "Note 2Mar2017 change decending"
+gs
+gl
+mv mynote_170303041912.html  mynote.html 
+gac "Note 2Mar2017 change decending"
+cd ..\Document\k会社/報告書
+cd ..\Document\k会社\NewJersey_America\/報告書
+gaa
+gc "note 3Mar2017"
+mv mynote_170303231623.html  mynote.html
+gs
+gac "mynote html publish"
+gl
+gac "Note 2Mar2017 change decending"
+gs
+gl
+mv mynote_170303041912.html  mynote.html 
+gac "Note 2Mar2017 change decending"
+cd ..\Document\k会社/報告書
+gc "note 3Mar2017"
+mv mynote_170303231623.html  mynote.html
+gac "mynote html publish"
+ipconfig
+cd ..\Document\k会社\NewJersey_America\/報告書
+mv mynote_17030401.html mynote.html 
+rm mynote_*
+gc "27Feb2017"
+gf feature start v1
+gch develop
+gb -D feature/v1
+gb
+gf release start v1
+mv mynote_170304023156.html  mynote.html 
+gac "mail 1"
+gf release finish v1
+cd python\fx
+cd python\fxpy\
+mkdir dollcost
+cd dollcost\
+ls EURUSD/
+ls EURUSD
+pdvcd
+gf 
+gf init -h
+.gitignore
+less .gitignore
+cd read_hst\
+echo .hst > .gitignore
+echo .h5 >> .gitignore
+echo .zip >> .gitignore
+subl .gitignore
+subl
+alias
+choco install rapidee -y
+rapidee
+vim .gitignore 
+cd ..
+less .gitignore 
+ls py-api-trading\
+ls read_hst\]
+ls read_hst\
+gls
+g add py-api-trading\*
+g add read_hst\*
+g init
+gf init
+gc "first commit"
+gd
+g submodules add *
+g submodule add *
+ls
+echo /py-api-trading/ > .gitignore
+g rm -h
+g rm --cached py-api-trading\
+gc "rm py-api-trading"
+gl
+conda install plotly
+conda install pandas_datareader
+conda install pandas-datareader
+gaa
+gs
+gc "how to get current USDJPY from web"
+conda install pandas-datareader
+gaa
+gc "how to get current USDJPY from web"
+cd ..\Document\k会社\NewJersey_America\報告書
+mv mynote_170307002702.html  mynote.html
+ls
+gac "6Mar2017"
+gs
+cd ..\Document\k会社\NewJersey_America\報告書
+mv mynote_170307002702.html  mynote.html
+ls
+gac "6Mar2017"
+cd python\fxpy\
+conda install yahoo_finance
+pwd
+gc "resample('d')"
+gaa
+gc "matplotlin.finance.candleticks_ohlc()"
+gs
+gl
