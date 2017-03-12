@@ -3,9 +3,3 @@
 
 # DO NOT REMOVE NEXT LINE. It remove cygdrive prefix from path
 none / cygdrive binary,posix=0,noacl,user 0 0
-
-C:/tools/Anaconda3/Scripts /conda
-C:/tools/Anaconda3 /Anaconda3
-C:/Program\040Files/gnuplot/bin/ /gnuplot
-C:/Program\040Files/Sublime\040Text\0403 /subl
-C:/ProgramData/chocolatey/bin /choco
