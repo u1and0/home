@@ -6334,3 +6334,127 @@ mv mynote_170311001232.html  mynote.html
 gs
 gac "10Mar2017"
 gl
+gf feature start gitver
+gch -b fitver
+cinst git
+rm Untitled.*
+cd ..
+gaa dollcost\
+gc "romdom wark v1"
+choco uninstall git
+choco install git -version 2.6.4 
+git version
+where git
+where cmder
+gl
+gd
+grst-h 
+gch master
+gb -d fitver
+d python\fxpy\dollcost\
+cd python\fxpy\dollcost\
+gs
+gaa
+gc "dollcost cumsum"
+cinst git
+rm Untitled.*
+cd ..
+gaa dollcost\
+gc "romdom wark v1"
+choco uninstall git
+choco install git -version 2.6.4 
+git version
+where git
+where cmder
+gd
+grst-h 
+gch master
+gb -d fitver
+d python\fxpy\dollcost\
+gc "dollcost cumsum"
+cd python\fxpy\dollcost\
+g version
+gc "Calculate bullbear from price"
+gc "if price down then buy the price"
+g stash
+gf release start v0.0
+g stash pop
+gac "READMEv0.0"
+gf release finish v0.0
+gc "def randomwalk() "
+gc "pd.Period -> turn to Week"
+gc "constant cost"
+gaa
+gs
+gc "price, cost, tickets, asset, profit"
+gl
+gc "price, cost, tickets, asset, profit"
+cd python\fxpy\
+gd
+gs
+gaa
+gc "simulator activate!"
+gl
+gch master
+gb -d fitver
+d python\fxpy\dollcost\
+gc "dollcost cumsum"
+cd python\fxpy\dollcost\
+g version
+gc "Calculate bullbear from price"
+gc "if price down then buy the price"
+g stash
+gf release start v0.0
+g stash pop
+gac "READMEv0.0"
+gf release finish v0.0
+gc "def randomwalk() "
+gc "pd.Period -> turn to Week"
+gc "constant cost"
+gaa
+gs
+gc "price, cost, tickets, asset, profit"
+gl
+gc "price, cost, tickets, asset, profit"
+gc "simulator activate!"
+enabled
+enable
+cd python\fxpy\
+gf release start v1.0
+gc "はじめに、用語説明の追加"
+gd
+gac "modify subhead"
+ls
+rm dollcost\Untitled.*
+rm ./dollcost\Untitled.*
+rm ./dollcost/Untitled.*
+ls dollcost\
+cp dollcost\randomwalk.ipynb dollcost\post_qiita.ipynb 
+gc "<add> post_qiita"
+g
+gc "post_qiita: randomwalk function"
+gc "unit_cost explain"
+gc "Swap dollcost 1<-->2"
+gl
+gaa
+gs
+gc "simulation"
+gc "Swap dollcost 1<-->2"
+gc "simulation"
+cd ..\Document\k会社
+cd NewJersey_America\報告書
+ga
+mv mynote_170314000707.html  mynote.html 
+gs
+gaa
+gc "13Mar2017"
+gl
+glsq
+gls
+gls
+cd python\fx
+cd python\fxpy\
+gl
+gs
+gaa
+gc "<add> script.py"
