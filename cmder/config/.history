@@ -6458,3 +6458,171 @@ gl
 gs
 gaa
 gc "<add> script.py"
+gs
+gd
+grst-h 
+cd python\fxpy\
+gd
+gac "modify subhead"
+rm dollcost\Untitled.*
+rm ./dollcost\Untitled.*
+rm ./dollcost/Untitled.*
+ls dollcost\
+cp dollcost\randomwalk.ipynb dollcost\post_qiita.ipynb 
+gc "<add> post_qiita"
+g
+gc "post_qiita: randomwalk function"
+gc "unit_cost explain"
+gc "Swap dollcost 1<-->2"
+gl
+gaa
+gs
+gc "simulation"
+gc "Swap dollcost 1<-->2"
+gc "simulation"
+cd ..\Document\k会社
+cd NewJersey_America\報告書
+ga
+mv mynote_170314000707.html  mynote.html 
+gs
+gaa
+gc "13Mar2017"
+gl
+glsq
+gls
+gls
+cd python\fx
+cd python\fxpy\
+gs
+gc "<add> script.py"
+gd
+grst-h 
+conda update --all
+conda list -e
+conda env -h
+conda create -n 2017031401
+conda env list
+conda uninstall Qt5
+conda uninstall Qt
+conda uninstall qt
+conda uninstall pyqt
+conda import qt
+conda import pyqt
+conda install
+conda install matplotlib
+conda install ipython 
+conda install jupyter qtconsole seaborn spyder spyder-app
+conda install jupyter  seaborn 
+conda install qtconsole ipython-qtconsole
+ipy
+py
+conda install pyqt
+conda create -n 2017031402
+conda list --explicit > .\python\conda/2017031402
+conda list --explicit > .\python\conda/2017031402.yml
+rm .\python\conda/2017031402
+less  .\python\conda/2017031402.yml
+activate 2017031402
+conda env export > ./python/conda/environment2017031402.yml
+less ./python/conda/environment2017031402.yml
+deactivate.bat 
+cd python\fxpy\
+rm .\common\Untitled.*
+rm -rf  .\common\Untitled.*
+rm  .\common\Untitled.html 
+rm  .\common\Untitled.md
+rm  .\common\Untitled.py
+rm  .\common\Untitled.ipynb
+rm  .\common\Untitled.txt
+rm -rf  .\common\Untitled_files\
+ls .\common\
+gc "candlechart http://qiita.com/toyolab/items/1b5d11b5d376bd542022"
+gc "sma plot"
+bc -h
+{
+{echo hoge
+{echo hoge\n echohogehoge}
+conda install plotly
+gc "candol chart using plotly"
+gc "candle chart"
+gf release start v1.0
+cd "Untitled Folder\
+ls
+cd ..
+g mv common\PracticeSubplot.html  README.html
+g mv common\PracticeSubplot.md  README.md
+
+g mv   commconREADME.md common/README.md
+g mv README.html common/README.html
+g mv common\PracticeSubplot.py common\README.py
+g mv common\PracticeSubplot.ipynb common\README.ipynb
+g mv common\PracticeSubplot_files\ common\README_files/
+gc "<rename> PracticeSubplot --> README"
+ls C:\Users\U1and0\Downloads\
+mv C:\Users\U1and0\Downloads\newplot.png  C:\Users\U1and0\Dropbox\Program\python\fxpy\common\README_files\newplot2.png 
+mv C:\Users\U1and0\Downloads\newplot.png  C:\Users\U1and0\Dropbox\Program\python\fxpy\common\README_files\newplot4.png 
+mv C:\Users\U1and0\Downloads\newplot.png  C:\Users\U1and0\Dropbox\Program\python\fxpy\common\README_files\newplot3.png 
+mv C:\Users\U1and0\Downloads\newplot.png  C:\Users\U1and0\Dropbox\Program\python\fxpy\common\README_files\newplot1.png 
+gaa
+gc "submit qiita"
+gs
+gac "version info"
+gf release finish v1.0
+gl
+gf release finish v1.0
+cd python\fxpy\
+gs
+gaa
+gc "random walk data make explain"
+gl
+gc "random walk data make explain"
+cd ..\Document\k会社\NewJersey_America\報告書\
+mv mynote_170316022104.html  mynote.html 
+gs
+gls
+ls
+ls *.html
+gaa
+gc "15Mar2017"
+gl
+cd python\fxpy\
+gs
+gaa
+gc "SMA chart @plotly"
+gc "SMA chart @plotly"
+cd ..\Document\k会社\NewJersey_America\報告書\
+mv mynote_170317015558.html  mynote.html 
+ga
+gs
+gaa
+gc "16Mar2017"
+gl
+gc "SMA chart @plotly"
+mv mynote_170317015558.html  mynote.html 
+ga
+gaa
+gc "16Mar2017"
+cd ..\Document\k会社\NewJersey_America\報告書\
+g
+gd
+mv mynote_170318151508.html  mynote.html 
+gac "regular report 3 "
+gd dcfe65c 84155a3
+gd dcfe65c 84155a3 mynote.md
+gf release start
+gf release start v2.0
+mv mynote_170318153531.html  mynote.html 
+gs
+gac "WND of cisco IOS configuration"
+gf release finish v2.0
+gl
+cd python\fxpy\
+gs
+gf release finish v2.0
+cd python\fxpy\
+cd python\fxpy
+gaa
+gc "plotly xaxis range"
+gs
+gl
+cinst calibre
