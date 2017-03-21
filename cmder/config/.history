@@ -6626,3 +6626,76 @@ gc "plotly xaxis range"
 gs
 gl
 cinst calibre
+ga
+gaa
+gc "16Mar2017"
+cd ..\Document\k会社\NewJersey_America\報告書\
+g
+gd
+mv mynote_170318151508.html  mynote.html 
+gac "regular report 3 "
+gd dcfe65c 84155a3
+gd dcfe65c 84155a3 mynote.md
+gf release start
+gf release start v2.0
+mv mynote_170318153531.html  mynote.html 
+gs
+gac "WND of cisco IOS configuration"
+gf release finish v2.0
+gl
+cd python\fxpy\
+gs
+gf release finish v2.0
+cd python\fxpy
+gc "plotly xaxis range"
+cinst calibre
+cal
+man help
+man
+gc "Anaconda 2.1.7"
+gpo
+cd python\fxpy\
+gc "span"
+gac "save"
+gd HEAD .. master
+gd HEAD...master
+gd master
+gd master README.md
+gd README.md master 
+g diff -h
+gd master  -- common/README.md
+gc "randomwalkの生成少し詳しく。plotlyにSMA, EMA追加。"
+gf release finish v1.1
+gf release v1.1
+gac "plotly plot html"
+gf release start v1.1
+gf hotfix  start v1.1
+gf hotfix  start v1.1.1
+gc "<fix> remove twice cell"
+gf hotfix finish v1.1.1
+gc "candle2.py development start"
+]gaa
+gaa
+gc "<add> basechart.py: class candlechart"
+gs
+gl
+cd python\fx
+cd python\fxpy\
+g stash
+gf feature start resamp 
+g stash pop
+gs
+gac "sma5 added df"
+gf feature start resamp 
+g stash pop
+gac "sma5 added df"
+cd ..\Document\k会社\NewJersey_America\報告書\
+mv mynote_170321013200.html  mynote.html 
+ls
+rm mynote_170321013523.html 
+mv mynote_170321032556.html  mynote.html 
+mv mynote_170321032842.html mynote.html 
+gs
+gaa
+gc "20Mar2017"
+gl

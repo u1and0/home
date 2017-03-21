@@ -24,21 +24,11 @@ class FindUsages(Command):
             usages = None
             success = False
 
-        try:
-            self.callback({
-                'success': success,
-                'result': [
-                    (i.full_name, i.module_path, i.line, i.column)
-                    for i in usages if not i.in_builtin_module()
-                ] if usages is not None else [],
-                'uid': self.uid
-            })
-        except ValueError:
-            self.callback({
-                'success': success,
-                'result': [
-                    (i.name, i.module_path, i.line, i.column)
-                    for i in usages if not i.in_builtin_module()
-                ] if usages is not None else [],
-                'uid': self.uid
-            })
+        self.callback({
+            'success': success,
+            'result': [
+                (i.full_name, i.module_path, i.line, i.column)
+                for i in usages if not i.in_builtin_module()
+            ] if usages is not None else [],
+            'uid': self.uid
+        })
