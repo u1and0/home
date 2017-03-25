@@ -6699,3 +6699,195 @@ gs
 gaa
 gc "20Mar2017"
 gl
+gs
+gl
+cd python\fx
+g stash
+gf feature start resamp 
+g stash pop
+gs
+gac "sma5 added df"
+gf feature start resamp 
+g stash pop
+gac "sma5 added df"
+cd ..\Document\k会社\NewJersey_America\報告書\
+mv mynote_170321013200.html  mynote.html 
+rm mynote_170321013523.html 
+mv mynote_170321032556.html  mynote.html 
+mv mynote_170321032842.html mynote.html 
+gc "20Mar2017"
+mv C:\Users\U1and0\Downloads\newplot.PNG  ..\Picture\PC周り\newplot.PNG
+gc "<Auto> @sublimetext: anaconda 2.1.18"
+cd python\fxpy\]
+cd python\fxpy\
+rm .\common\Untitled.*
+rm -r .\common\Untitled.*
+rm -r .\common\Untitled.
+rm  .\common\Untitled.
+rm  .\common\Untitled.*
+rm  -rf  .\common\Untitled.*
+rm  -irf  .\common\Untitled.*
+rm  -irf  .\common\Untitled.html 
+ls\\
+rm  -irf  .\common\Untitled.md
+rm  -irf  .\common\Untitled.txt
+ls common\
+gaa
+gc "basechart v0.0.0"
+
+set ~=C:\Users\U1and0\Dropbox\Program\
+~
+cd ~
+gac "EMA add"
+gs
+gac "bollinger 1"
+gl
+cd python\fxpy\
+gs
+gac "sma, ema, bollinger"
+fg feature finish resmp
+gf feature finish resmp
+gf feature finish resamp
+gl
+gf feature finish resamp
+gl
+touch --help
+cat --help
+history
+.history
+history 
+Cmder/.history
+cat Cmder/.history
+cat cmder/.history
+cat ./cmder/.history
+cd ..\Document\k会社\NewJersey_America\
+cd 報告書
+rm mynote_170322004626.html 
+mv mynote_170322005141.html  mynote.html 
+gac "21Mar2017"
+gs
+gs
+gac "21Mar2017"
+gs
+cup all -y
+cinst git-v2.6.4
+choco uninstall git
+cinst git v2.6.4
+gl
+py --version
+top
+cd python\fxpy\
+gs
+gf subp
+gf feature start subp
+find %HOME% -name .bash* | grep -nriC 2 path | sort | uniq | xargs wc -l
+find %HOME% -name .bash* | grep -nriC 2 path | sort | uniq 
+find . -name .bash_*
+find . -name '.bash_*'
+find ./ -name '.bash_*'
+find -help
+where find
+man find
+info find
+help find
+find --help
+find ./ -name '.bash_*' | wc -l
+find ./ -name '.bash_*' | grep -nri @ 
+info grep
+grep --help
+grep --help | less
+find ./ -name '.bash_*' | grep -nria @ 
+find ./ -name '.bash_*' | grep -nriaq @ 
+find ./ -name '.bash_*' | grep -nria Mark 
+find ./ -name '.bash_*' 
+find ./ -name '.bash_*' | grep -nria '.txt' 
+find ./ -name '.bash_*' | grep -nria '.txt' | sort | uniq | wc -l
+conda install stockstats
+pip install stockstats
+find --help
+where find
+man find
+ls
+man find
+cd ..\Document\k会社\NewJersey_America\報告書/
+ls
+mv mynote_170323013041.html  mynote.html 
+gs
+gac "23Mar2017"
+qgcundo
+gcundo
+gl
+conda install stockstats
+pip install stockstats
+find --help
+where find
+man find
+man find
+mv mynote_170323013041.html  mynote.html 
+gs
+gac "23Mar2017"
+qgcundo
+gcundo
+gl
+which
+which vi
+which vim
+cd ..\Document\k会社\NewJersey_America\報告書/
+rm mynote_170324004.html
+rm -r mynote_*
+ls\
+vim mynote.md
+cd /
+cd ~
+cd 
+cd home
+cd %home%
+ls
+tail _vimrc 
+vim _vimrc
+ipy
+vim _vimrc
+ipy
+cd vim74-kaoriya-win32\
+where vim
+rapidee
+vim vimrc
+ls
+man find
+cd ..\Document\k会社\NewJersey_America\報告書/
+mv mynote_170323013041.html  mynote.html 
+gs
+gac "23Mar2017"
+qgcundo
+gcundo
+choco uninstall git
+cinst git-v2.6.4
+cinst git -version 2.6.4
+cinst git -version 2.10.2
+gl
+vim _vimrc
+mv _vimrc __vimrc
+vim _=vimrc
+vim __vimrc
+where vim
+ls msys64\
+ls msys64\usr\
+ls msys64\home
+ls msys64\home/
+cd msys64\home\vim74
+ls -a
+alias
+cd ../../
+cd vim74-kaoriya-win32\
+less vimrc
+echo home
+echo %home%
+cp vimrc %home%/_vimrc
+cd home
+cd %home%
+vim _vimrc 
+find . -name vim74-kaoriya-win32\
+find . -name vim74-kaoriya-win32
+ls
+cp vim74-kaoriya-win32\vimrc ../_vimrc
+
