@@ -39,8 +39,8 @@ alias findx='find . -name'
 	# find | grep hogeで./以下のファイル名からhogeを検索
 	# whereis hogeでコマンドの関連場所を検索(bin, src, man)
 	# type -a hogeでコマンドを検索
-alias grep='grep --color'
-alias grepx='grep --color=always -nriC'
+	# -I: バイナリ無視
+alias grep='grep --color=always -nriI'
 # "grepx 1 検索文字列"で前後一行の表示、"grepx 2 検索文字列"で前後2行の表示
 
 # Windowsコマンド文字化け対策
