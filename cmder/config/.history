@@ -6891,3 +6891,4 @@ find . -name vim74-kaoriya-win32
 ls
 cp vim74-kaoriya-win32\vimrc ../_vimrc
 
+exit
