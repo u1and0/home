@@ -11,19 +11,77 @@
 # hlsearch on (H) or off (h):
 ~h
 # 最後の 検索パターン:
-~MSle0~/install
+~Msle0~/\<f\>
 
 # コマンドライン 項目の履歴 (新しいものから古いものへ):
+:wq
+|2,0,1491247106,,"wq"
 :q
-|2,0,1491081050,,"q"
+|2,0,1491247105,,"q"
+:!./case.sh thfy
+|2,0,1491246963,,"!./case.sh thfy"
+:w
+|2,0,1491246960,,"w"
+:!./case.sh
+|2,0,1491246828,,"!./case.sh"
+:1r hello.sh
+|2,0,1491246643,,"1r hello.sh"
 :e
-|2,0,1491080745,,"e"
+|2,0,1491246403,,"e"
+:!./if.sh
+|2,0,1491246211,,"!./if.sh"
+:!ls
+|2,0,1491245841,,"!ls"
+:!./whosh.sh
+|2,0,1491106011,,"!./whosh.sh"
+:!echo ~
+|2,0,1491105535,,"!echo ~"
+:!$BASH
+|2,0,1491105516,,"!$BASH"
+:w!
+|2,0,1491104231,,"w!"
+:1,3r hello.sh
+|2,0,1491103598,,"1,3r hello.sh"
+:!pwd
+|2,0,1491100829,,"!pwd"
+:!./printdate.sh
+|2,0,1491098651,,"!./printdate.sh"
+:!./hello.awk
+|2,0,1491098407,,"!./hello.awk"
+:help indent
+|2,0,1491098300,,"help indent"
+:!./hello.sh
+|2,0,1491097752,,"!./hello.sh"
+:!hello.sh
+|2,0,1491097746,,"!hello.sh"
+:!hello.awk
+|2,0,1491097739,,"!hello.awk"
+:!ls /bin/a*
+|2,0,1491097724,,"!ls /bin/a*"
+:!echo $BASH
+|2,0,1491096728,,"!echo $BASH"
+:echo $BASH
+|2,0,1491096714,,"echo $BASH"
+:q!
+|2,0,1491096254,,"q!"
+:!echo $vimrc
+|2,0,1491096249,,"!echo $vimrc"
+:!echo $VIMR
+|2,0,1491096242,,"!echo $VIMR"
+:!echo $VIMRC
+|2,0,1491096237,,"!echo $VIMRC"
+:echo $VIMRC
+|2,0,1491096207,,"echo $VIMRC"
+:.q
+|2,0,1491096000,,".q"
+:!echo $VIM
+|2,0,1491095987,,"!echo $VIM"
+:!$VIM
+|2,0,1491095973,,"!$VIM"
+:!echo $vim
+|2,0,1491095238,,"!echo $vim"
 :echo $VIM
 |2,0,1491005595,,"echo $VIM"
-:q!
-|2,0,1491005696,,"q!"
-:wq
-|2,0,1491005680,,"wq"
 ::4r ./hello.sh
 |2,0,1491002435,,":4r ./hello.sh"
 ::2r ./hello.sh
@@ -50,12 +108,8 @@
 |2,0,1491001982,,"help range"
 :3,5r hello.sh
 |2,0,1491001978,,"3,5r hello.sh"
-:1,3r hello.sh
-|2,0,1491001967,,"1,3r hello.sh"
 :6,8r hello.sh
 |2,0,1491001959,,"6,8r hello.sh"
-:1r hello.sh
-|2,0,1491001945,,"1r hello.sh"
 :.,.+11110
 |2,0,1491005415,,".,.+11110"
 :help vimrc
@@ -70,6 +124,18 @@
 |2,0,0,,"a!"
 
 # 検索文字列 項目の履歴 (新しいものから古いものへ):
+?/bin/bash echo This is print date printf "`$BASH`\n Hello, world"i#!/bin/bash echo This is print date printf "`$BASH`\n Hello, world"
+|2,1,1491245026,47,"bin/bash echo This is print date printf \"`$BASH`\\n Hello, world\"i#!/bin/bash echo This is print date printf \"`$BASH`\\n Hello, world\""
+?/c/Users/U1and0/Dropbox/Program/.cache/ctrlp/mru/cache.txt
+|2,1,1491105744,47,"c/Users/U1and0/Dropbox/Program/.cache/ctrlp/mru/cache.txt"
+? \<f\>
+|2,1,1491105541,,"\\<f\\>"
+?/grep
+|2,1,1491100232,47,"grep"
+?/ui
+|2,1,1491098263,47,"ui"
+? \<この\>
+|2,1,1491096244,,"\\<この\\>"
 ?/install
 |2,1,1491081018,47,"install"
 ? \<s\>
@@ -78,8 +144,6 @@
 |2,1,1491005546,47,"s:path"
 ?/set
 |2,1,1491005339,47,"set"
-?/grep
-|2,1,1491005330,47,"grep"
 ? \<set\>
 |2,1,1491004285,,"\\<set\\>"
 
@@ -94,250 +158,456 @@
 	
 |3,0,0,1,1,0,0,""
 ""1	LINE	0
-	splitpkg_overrides=('pkgdesc' 'arch' 'url' 'license' 'groups' 'depends'
-	                    'optdepends' 'provides' 'conflicts' 'replaces' 'backup'
-	                    'options' 'install' 'changelog')
-	readonly -a build_options splitpkg_overrides
-	
-|3,1,1,1,5,0,1491080728,"splitpkg_overrides=('pkgdesc' 'arch' 'url' 'license' 'groups' 'depends'","                    'optdepends' 'provides' 'conflicts' 'replaces' 'backup'","                    'options' 'install' 'changelog')","readonly -a build_options splitpkg_overrides",""
+	set -xv
+|3,1,1,1,1,0,1491246975,"set -xv"
 "2	LINE	0
-	set nu
-|3,0,2,1,1,0,1491004874,"set nu"
+	# This is a Hello world 
+	echo Hello world!
+	echo
+	echo This is my direcroties.
+	ls -Fa
+	echo
+	echo This is my script
+	cat $0 
+	
+|3,0,2,1,9,0,1491246650,"# This is a Hello world ","echo Hello world!","echo","echo This is my direcroties.","ls -Fa","echo","echo This is my script","cat $0 ",""
 "3	LINE	0
-	set number
-|3,0,3,1,1,0,1491004819,"set number"
+	
+|3,0,3,1,1,0,1491246648,""
 "4	LINE	0
-	set nu
-|3,0,4,1,1,0,1491004702,"set nu"
+	
+|3,0,4,1,1,0,1491246000,""
+"5	LINE	0
+	# This is a Hello world 
+	echo Hello world!
+	echo
+	echo This is my direcroties.
+	ls -Fa
+	echo
+	echo This is my script
+	cat $0 
+	
+|3,0,5,1,9,0,1491245541,"# This is a Hello world ","echo Hello world!","echo","echo This is my direcroties.","ls -Fa","echo","echo This is my script","cat $0 ",""
+"6	LINE	0
+	echo `pwd`
+|3,0,6,1,1,0,1491105772,"echo `pwd`"
+"7	LINE	0
+	echo search $x
+|3,0,7,1,1,0,1491105371,"echo search $x"
+"8	LINE	0
+	:/c/Users/U1and0/Dropbox/Program/_vimrc /c/Users/U1and0/Dropbox/Program/p
+|3,0,8,1,1,0,1491105187,":/c/Users/U1and0/Dropbox/Program/_vimrc /c/Users/U1and0/Dropbox/Program/p"
+"9	LINE	0
+	# ユーザ表d
+|3,0,9,1,1,0,1491103690,"# ユーザ表d"
 "-	CHAR	0
-		
-|3,0,36,0,1,0,1491079746,"	"
+	大きッジ、
+|3,0,36,0,1,0,1491246417,"大きッジ、"
 
 # ファイルマーク:
-'0  1650  5  /bin/makepkg
-|4,48,1650,5,1491081050,"/bin/makepkg"
-'1  24  47  /home/aur/info-ja-gnu-coreutils/PKGBUILD
-|4,49,24,47,1491080108,"/home/aur/info-ja-gnu-coreutils/PKGBUILD"
-'2  225  1  /bin/makepkg
-|4,50,225,1,1491079801,"/bin/makepkg"
-'3  225  1  /bin/makepkg
-|4,51,225,1,1491079801,"/bin/makepkg"
-'4  61  40  ~/_vimrc
-|4,52,61,40,1491005812,"~/_vimrc"
-'5  4  23  ~/sh/ifelse.sh
-|4,53,4,23,1491005696,"~/sh/ifelse.sh"
-'6  1  0  ~/_vimrc
-|4,54,1,0,1491005504,"~/_vimrc"
-'7  1  0  ~/_vimrc
-|4,55,1,0,1491005504,"~/_vimrc"
-'8  12  64  ~/msys64/etc/skel/.vimrc
-|4,56,12,64,1491005427,"~/msys64/etc/skel/.vimrc"
-'9  2  0  ~/Cmder132/vendor/git-for-windows/etc/vimrc
-|4,57,2,0,1491004878,"~/Cmder132/vendor/git-for-windows/etc/vimrc"
+'0  15  0  ~/sh/case.sh
+|4,48,15,0,1491247106,"~/sh/case.sh"
+'1  4  0  ~/sh/case.sh
+|4,49,4,0,1491246980,"~/sh/case.sh"
+'2  4  0  ~/sh/case.sh
+|4,50,4,0,1491246980,"~/sh/case.sh"
+'3  5  6  ~/sh/case.sh
+|4,51,5,6,1491246867,"~/sh/case.sh"
+'4  4  6  ~/sh/case.sh
+|4,52,4,6,1491246867,"~/sh/case.sh"
+'5  5  6  ~/sh/case.sh
+|4,53,5,6,1491246867,"~/sh/case.sh"
+'6  4  6  ~/sh/case.sh
+|4,54,4,6,1491246867,"~/sh/case.sh"
+'7  9  67  ~/sh/if.sh
+|4,55,9,67,1491246533,"~/sh/if.sh"
+'8  4  11  ~/sh/if.sh
+|4,56,4,11,1491246461,"~/sh/if.sh"
+'9  4  11  ~/sh/if.sh
+|4,57,4,11,1491246461,"~/sh/if.sh"
 
 # ジャンプリスト (新しいものが先):
--'  1650  5  /bin/makepkg
-|4,39,1650,5,1491081050,"/bin/makepkg"
--'  1649  67  /bin/makepkg
-|4,39,1649,67,1491081047,"/bin/makepkg"
--'  1627  4  /bin/makepkg
-|4,39,1627,4,1491081047,"/bin/makepkg"
--'  1626  58  /bin/makepkg
-|4,39,1626,58,1491081047,"/bin/makepkg"
--'  1509  18  /bin/makepkg
-|4,39,1509,18,1491081046,"/bin/makepkg"
--'  1508  14  /bin/makepkg
-|4,39,1508,14,1491081046,"/bin/makepkg"
--'  1507  7  /bin/makepkg
-|4,39,1507,7,1491081045,"/bin/makepkg"
--'  1506  13  /bin/makepkg
-|4,39,1506,13,1491081045,"/bin/makepkg"
--'  1505  35  /bin/makepkg
-|4,39,1505,35,1491081044,"/bin/makepkg"
--'  1447  32  /bin/makepkg
-|4,39,1447,32,1491081043,"/bin/makepkg"
--'  1423  0  /bin/makepkg
-|4,39,1423,0,1491081041,"/bin/makepkg"
--'  1360  23  /bin/makepkg
-|4,39,1360,23,1491081040,"/bin/makepkg"
--'  1307  60  /bin/makepkg
-|4,39,1307,60,1491081039,"/bin/makepkg"
--'  1215  34  /bin/makepkg
-|4,39,1215,34,1491081038,"/bin/makepkg"
--'  1214  23  /bin/makepkg
-|4,39,1214,23,1491081038,"/bin/makepkg"
--'  1193  9  /bin/makepkg
-|4,39,1193,9,1491081037,"/bin/makepkg"
--'  1095  33  /bin/makepkg
-|4,39,1095,33,1491081036,"/bin/makepkg"
--'  1083  53  /bin/makepkg
-|4,39,1083,53,1491081035,"/bin/makepkg"
--'  353  39  /bin/makepkg
-|4,39,353,39,1491081034,"/bin/makepkg"
--'  350  15  /bin/makepkg
-|4,39,350,15,1491081033,"/bin/makepkg"
--'  339  39  /bin/makepkg
-|4,39,339,39,1491081031,"/bin/makepkg"
--'  336  16  /bin/makepkg
-|4,39,336,16,1491081030,"/bin/makepkg"
--'  335  48  /bin/makepkg
-|4,39,335,48,1491081029,"/bin/makepkg"
--'  292  36  /bin/makepkg
-|4,39,292,36,1491081027,"/bin/makepkg"
--'  288  4  /bin/makepkg
-|4,39,288,4,1491081026,"/bin/makepkg"
--'  54  31  /bin/makepkg
-|4,39,54,31,1491081023,"/bin/makepkg"
--'  29  38  /bin/makepkg
-|4,39,29,38,1491081019,"/bin/makepkg"
--'  1  0  /bin/makepkg
-|4,39,1,0,1491081018,"/bin/makepkg"
--'  600  3  /bin/makepkg
-|4,39,600,3,1491080972,"/bin/makepkg"
--'  81  0  /bin/makepkg
-|4,39,81,0,1491080749,"/bin/makepkg"
--'  57  0  /bin/makepkg
-|4,39,57,0,1491080730,"/bin/makepkg"
--'  25  0  /bin/makepkg
-|4,39,25,0,1491080709,"/bin/makepkg"
--'  225  1  /bin/makepkg
-|4,39,225,1,1491080709,"/bin/makepkg"
--'  24  47  /home/aur/info-ja-gnu-coreutils/PKGBUILD
-|4,39,24,47,1491080108,"/home/aur/info-ja-gnu-coreutils/PKGBUILD"
--'  24  47  /home/aur/info-ja-gnu-coreutils/PKGBUILD
-|4,39,24,47,1491080108,"/home/aur/info-ja-gnu-coreutils/PKGBUILD"
--'  25  0  /home/aur/info-ja-gnu-coreutils/PKGBUILD
-|4,39,25,0,1491080057,"/home/aur/info-ja-gnu-coreutils/PKGBUILD"
--'  1  0  /home/aur/info-ja-gnu-coreutils/PKGBUILD
-|4,39,1,0,1491080057,"/home/aur/info-ja-gnu-coreutils/PKGBUILD"
--'  25  0  /home/aur/info-ja-gnu-coreutils/PKGBUILD
-|4,39,25,0,1491080057,"/home/aur/info-ja-gnu-coreutils/PKGBUILD"
--'  1  0  /home/aur/info-ja-gnu-coreutils/PKGBUILD
-|4,39,1,0,1491080057,"/home/aur/info-ja-gnu-coreutils/PKGBUILD"
--'  225  1  /bin/makepkg
-|4,39,225,1,1491079801,"/bin/makepkg"
--'  225  1  /bin/makepkg
-|4,39,225,1,1491079801,"/bin/makepkg"
--'  2391  0  /bin/makepkg
-|4,39,2391,0,1491079790,"/bin/makepkg"
--'  2391  0  /bin/makepkg
-|4,39,2391,0,1491079790,"/bin/makepkg"
--'  2391  0  /bin/makepkg
-|4,39,2391,0,1491079790,"/bin/makepkg"
--'  1  0  /bin/makepkg
-|4,39,1,0,1491079767,"/bin/makepkg"
--'  1  0  /bin/makepkg
-|4,39,1,0,1491079767,"/bin/makepkg"
--'  825  1  /bin/makepkg
-|4,39,825,1,1491079761,"/bin/makepkg"
--'  825  1  /bin/makepkg
-|4,39,825,1,1491079761,"/bin/makepkg"
--'  825  1  /bin/makepkg
-|4,39,825,1,1491079761,"/bin/makepkg"
--'  25  0  /bin/makepkg
-|4,39,25,0,1491079645,"/bin/makepkg"
--'  25  0  /bin/makepkg
-|4,39,25,0,1491079645,"/bin/makepkg"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  61  40  ~/_vimrc
-|4,39,61,40,1491005812,"~/_vimrc"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  4  23  ~/sh/ifelse.sh
-|4,39,4,23,1491005696,"~/sh/ifelse.sh"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  60  37  ~/_vimrc
-|4,39,60,37,1491005578,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  59  4  ~/_vimrc
-|4,39,59,4,1491005555,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  64  6  ~/_vimrc
-|4,39,64,6,1491005554,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005546,"~/_vimrc"
--'  1  0  ~/_vimrc
-|4,39,1,0,1491005504,"~/_vimrc"
+-'  15  0  ~/sh/case.sh
+|4,39,15,0,1491247106,"~/sh/case.sh"
+-'  4  0  ~/sh/case.sh
+|4,39,4,0,1491247083,"~/sh/case.sh"
+-'  4  0  ~/sh/case.sh
+|4,39,4,0,1491246980,"~/sh/case.sh"
+-'  6  0  ~/sh/case.sh
+|4,39,6,0,1491246977,"~/sh/case.sh"
+-'  6  0  ~/sh/case.sh
+|4,39,6,0,1491246977,"~/sh/case.sh"
+-'  5  6  ~/sh/case.sh
+|4,39,5,6,1491246909,"~/sh/case.sh"
+-'  5  6  ~/sh/case.sh
+|4,39,5,6,1491246909,"~/sh/case.sh"
+-'  4  6  ~/sh/case.sh
+|4,39,4,6,1491246867,"~/sh/case.sh"
+-'  6  0  ~/sh/case.sh
+|4,39,6,0,1491246834,"~/sh/case.sh"
+-'  3  0  ~/sh/case.sh
+|4,39,3,0,1491246650,"~/sh/case.sh"
+-'  3  0  ~/sh/case.sh
+|4,39,3,0,1491246650,"~/sh/case.sh"
+-'  3  0  ~/sh/case.sh
+|4,39,3,0,1491246650,"~/sh/case.sh"
+-'  1  0  ~/sh/case.sh
+|4,39,1,0,1491246633,"~/sh/case.sh"
+-'  1  0  ~/sh/case.sh
+|4,39,1,0,1491246633,"~/sh/case.sh"
+-'  1  0  ~/sh/case.sh
+|4,39,1,0,1491246633,"~/sh/case.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  9  67  ~/sh/if.sh
+|4,39,9,67,1491246533,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246496,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  4  11  ~/sh/if.sh
+|4,39,4,11,1491246461,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  8  70  ~/sh/if.sh
+|4,39,8,70,1491246441,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  70  ~/sh/if.sh
+|4,39,7,70,1491246439,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  13  ~/sh/if.sh
+|4,39,7,13,1491246419,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  7  40  ~/sh/if.sh
+|4,39,7,40,1491246405,"~/sh/if.sh"
+-'  10  23  ~/sh/if.sh
+|4,39,10,23,1491246356,"~/sh/if.sh"
+-'  10  23  ~/sh/if.sh
+|4,39,10,23,1491246356,"~/sh/if.sh"
+-'  9  23  ~/sh/if.sh
+|4,39,9,23,1491246356,"~/sh/if.sh"
+-'  9  23  ~/sh/if.sh
+|4,39,9,23,1491246356,"~/sh/if.sh"
+-'  9  23  ~/sh/if.sh
+|4,39,9,23,1491246356,"~/sh/if.sh"
+-'  10  23  ~/sh/if.sh
+|4,39,10,23,1491246356,"~/sh/if.sh"
+-'  10  23  ~/sh/if.sh
+|4,39,10,23,1491246356,"~/sh/if.sh"
+-'  9  23  ~/sh/if.sh
+|4,39,9,23,1491246356,"~/sh/if.sh"
+-'  9  23  ~/sh/if.sh
+|4,39,9,23,1491246356,"~/sh/if.sh"
+-'  9  23  ~/sh/if.sh
+|4,39,9,23,1491246356,"~/sh/if.sh"
+-'  10  23  ~/sh/if.sh
+|4,39,10,23,1491246356,"~/sh/if.sh"
+-'  10  23  ~/sh/if.sh
+|4,39,10,23,1491246356,"~/sh/if.sh"
+-'  9  23  ~/sh/if.sh
+|4,39,9,23,1491246356,"~/sh/if.sh"
 
 # ファイル内マークの履歴 (新しいものから古いもの):
+
+> ~/sh/case.sh
+	*	1491247105	0
+	"	15	0
+	^	4	0
+	.	14	0
+	+	1	0
+	+	3	32
+	+	5	6
+	+	3	33
+	+	2	26
+	+	5	0
+	+	5	12
+	+	7	50
+	+	10	50
+	+	11	2
+	+	8	1
+	+	6	0
+	+	5	6
+	+	13	54
+	+	15	3
+	+	5	0
+	+	6	0
+	+	4	0
+	+	8	0
+	+	11	0
+	+	14	0
+
+> ~/sh/if.sh
+	*	1491246530	0
+	"	9	67
+	^	9	70
+	.	9	67
+	+	1	0
+	+	3	0
+	+	5	14
+	+	9	12
+	+	6	0
+	+	5	0
+	+	6	3
+	+	9	31
+	+	10	50
+	+	12	38
+	+	13	1
+	+	9	27
+	+	1	0
+	+	2	41
+	+	9	18
+	+	10	8
+	+	12	28
+	+	10	23
+	+	8	13
+	+	8	70
+	+	4	11
+	+	9	67
+
+> ~/.bash_aliases
+	*	1491245242	0
+	"	43	33
+	^	43	34
+	.	43	33
+	+	43	36
+	+	9	0
+	+	44	0
+	+	43	33
+
+> ~/sh/printdate.sh
+	*	1491245079	0
+	"	3	11
+	^	3	0
+	.	4	0
+	+	2	0
+	+	3	7
+	+	2	34
+	+	1	42
+	+	1	0
+	+	1	18
+	+	1	11
+	+	2	30
+	+	3	7
+	+	3	6
+	+	4	0
+
+> ~/sh/kotoriotoko/BIN/twtl.sh
+	*	1491112923	0
+	"	1	0
+
+> ~/sh/whosh.sh
+	*	1491106036	0
+	"	10	3
+	^	10	4
+	.	10	4
+	+	1	0
+	+	2	0
+	+	1	5
+	+	2	8
+	+	4	2
+	+	3	2
+	+	6	10
+	+	7	6
+	+	10	10
+	+	6	5
+	+	7	12
+	+	10	8
+	+	6	8
+	+	10	45
+	+	11	0
+	+	10	58
+	+	11	0
+	+	7	73
+	+	7	96
+	+	7	4
+	+	7	0
+	+	10	116
+	+	10	20
+	+	10	0
+	+	7	0
+	+	8	27
+	+	10	1
+	+	8	19
+	+	10	24
+	+	7	8
+	+	7	9
+	+	7	0
+	+	10	20
+	+	8	19
+	+	10	48
+	+	10	46
+	+	9	18
+	+	8	30
+	+	9	0
+	+	9	31
+	+	10	4
+
+> ~/wherei.sh
+	*	1491100838	0
+	"	1	0
+
+> ~/sh/hello.awk
+	*	1491098471	0
+	"	2	27
+	^	2	28
+	.	2	27
+	+	5	20
+	+	1	5
+	+	4	5
+	+	5	0
+	+	6	0
+	+	2	27
+
+> /usr/share/vim/vim80/doc/eval.txt
+	*	1491098300	0
+	"	4927	7
+
+> ~/.viminfo
+	*	1491096251	0
+	"	7	2
+	^	90	1
+	.	6	0
+	+	8	0
+	+	7	0
+	+	6	0
+
+> /etc/skel/.vimrc
+	*	1491096185	0
+	"	33	0
+	.	33	0
+	+	33	5
+	+	33	0
+
+> /c/ProgramData/chocolatey/lib/chocolatey/.chocolateyPending
+	*	1491088899	0
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/.chocolateyPending
+	*	1491088312	0
+	"	1	0
 
 > /bin/makepkg
 	*	1491081047	0
@@ -399,15 +669,6 @@
 > ~/vim:
 	*	1491004598	0
 	"	1	0
-
-> ~/.viminfo
-	*	1491004499	0
-	"	1	0
-	^	90	1
-	.	6	0
-	+	8	0
-	+	7	0
-	+	6	0
 
 > ~/.bashrc
 	*	1491004460	0
