@@ -11,17 +11,63 @@
 # hlsearch on (H) or off (h):
 ~h
 # 最後の 検索パターン:
-~Msle0~/\<f\>
+~MSle0~/open
 
 # コマンドライン 項目の履歴 (新しいものから古いものへ):
 :wq
-|2,0,1491247106,,"wq"
+|2,0,1491457030,,"wq"
+:q!
+|2,0,1491456133,,"q!"
 :q
-|2,0,1491247105,,"q"
+|2,0,1491454093,,"q"
+:w
+|2,0,1491453763,,"w"
+:q:q
+|2,0,1491416312,,"q:q"
+:r !tail +3 ipython_log.py
+|2,0,1491416027,,"r !tail +3 ipython_log.py"
+:o basechart.py
+|2,0,1491414712,,"o basechart.py"
+:help open
+|2,0,1491414679,,"help open"
+:help
+|2,0,1491414646,,"help"
+::wq
+|2,0,1491413524,,":wq"
+:!./extadd.sh gh asa fer 
+|2,0,1491333572,,"!./extadd.sh gh asa fer "
+:!./extadd.sh g a f 
+|2,0,1491333551,,"!./extadd.sh g a f "
+:!./extadd g a f 
+|2,0,1491333497,,"!./extadd g a f "
+:!./sortarg.sh -xv g a f 
+|2,0,1491333446,,"!./sortarg.sh -xv g a f "
+:!bash -x ./sortarg.sh -xv g a f 
+|2,0,1491333068,,"!bash -x ./sortarg.sh -xv g a f "
+:w; !./sortarg.sh -xv g a f 
+|2,0,1491332920,,"w; !./sortarg.sh -xv g a f "
+:w !bash -xv ./sortarg.sh g a f 
+|2,0,1491332883,,"w !bash -xv ./sortarg.sh g a f "
+:w !./sortarg.sh -xv g a f 
+|2,0,1491332864,,"w !./sortarg.sh -xv g a f "
+:w !./sortarg.sh g a f -xv
+|2,0,1491332859,,"w !./sortarg.sh g a f -xv"
+:w !./sortarg.sh g a f
+|2,0,1491332827,,"w !./sortarg.sh g a f"
+:w !./sortarg.sh
+|2,0,1491332794,,"w !./sortarg.sh"
+:!./sortarg.sh h a g
+|2,0,1491331900,,"!./sortarg.sh h a g"
+:w !./sortarg.sh h a g
+|2,0,1491331894,,"w !./sortarg.sh h a g"
+:w!./sortarg.sh h a g
+|2,0,1491331889,,"w!./sortarg.sh h a g"
+:./
+|2,0,1491331800,,"./"
+:r hello.sh
+|2,0,1491331742,,"r hello.sh"
 :!./case.sh thfy
 |2,0,1491246963,,"!./case.sh thfy"
-:w
-|2,0,1491246960,,"w"
 :!./case.sh
 |2,0,1491246828,,"!./case.sh"
 :1r hello.sh
@@ -62,8 +108,6 @@
 |2,0,1491096728,,"!echo $BASH"
 :echo $BASH
 |2,0,1491096714,,"echo $BASH"
-:q!
-|2,0,1491096254,,"q!"
 :!echo $vimrc
 |2,0,1491096249,,"!echo $vimrc"
 :!echo $VIMR
@@ -124,6 +168,12 @@
 |2,0,0,,"a!"
 
 # 検索文字列 項目の履歴 (新しいものから古いものへ):
+?/open
+|2,1,1491414667,47,"open"
+?/file
+|2,1,1491414630,47,"file"
+? \<n\>
+|2,1,1491333531,,"\\<n\\>"
 ?/bin/bash echo This is print date printf "`$BASH`\n Hello, world"i#!/bin/bash echo This is print date printf "`$BASH`\n Hello, world"
 |2,1,1491245026,47,"bin/bash echo This is print date printf \"`$BASH`\\n Hello, world\"i#!/bin/bash echo This is print date printf \"`$BASH`\\n Hello, world\""
 ?/c/Users/U1and0/Dropbox/Program/.cache/ctrlp/mru/cache.txt
@@ -155,280 +205,396 @@
 
 # レジスタ:
 "0	LINE	0
-	
-|3,0,0,1,1,0,0,""
+	        ```
+|3,0,0,1,1,0,1491416058,"        ```"
 ""1	LINE	0
-	set -xv
-|3,1,1,1,1,0,1491246975,"set -xv"
-"2	LINE	0
-	# This is a Hello world 
-	echo Hello world!
-	echo
-	echo This is my direcroties.
-	ls -Fa
-	echo
-	echo This is my script
-	cat $0 
-	
-|3,0,2,1,9,0,1491246650,"# This is a Hello world ","echo Hello world!","echo","echo This is my direcroties.","ls -Fa","echo","echo This is my script","cat $0 ",""
+	import stockstats as ss
+|3,1,1,1,1,0,1491453760,"import stockstats as ss"
+"2	CHAR	0
+	 basechart as B
+	x = B.Base(df)
+	x.plot()
+	x.add('close_5_sma')
+	x.plot()
+|3,0,2,0,5,0,1491453644," basechart as B","x = B.Base(df)","x.plot()","x.add('close_5_sma')","x.plot()"
 "3	LINE	0
-	
-|3,0,3,1,1,0,1491246648,""
+	x.aaa('close_5_sma')
+|3,0,3,1,1,0,1491453623,"x.aaa('close_5_sma')"
 "4	LINE	0
 	
-|3,0,4,1,1,0,1491246000,""
+|3,0,4,1,1,0,1491416275,""
 "5	LINE	0
-	# This is a Hello world 
-	echo Hello world!
-	echo
-	echo This is my direcroties.
-	ls -Fa
-	echo
-	echo This is my script
-	cat $0 
+	        ximport stockstats as ss
+|3,0,5,1,1,0,1491416274,"        ximport stockstats as ss"
+"6	CHAR	0
+	a
+	        df = randomwalk(10000, freq='T').resample('H').ohlc(); df
+|3,0,6,0,2,0,1491416203,"a","        df = randomwalk(10000, freq='T').resample('H').ohlc(); df"
+"7	CHAR	0
+	# Set sample data
 	
-|3,0,5,1,9,0,1491245541,"# This is a Hello world ","echo Hello world!","echo","echo This is my direcroties.","ls -Fa","echo","echo This is my script","cat $0 ",""
-"6	LINE	0
-	echo `pwd`
-|3,0,6,1,1,0,1491105772,"echo `pwd`"
-"7	LINE	0
-	echo search $x
-|3,0,7,1,1,0,1491105371,"echo search $x"
+|3,0,7,0,2,0,1491416192,"# Set sample data",""
 "8	LINE	0
-	:/c/Users/U1and0/Dropbox/Program/_vimrc /c/Users/U1and0/Dropbox/Program/p
-|3,0,8,1,1,0,1491105187,":/c/Users/U1and0/Dropbox/Program/_vimrc /c/Users/U1and0/Dropbox/Program/p"
+	        # random OHLC made END
+|3,0,8,1,1,0,1491416112,"        # random OHLC made END"
 "9	LINE	0
-	# ユーザ表d
-|3,0,9,1,1,0,1491103690,"# ユーザ表d"
+	
+|3,0,9,1,1,0,1491416067,""
+"k	CHAR	0
+	kjj
+|3,0,20,0,1,0,1491414793,"kjj"
+"q	CHAR	0
+	�kb�kb�kb
+|3,0,26,0,1,0,1491414673,"�kb�kb�kb"
 "-	CHAR	0
-	大きッジ、
-|3,0,36,0,1,0,1491246417,"大きッジ、"
+	B
+|3,0,36,0,1,0,1491453663,"B"
 
 # ファイルマーク:
-'0  15  0  ~/sh/case.sh
-|4,48,15,0,1491247106,"~/sh/case.sh"
-'1  4  0  ~/sh/case.sh
-|4,49,4,0,1491246980,"~/sh/case.sh"
-'2  4  0  ~/sh/case.sh
-|4,50,4,0,1491246980,"~/sh/case.sh"
-'3  5  6  ~/sh/case.sh
-|4,51,5,6,1491246867,"~/sh/case.sh"
-'4  4  6  ~/sh/case.sh
-|4,52,4,6,1491246867,"~/sh/case.sh"
-'5  5  6  ~/sh/case.sh
-|4,53,5,6,1491246867,"~/sh/case.sh"
-'6  4  6  ~/sh/case.sh
-|4,54,4,6,1491246867,"~/sh/case.sh"
-'7  9  67  ~/sh/if.sh
-|4,55,9,67,1491246533,"~/sh/if.sh"
-'8  4  11  ~/sh/if.sh
-|4,56,4,11,1491246461,"~/sh/if.sh"
-'9  4  11  ~/sh/if.sh
-|4,57,4,11,1491246461,"~/sh/if.sh"
+'0  110  11  ~/.bash_aliases
+|4,48,110,11,1491457030,"~/.bash_aliases"
+'1  2  1  ~/python/fxpy/.gitignore
+|4,49,2,1,1491456162,"~/python/fxpy/.gitignore"
+'2  2  0  ~/python/fxpy/.gitignore
+|4,50,2,0,1491456133,"~/python/fxpy/.gitignore"
+'3  3  0  ~/python/fxpy/common/ipython_log.py
+|4,51,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+'4  95  0  ~/python/fxpy/common/basechart.py
+|4,52,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+'5  11  0  ~/python/fxpy/common/ipython_log.py
+|4,53,11,0,1491415885,"~/python/fxpy/common/ipython_log.py"
+'6  12  0  ~/python/fxpy/common/ipython_log.py
+|4,54,12,0,1491415885,"~/python/fxpy/common/ipython_log.py"
+'7  72  0  ~/python/fxpy/common/basechart.py
+|4,55,72,0,1491414441,"~/python/fxpy/common/basechart.py"
+'8  55  0  ~/python/fxpy/common/basechart.py
+|4,56,55,0,1491414441,"~/python/fxpy/common/basechart.py"
+'9  6  11  ~/python/fxpy/common/ipython_log.py
+|4,57,6,11,1491414378,"~/python/fxpy/common/ipython_log.py"
 
 # ジャンプリスト (新しいものが先):
--'  15  0  ~/sh/case.sh
-|4,39,15,0,1491247106,"~/sh/case.sh"
--'  4  0  ~/sh/case.sh
-|4,39,4,0,1491247083,"~/sh/case.sh"
--'  4  0  ~/sh/case.sh
-|4,39,4,0,1491246980,"~/sh/case.sh"
--'  6  0  ~/sh/case.sh
-|4,39,6,0,1491246977,"~/sh/case.sh"
--'  6  0  ~/sh/case.sh
-|4,39,6,0,1491246977,"~/sh/case.sh"
--'  5  6  ~/sh/case.sh
-|4,39,5,6,1491246909,"~/sh/case.sh"
--'  5  6  ~/sh/case.sh
-|4,39,5,6,1491246909,"~/sh/case.sh"
--'  4  6  ~/sh/case.sh
-|4,39,4,6,1491246867,"~/sh/case.sh"
--'  6  0  ~/sh/case.sh
-|4,39,6,0,1491246834,"~/sh/case.sh"
--'  3  0  ~/sh/case.sh
-|4,39,3,0,1491246650,"~/sh/case.sh"
--'  3  0  ~/sh/case.sh
-|4,39,3,0,1491246650,"~/sh/case.sh"
--'  3  0  ~/sh/case.sh
-|4,39,3,0,1491246650,"~/sh/case.sh"
--'  1  0  ~/sh/case.sh
-|4,39,1,0,1491246633,"~/sh/case.sh"
--'  1  0  ~/sh/case.sh
-|4,39,1,0,1491246633,"~/sh/case.sh"
--'  1  0  ~/sh/case.sh
-|4,39,1,0,1491246633,"~/sh/case.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  9  67  ~/sh/if.sh
-|4,39,9,67,1491246533,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246496,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  4  11  ~/sh/if.sh
-|4,39,4,11,1491246461,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  8  70  ~/sh/if.sh
-|4,39,8,70,1491246441,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  70  ~/sh/if.sh
-|4,39,7,70,1491246439,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  13  ~/sh/if.sh
-|4,39,7,13,1491246419,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  7  40  ~/sh/if.sh
-|4,39,7,40,1491246405,"~/sh/if.sh"
--'  10  23  ~/sh/if.sh
-|4,39,10,23,1491246356,"~/sh/if.sh"
--'  10  23  ~/sh/if.sh
-|4,39,10,23,1491246356,"~/sh/if.sh"
--'  9  23  ~/sh/if.sh
-|4,39,9,23,1491246356,"~/sh/if.sh"
--'  9  23  ~/sh/if.sh
-|4,39,9,23,1491246356,"~/sh/if.sh"
--'  9  23  ~/sh/if.sh
-|4,39,9,23,1491246356,"~/sh/if.sh"
--'  10  23  ~/sh/if.sh
-|4,39,10,23,1491246356,"~/sh/if.sh"
--'  10  23  ~/sh/if.sh
-|4,39,10,23,1491246356,"~/sh/if.sh"
--'  9  23  ~/sh/if.sh
-|4,39,9,23,1491246356,"~/sh/if.sh"
--'  9  23  ~/sh/if.sh
-|4,39,9,23,1491246356,"~/sh/if.sh"
--'  9  23  ~/sh/if.sh
-|4,39,9,23,1491246356,"~/sh/if.sh"
--'  10  23  ~/sh/if.sh
-|4,39,10,23,1491246356,"~/sh/if.sh"
--'  10  23  ~/sh/if.sh
-|4,39,10,23,1491246356,"~/sh/if.sh"
--'  9  23  ~/sh/if.sh
-|4,39,9,23,1491246356,"~/sh/if.sh"
+-'  110  11  ~/.bash_aliases
+|4,39,110,11,1491457030,"~/.bash_aliases"
+-'  107  0  ~/.bash_aliases
+|4,39,107,0,1491456995,"~/.bash_aliases"
+-'  43  33  ~/.bash_aliases
+|4,39,43,33,1491456982,"~/.bash_aliases"
+-'  2  1  ~/python/fxpy/.gitignore
+|4,39,2,1,1491456162,"~/python/fxpy/.gitignore"
+-'  2  1  ~/python/fxpy/.gitignore
+|4,39,2,1,1491456162,"~/python/fxpy/.gitignore"
+-'  3  0  ~/python/fxpy/.gitignore
+|4,39,3,0,1491456151,"~/python/fxpy/.gitignore"
+-'  3  0  ~/python/fxpy/.gitignore
+|4,39,3,0,1491456151,"~/python/fxpy/.gitignore"
+-'  1  0  ~/python/fxpy/.gitignore
+|4,39,1,0,1491456144,"~/python/fxpy/.gitignore"
+-'  1  0  ~/python/fxpy/.gitignore
+|4,39,1,0,1491456144,"~/python/fxpy/.gitignore"
+-'  2  0  ~/python/fxpy/.gitignore
+|4,39,2,0,1491456133,"~/python/fxpy/.gitignore"
+-'  2  0  ~/python/fxpy/.gitignore
+|4,39,2,0,1491456133,"~/python/fxpy/.gitignore"
+-'  1  0  ~/python/fxpy/.gitignore
+|4,39,1,0,1491456119,"~/python/fxpy/.gitignore"
+-'  1  0  ~/python/fxpy/.gitignore
+|4,39,1,0,1491456119,"~/python/fxpy/.gitignore"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  3  0  ~/python/fxpy/common/ipython_log.py
+|4,39,3,0,1491454093,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  9  7  ~/python/fxpy/common/ipython_log.py
+|4,39,9,7,1491453757,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  7  3  ~/python/fxpy/common/ipython_log.py
+|4,39,7,3,1491453667,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  6  5  ~/python/fxpy/common/ipython_log.py
+|4,39,6,5,1491453645,"~/python/fxpy/common/ipython_log.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  95  0  ~/python/fxpy/common/basechart.py
+|4,39,95,0,1491416314,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  51  8  ~/python/fxpy/common/basechart.py
+|4,39,51,8,1491416279,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  52  39  ~/python/fxpy/common/basechart.py
+|4,39,52,39,1491416218,"~/python/fxpy/common/basechart.py"
+-'  54  7  ~/python/fxpy/common/basechart.py
+|4,39,54,7,1491416196,"~/python/fxpy/common/basechart.py"
+-'  54  7  ~/python/fxpy/common/basechart.py
+|4,39,54,7,1491416196,"~/python/fxpy/common/basechart.py"
+-'  54  7  ~/python/fxpy/common/basechart.py
+|4,39,54,7,1491416196,"~/python/fxpy/common/basechart.py"
+-'  54  7  ~/python/fxpy/common/basechart.py
+|4,39,54,7,1491416196,"~/python/fxpy/common/basechart.py"
+-'  54  7  ~/python/fxpy/common/basechart.py
+|4,39,54,7,1491416196,"~/python/fxpy/common/basechart.py"
+-'  54  7  ~/python/fxpy/common/basechart.py
+|4,39,54,7,1491416196,"~/python/fxpy/common/basechart.py"
+-'  54  7  ~/python/fxpy/common/basechart.py
+|4,39,54,7,1491416196,"~/python/fxpy/common/basechart.py"
 
 # ファイル内マークの履歴 (新しいものから古いもの):
+
+> ~/.bash_aliases
+	*	1491457027	0
+	"	110	11
+	^	110	12
+	.	110	11
+	+	43	36
+	+	9	0
+	+	44	0
+	+	43	33
+	+	110	11
+
+> ~/python/fxpy/.gitignore
+	*	1491456159	0
+	"	2	1
+	^	2	2
+	.	2	1
+	+	2	0
+	+	3	0
+	+	2	1
+
+> ~/python/fxpy/common/ipython_log.py
+	*	1491454091	0
+	"	3	0
+	^	10	8
+	.	3	0
+	+	4	0
+	+	6	0
+	+	6	6
+	+	11	0
+	+	6	11
+	+	6	12
+	+	6	6
+	+	6	10
+	+	6	15
+	+	7	12
+	+	3	0
+	j	7	7
+
+> ~/python/fxpy/common/basechart.py
+	*	1491416313	0
+	"	95	0
+	.	51	0
+	+	80	0
+	+	50	0
+	+	51	0
+	+	50	10
+	+	64	0
+	+	65	0
+	+	52	48
+	+	55	0
+	+	54	8
+	+	61	19
+	+	57	24
+	+	60	0
+	+	56	0
+	+	52	43
+	+	52	59
+	+	52	0
+	+	51	24
+	+	52	0
+	+	51	24
+	+	51	0
+
+> /usr/share/vim/vim80/doc/vi_diff.txt
+	*	1491414694	0
+	"	30	18
+
+> /usr/share/vim/vim80/doc/help.txt
+	*	1491414673	0
+	"	77	0
+
+> ~/sh/extadd.sh
+	*	1491334000	0
+	"	6	0
+	.	6	0
+	+	3	63
+	+	3	66
+	+	5	19
+	+	9	16
+	+	5	13
+	+	3	0
+	+	5	17
+	+	9	18
+	+	5	18
+	+	9	0
+	+	6	0
+	+	5	8
+	+	6	0
+	+	5	0
+	+	4	14
+	+	6	0
+
+> ~/sh/sortarg.sh
+	*	1491333101	0
+	"	7	16
+	^	7	17
+	.	7	16
+	+	2	0
+	+	3	0
+	+	4	6
+	+	5	0
+	+	4	0
+	+	5	0
+	+	5	17
+	+	5	0
+	+	5	11
+	+	7	10
+	+	8	3
+	+	7	9
+	+	7	16
+
+> ~/sh/sortarg
+	*	1491331728	0
+	"	1	0
+
+> ~/sh/sort
+	*	1491331717	0
+	"	1	0
+	^	1	0
 
 > ~/sh/case.sh
 	*	1491247105	0
@@ -484,16 +650,6 @@
 	+	8	70
 	+	4	11
 	+	9	67
-
-> ~/.bash_aliases
-	*	1491245242	0
-	"	43	33
-	^	43	34
-	.	43	33
-	+	43	36
-	+	9	0
-	+	44	0
-	+	43	33
 
 > ~/sh/printdate.sh
 	*	1491245079	0

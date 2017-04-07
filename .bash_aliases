@@ -105,3 +105,6 @@ alias gb='git branch'
 alias gm='git merge'
 alias gt='git tag'
 alias grst-h='git reset --hard HEAD'
+
+# tweet
+alias tweet=" ~/sh/kotoriotoko/BIN/tweet.sh"
