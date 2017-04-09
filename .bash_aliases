@@ -107,4 +107,5 @@ alias gt='git tag'
 alias grst-h='git reset --hard HEAD'
 
 # tweet
-alias tweet=" ~/sh/kotoriotoko/BIN/tweet.sh"
+alias tweet="~/sh/kotoriotoko/BIN/tweet.sh"
+alias timeline="~/sh/get_tl.sh"
