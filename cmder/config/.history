@@ -6898,3 +6898,14 @@ choco install --force  PDFXchangeEditor
 choco upgrade all
 cinst pycharm
 exit
+choco upgrade all
+cinst pycharm
+cinst line
+less .rnd
+vim .gitignore 
+gs
+gd
+gac "@.bash_alias: get timeline shellscript"
+gpo
+gl
+exit
