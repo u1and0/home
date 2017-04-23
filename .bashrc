@@ -269,6 +269,12 @@ fi
 git_branch() {
   echo $(git branch --no-color 2>/dev/null | sed -ne "s/^\* \(.*\)$/\1/p")
 }
-PS1=' \[\033[36m\]\u\[\033[0m\]\[\033[32m\]\w\[\033[0m\]:\[\033[35m\]'
-PS1+='\n$(git_branch)\[\033[0m\] $ '
+# PS1=' \[\033[36m\]\u\[\033[0m\]\[\033[32m\]\w\[\033[0m\]:\[\033[0m\]$(__git_ps1)'
+# PS1+='\[\033[0m\] $ '
+PS1='$(__git_ps1)'
 export PS1
+
+set GIT_PS1_SHOWUPSTREAM="auto"
+set GIT_PS1_SHOWCOLORHINTS=true
+PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+export PROMPT_COMMAND
