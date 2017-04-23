@@ -225,7 +225,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 # export PS1='\W$(__git_ps1 " (%s)")\$'
 if [ -f "${HOME}/.git-prompt.sh" ]; then
   source "${HOME}/.git-prompt.sh"
-  echo '--Loading ~/.git-prompt_color.sh--'
+  echo '--Loading ~/.git-prompt.sh--'
 fi
 
 #if [ -f "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash" ]; then
@@ -269,6 +269,6 @@ fi
 git_branch() {
   echo $(git branch --no-color 2>/dev/null | sed -ne "s/^\* \(.*\)$/\1/p")
 }
-PS1='——\n\[\033[36m\]\u\[\033[0m\]\[\033[32m\]\w\[\033[0m\]:\[\033[35m\]'
-PS1+='$(git_branch)\[\033[0m\] $ '
+PS1=' \[\033[36m\]\u\[\033[0m\]\[\033[32m\]\w\[\033[0m\]:\[\033[35m\]'
+PS1+='\n$(git_branch)\[\033[0m\] $ '
 export PS1
