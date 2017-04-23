@@ -249,10 +249,11 @@ fi
 #   echo `date`出力したよ
 # }
 
-#   green="\[\033[32m\]"
-#   purple="\[\033[35m\]"
-#   yellow="\[\033[33m\]"
-#   color_off='\[\e[0m\]'
+# Color Settings
+# GREEN="\033[32m"
+# PURPLE="\033[35m"
+# YELLOW="\033[33m"
+# COLOR_OFF="\e[0m"
 
 #   PS1=$green'\u@\h '
 #   PS1+=$yellow'\w'
@@ -266,15 +267,19 @@ fi
   # export PS1="\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ "
 #fi
 
-git_branch() {
-  echo $(git branch --no-color 2>/dev/null | sed -ne "s/^\* \(.*\)$/\1/p")
-}
+# git_branch() {
+#   echo $(git branch --no-color 2>/dev/null | sed -ne "s/^\* \(.*\)$/\1/p")
+# }
 # PS1=' \[\033[36m\]\u\[\033[0m\]\[\033[32m\]\w\[\033[0m\]:\[\033[0m\]$(__git_ps1)'
 # PS1+='\[\033[0m\] $ '
-PS1='$(__git_ps1)'
-export PS1
+# PS1="\[$GREEN\]"
+# set GIT_PS1_SHOWCOLORHINTS=true
+# PS1="\u@\w"
+# PS1+=$(__git_ps1)
+# PS1+="\n\$ "
+# export PS1
 
-set GIT_PS1_SHOWUPSTREAM="auto"
-set GIT_PS1_SHOWCOLORHINTS=true
-PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
-export PROMPT_COMMAND
+
+if [ -f "${HOME}/.bash_prompt" ]; then
+  source "${HOME}/.bash_prompt"
+fi
