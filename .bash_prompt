@@ -29,9 +29,9 @@ BLUE="\[\033[1;34m\]"
 LIGHT_RED="\[\033[1;31m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
 WHITE="\[\033[1;37m\]"
- LIGHT_GRAY="\[\033[0;37m\]"
- COLOR_OCHRE="\[\033[38;5;95m\]"
- COLOR_NONE="\[\e[0m\]"
+LIGHT_GRAY="\[\033[1;30m\]"
+COLOR_OCHRE="\[\033[38;5;95m\]"
+COLOR_NONE="\[\e[0m\]"
 
 # Detect whether the current directory is a git repository.
 function is_git_repository {
@@ -84,7 +84,7 @@ function set_git_branch {
 # previous command.
 function set_prompt_symbol () {
   if test $1 -eq 0 ; then
-      PROMPT_SYMBOL="\$"
+      PROMPT_SYMBOL="${LIGHT_GRAY}\$${COLOR_NONE}"
   else
       PROMPT_SYMBOL="${LIGHT_RED}\$${COLOR_NONE}"
   fi
@@ -95,7 +95,7 @@ function set_virtualenv () {
   if test -z "$VIRTUAL_ENV" ; then
       PYTHON_VIRTUALENV=""
   else
-      PYTHON_VIRTUALENV="${BLUE}[`basename \"$VIRTUAL_ENV\"`]${COLOR_NONE} "
+      PYTHON_VIRTUALENV="${LIGHT_GREEN}[`basename \"$VIRTUAL_ENV\"`]${COLOR_NONE} "
   fi
 }
 
@@ -117,7 +117,7 @@ function set_bash_prompt () {
 
   # Set the bash prompt variable.
   PS1="
-${PYTHON_VIRTUALENV}${GREEN}\u@\h ${YELLOW}\w${COLOR_NONE} ${BRANCH}
+${PYTHON_VIRTUALENV}${BLUE}@\h ${GREEN}\w${COLOR_NONE} ${BRANCH}
 ${PROMPT_SYMBOL} "
 }
 

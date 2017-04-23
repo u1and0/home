@@ -191,6 +191,14 @@ fi
 # 
 # alias cd=cd_func
 
+
+# ---Bash Prompt Setting---
+if [ -f "${HOME}/.bash_prompt" ]; then
+  source "${HOME}/.bash_prompt"
+  echo '--Loading ~/.bash_prompt--'
+fi
+
+
 # -----------------------------
 # __LESS ENVPATH__
 # -g  検索したとき、ヒットした全ての文字列を反転するのではなく、現在カーソルがある行のみ反転する。
@@ -217,69 +225,3 @@ export LESS_TERMCAP_se=$'\E[0m'          # Ends standout-mode.
 export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
-
-# -----------------------------
-# __GIT SETTINGS__
-# indicate branch name at current terminal
-
-# export PS1='\W$(__git_ps1 " (%s)")\$'
-if [ -f "${HOME}/.git-prompt.sh" ]; then
-  source "${HOME}/.git-prompt.sh"
-  echo '--Loading ~/.git-prompt.sh--'
-fi
-
-#if [ -f "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash" ]; then
-#  source "${HOME}/msys64/usr/local/git/contrib/completion/git-prompt.sh"
-#  source "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash"
-#export GIT_PS1_SHOWDIRTYSTATE=true
-  #######################
-  # PS1="\[\033[32m\]"            # change to green
-  # PS1="$PS1""\u@\h"             # user@host<space>
-  # PS1="$PS1""\[\033[00m\]:"     # change to white & ":"
-  # PS1="$PS1""\[\033[33m\]"  # change to brownish yellow
-  # PS1="$PS1""\w"                # current working directory
-  # PS1="$PS1""\[\033[00m\]"      # change to red
-  # PS1="$PS1"`__git_ps1`           # branch state (bash function)
-  # PS1="$PS1""\[\033[35m\]"      # change to purple
-  # PS1="$PS1""\n\$ "             # new line & $
-  # PS1="$PS1""\[\033[00m\]"      # change to white
-  #######################
-
-# function teatime {
-#   echo `date`出力したよ
-# }
-
-# Color Settings
-# GREEN="\033[32m"
-# PURPLE="\033[35m"
-# YELLOW="\033[33m"
-# COLOR_OFF="\e[0m"
-
-#   PS1=$green'\u@\h '
-#   PS1+=$yellow'\w'
-#   PS1+=$color_off$(__git_ps1)
-#   # PS1+=$color_off$(__git_ps1 " (%s)")
-#   PS1+=$(teatime)
-#   PS1+=$purple'\n\$ '
-#   PS1+=$color_off
-#   export PS1=$PS1
-  #######################
-  # export PS1="\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ "
-#fi
-
-# git_branch() {
-#   echo $(git branch --no-color 2>/dev/null | sed -ne "s/^\* \(.*\)$/\1/p")
-# }
-# PS1=' \[\033[36m\]\u\[\033[0m\]\[\033[32m\]\w\[\033[0m\]:\[\033[0m\]$(__git_ps1)'
-# PS1+='\[\033[0m\] $ '
-# PS1="\[$GREEN\]"
-# set GIT_PS1_SHOWCOLORHINTS=true
-# PS1="\u@\w"
-# PS1+=$(__git_ps1)
-# PS1+="\n\$ "
-# export PS1
-
-
-if [ -f "${HOME}/.bash_prompt" ]; then
-  source "${HOME}/.bash_prompt"
-fi
