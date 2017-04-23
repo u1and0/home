@@ -52,6 +52,7 @@
 !/cmder/
 /cmder/*
 !/cmder/config/
+/cmder/config/.history
 !/cmder/vendor
 /cmder/vendor/*
 !/cmder/vendor/conemu-maximus5/
