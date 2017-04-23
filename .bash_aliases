@@ -30,6 +30,8 @@ alias df='df -h'
 alias du='du -h'
 alias du1='du -d1'
 
+# diff custom
+alias diff='diff --color'
 
 # find custom
 alias findx='find . -name'
