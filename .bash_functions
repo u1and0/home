@@ -13,7 +13,7 @@ function puninst()
 }
 
 # ANSI test
-test_ansi()
+ansi_test()
 {
 for x in {0..8}; do 
     for i in {30..37}; do 
