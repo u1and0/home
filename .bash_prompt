@@ -51,7 +51,7 @@ function set_git_branch {
   elif [[ ${git_status} =~ "Changes not staged for commit:" ]]; then
     state="${LIGHT_RED}"
   else
-    state="${$COLOR_OCHRE}"
+    state="${COLOR_OCHRE}"
   fi
 
   # Set arrow icon based on status against remote.
