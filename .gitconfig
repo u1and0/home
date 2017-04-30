@@ -21,3 +21,5 @@
 	autosquash = true
 [gui]
 	encoding = utf-8
+[alias]
+	sort = for-each-ref --sort=committerdate refs/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
