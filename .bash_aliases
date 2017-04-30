@@ -105,6 +105,7 @@ alias gd='git diff --color-words'
 alias gch='git checkout'
 alias gb='git branch'
 alias gm='git merge'
+alias gst='git stash'
 alias gt='git tag'
 alias grst-h='git reset --hard HEAD'
 

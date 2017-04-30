@@ -654,6 +654,7 @@ c.AliasManager.user_aliases = [
     ('gb', 'git branch'),
     ('gch', 'git checkout'),
     ('gm', 'git merge'),
+    ('gst', 'git stash'),
     ('gt', 'git tag'),
     ('grst-h', 'git reset --hard HEAD'),
 ]

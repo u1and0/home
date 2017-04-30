@@ -49,6 +49,7 @@ gd= git diff --color-words $*
 gch=git checkout $*
 gb=git branch $*
 gm=git merge $*
+gst=git stash $*
 gt=git tag $*
 grst-h=git reset --hard HEAD
 vi=vim $*  
