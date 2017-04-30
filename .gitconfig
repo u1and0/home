@@ -25,4 +25,11 @@
 	sort = for-each-ref --sort=committerdate refs/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'  # Display branch info
 	alias = config --get-regexp alias.*  # Display alias list
 	zip = !git archive --format=zip HEAD > `git symbolic-ref --short HEAD`.zip  # Archive HEAD as zip
+	aa = !git add .
+	an = !git add -n .
+	aundo = reset HEAD
+	ac = commit -am
+	c = commit -m
+	cundo = commit --amend
+	po = push origin
 
