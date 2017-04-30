@@ -669,10 +669,12 @@ c.InlineBackend.rc = {'font.family': 'IPAMincho',
                       'figure.edgecolor': (1, 1, 1, 1)}
 
 c.TerminalIPythonApp.extensions = [
-    'line_profiler_ext',
-    'memory_profiler_ext',
+    'line_profiler',
+    'memory_profiler',
+    'cython',
 ]
 c.InteractiveShellApp.extensions = [
-    'line_profiler_ext',
-    'memory_profiler_ext',
+    'line_profiler',
+    'memory_profiler',
+    'cython',
 ]
