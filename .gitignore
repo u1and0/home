@@ -36,6 +36,8 @@
 
 !/.ipython/
 /.ipython/*
+!/.ipython/extensions/
+/.ipython/extensions/*/
 !/.ipython/profile_default/
 /.ipython/profile_default/*/
 /.ipython/profile_default/history.sqlite*

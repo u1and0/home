@@ -618,18 +618,15 @@
 # c.StoreMagics.autorestore = False
 
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # User defined Aliases
-#------------------------------------------------------------------------------
-
+# ------------------------------------------------------------------------------
 c.AliasManager.user_aliases = [
     # shell command
     ('ls', 'ls  --show-control-chars -F --color'),
     ('ll', 'ls -lA'),
     ('la', 'ls -A'),
     ('grep', 'grep --color'),
-    ('grepx', 'grep --color -nriC'),
-    ('findx', 'find . -name'),
 
     # git
     ('g', 'git'),
@@ -661,9 +658,21 @@ c.AliasManager.user_aliases = [
     ('grst-h', 'git reset --hard HEAD'),
 ]
 
+# Always reload module when modify.
 c.InteractiveShellApp.exec_lines = ['%load_ext autoreload', '%autoreload 2']
+
+# Adjust white space of matplotlib plot
 c.InlineBackend.rc = {'font.family': 'IPAMincho',
                       'figure.facecolor': (1, 1, 1, 1),
                       'savefig.dpi': 72,
                       'figure.subplot.bottom': 0.125,
                       'figure.edgecolor': (1, 1, 1, 1)}
+
+c.TerminalIPythonApp.extensions = [
+    'line_profiler_ext',
+    'memory_profiler_ext',
+]
+c.InteractiveShellApp.extensions = [
+    'line_profiler_ext',
+    'memory_profiler_ext',
+]
