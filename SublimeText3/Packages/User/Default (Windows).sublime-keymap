@@ -69,7 +69,7 @@ Close work space as ["ctrl+k","ctrl+c"]
 	{ "keys": ["ctrl+e", "ctrl+f"], "command": "open_evernote_note", "args": {"by_searching": true}, "caption": "Evernote: Search Note" },
 	{ "keys": ["ctrl+e", "ctrl+s"], "command": "save_evernote_note"},
 	// , "context": [{"key": "evernote_note"}] }
-	{ "keys": ["ctrl+shift+0"], "command": "input_sequence"},
+	{ "keys": ["ctrl+shift+9"], "command": "input_sequence"},
 	{
 		"command": "anaconda_doc", "keys": ["alt+shift+d"], "context": [
 		{"key": "selector", "operator": "equal", "operand": "source.python"}
