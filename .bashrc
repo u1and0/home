@@ -211,7 +211,7 @@ fi
 # -x4 タブを 4 つのスペースで表現する。
 # -L  $LESSOPEN 環境変数を無効にする。
 # -N  行数
-export LESS='-MigSRWNx4'
+export LESS='-MigRWNx4'
  # -z-4'
 
 # man などの様々なコマンドがページャーとして less を使うようになります
