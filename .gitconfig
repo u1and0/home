@@ -35,6 +35,8 @@
 	c = commit -m
 	cundo = commit --amend
 	po = push origin
+	# ========diff========
+	difff = diff --word-diff
 	# ========branch========
 	b = branch
 	# ========log========
