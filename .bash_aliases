@@ -29,6 +29,9 @@ alias path='echo -e ${PATH//:/\\n}'
 alias df='df -h'
 alias du='du -h'
 alias du1='du -d1'
+function dut() {
+    du -s $* | sort -h
+}
 
 # diff custom
 alias diff='diff --color'
