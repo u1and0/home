@@ -37,3 +37,6 @@
 	po = push origin
 	# ========branch========
 	b = branch
+	# ========ENCODE ERROR========
+	 logs = log --encoding=sjis
+	shows = show --encoding=sjis
