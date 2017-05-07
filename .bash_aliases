@@ -106,7 +106,7 @@ alias gch='git checkout'
 alias gb='git branch'
 alias gm='git merge'
 alias gst='git stash'
-alias gt='git tag'
+alias gt='git tag -n'
 alias grst-h='git reset --hard HEAD'
 
 # tweet
