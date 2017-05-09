@@ -107,10 +107,10 @@ done
 
 #pecoでsublime-projectを開く(project managerを使用)
 function sublime-projects() {
-  subl_root='/path/to/Packages/User/Projects'
+  subl_root="~/../../../../Program Files/Sublime Text 3/sublime_text.exe"
   root_len=${#subl_root}+3
   # files=`(ls -l ~/Projects/sublime_projects | grep project | cut -d " " -f 10)`
-  files=`find ~/path/to/Packages/User/Projects -name "*sublime-project"`
+  files=`find ~/SublimeText3/Packages/User/Projects -name "*sublime-project"`
   if [[ -n "$files" ]]; then
     project=`echo $files | awk '{ name=substr($0,'${root_len}'); print substr(name,0,index(name,".sublime-project"))}'| peco`
     if [[ -n "$project" ]]; then
