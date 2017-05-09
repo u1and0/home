@@ -37,7 +37,7 @@ function matrix()
     echo -e "\e[1;40m" ; clear ; while :; do echo $LINES $COLUMNS $(( $RANDOM % $COLUMNS)) $(( $RANDOM % 72 )) ;sleep 0.05; done|gawk '{ letters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()"; c=$4; letter=substr(letters,c,1);a[$3]=0;for (x in a) {o=a[x];a[x]=a[x]+1; printf "\033[%s;%sH\033[2;32m%s",o,x,letter; printf "\033[%s;%sH\033[1;37m%s\033[0;0H",a[x],x,letter;if (a[x] >= $1) { a[x]=0; } }}'
 }
 
-function install()
+function install_something()
 {
 #define library name
 libraries=("ujthsk" "wtpkty" "dancmu" "ckbbbw" "dgkujy" "rahtzz")
@@ -104,3 +104,20 @@ do
     sleep 1s
 done
 }
+
+#pecoでsublime-projectを開く(project managerを使用)
+function sublime-projects() {
+  subl_root='/path/to/Packages/User/Projects'
+  root_len=${#subl_root}+3
+  # files=`(ls -l ~/Projects/sublime_projects | grep project | cut -d " " -f 10)`
+  files=`find ~/path/to/Packages/User/Projects -name "*sublime-project"`
+  if [[ -n "$files" ]]; then
+    project=`echo $files | awk '{ name=substr($0,'${root_len}'); print substr(name,0,index(name,".sublime-project"))}'| peco`
+    if [[ -n "$project" ]]; then
+      subl `echo $files | grep $project`
+    fi
+  else
+    echo "no projects"
+  fi
+}
+alias subp='sublime-projects'
