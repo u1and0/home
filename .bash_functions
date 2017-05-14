@@ -107,28 +107,7 @@ done
 
 #pecoでsublime-projectを開く(project managerを使用)
 function sublime-projects() {
-  subl_root="~/../../../../Program Files/Sublime Text 3/sublime_text.exe"
-  root_len=${#subl_root}+3
-  # files=`(ls -l ~/Projects/sublime_projects | grep project | cut -d " " -f 10)`
-  files=`find ~/SublimeText3/Packages/User/Projects -name "*sublime-project" 2> /dev/null`
-  # if [[ -n "$files" ]]; then
-  #   project=`echo $files | awk '{ name=substr($0,'${root_len}'); print substr(name,0,index(name,".sublime-project"))}'| peco`
-  project=$(find ~/SublimeText3/Packages/User/Projects -name "*sublime-project" 2> /dev/null | peco)
-#   if [[ -n "$project" ]]; then
-#    subl `echo $files | egrep project`
-  subl $project
-#   fi
-# else
-#   echo "no projects"
-# fi
+  subl $(find ~/SublimeText3/Packages/User/Projects -name "*sublime-project" 2> /dev/null | peco)
 }
-# function sublime-projects()
-# {
-#     subl="~/../../../../Program Files/Sublime Text 3/sublime_text.exe"
-#     project_path=~/SublimeText3/Packages/User/Projects/
-#     finding=`find $project_path -name "*sublime-project"`
-#     echo $finding
-#     project=`$finding | peco`
-#     #subl $project
-# }
+alias subl='sublime_text.exe'
 alias subp='sublime-projects'
