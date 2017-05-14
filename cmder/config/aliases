@@ -5,7 +5,7 @@ la=ls -A $*
 pwd=cd
 clear=cls
 history=cat %CMDER_ROOT%\config\.history
-grep=grep --color $*
+grep=grep --color=tty $*
 grepx=grep --color -nriC $*
 findx=find . -name $*
 unalias=alias /d $*
