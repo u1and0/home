@@ -21,8 +21,8 @@
 		"*.ex4old"
 	],
 	"find_selected_text": true,
-	"font_face": "Mirica M",
-	"font_size": 14,
+	"font_face": "Ricty Diminished",
+	"font_size": 11,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
