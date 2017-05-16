@@ -17,7 +17,8 @@ from ..parseTeXlog import parse_tex_log
 from ..latextools_utils import cache, get_setting
 from ..latextools_utils.external_command import execute_command
 from . import preview_utils
-from .preview_utils import ghostscript_installed, run_ghostscript_command
+from .preview_utils import (
+    ghostscript_installed, get_ghostscript_version, run_ghostscript_command)
 from . import preview_threading as pv_threading
 
 # export the listener
@@ -25,7 +26,7 @@ exports = ["MathPreviewPhantomListener"]
 
 # increase this number if you change the convert command to mark the
 # generated images as expired
-_version = 1
+_version = 2
 
 # use this variable to disable the plugin for a session
 # (until ST is restarted)
@@ -164,7 +165,8 @@ def _create_image(latex_program, latex_document, base_name, color,
             bbox = None
 
         # hires renders the image at 8 times the dpi, then scales it down
-        scale_factor = 8 if _hires else 1
+        scale_factor = \
+            8 if _hires and get_ghostscript_version() >= (9, 14) else 1
 
         # convert the pdf to a png image
         command = [
@@ -247,7 +249,7 @@ def _create_image(latex_program, latex_document, base_name, color,
         err_log.append("Failed to convert pdf to png to preview.")
 
     if err_log:
-        with open(err_file_path, "w") as f:
+        with open(err_file_path, "w", encoding="utf-8") as f:
             f.write("\n".join(err_log))
 
     # cleanup created files
@@ -438,6 +440,10 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
             },
             "background_color": {
                 "setting": "preview_math_background_color",
+                "call_after": self.reset_phantoms
+            },
+            "math_scope": {
+                "setting": "preview_math_scope",
                 "call_after": self.reset_phantoms
             },
             "packages": {
@@ -644,11 +650,9 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
                 return
             scopes = []
         elif self.visible_mode == "all":
-            scopes = view.find_by_selector(
-                "text.tex.latex meta.environment.math")
+            scopes = view.find_by_selector(self.math_scope)
         elif self.visible_mode == "selected":
-            math_scopes = view.find_by_selector(
-                "text.tex.latex meta.environment.math")
+            math_scopes = view.find_by_selector(self.math_scope)
             scopes = [scope for scope in math_scopes
                       if any(scope.contains(sel) for sel in view.sel())]
         else:
@@ -719,7 +723,7 @@ class MathPreviewPhantomListener(sublime_plugin.ViewEventListener,
                 str(_version),
                 self.latex_program,
                 str(_density),
-                str(_hires),
+                str(_hires and get_ghostscript_version() >= (9, 14)),
                 color,
                 latex_document
             ])

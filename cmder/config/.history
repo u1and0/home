@@ -7734,3 +7734,23 @@ cp Cmder/config/aliases  C:\tools\Cmder\config\
 cp Cmder/config/user-startup.cmd  C:\tools\Cmder\config\
 cp Cmder/vendor/conemu-maximus5/ConEmu.xml C:\tools\Cmder\vendor\conemu-maximus5
 gl
+cp Cmder/config/user-startup.cmd  C:\tools\Cmder\config\
+cp Cmder/vendor/conemu-maximus5/ConEmu.xml C:\tools\Cmder\vendor\conemu-maximus5
+g pull
+gm origin/master
+less msys64/etc/mtab
+less cmder/vendor/conemu-maximus5/ConEmu.xml
+gc "[Merge] office cmder1.2.9 & home"
+g add .
+g commit
+gl
+gs
+exit
+gs
+cinst peco
+cinst ricty-deminish
+cinst ricty-diminishe
+cinst ricty-diminished
+cinst fonts-ricty-diminished
+gl
+gch origin/master

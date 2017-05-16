@@ -27,13 +27,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-<<<<<<< HEAD
-		"All Autocomplete",
-		"Anaconda",
-		"BracketHighlighter",
-		"GitGutter",
-=======
->>>>>>> origin/master
 		"GotoRecent",
 		"LaTeXTools",
 		"Markdown Extended",
@@ -41,7 +34,6 @@
 		"MarkdownTOC",
 		"Match",
 		"MetaQuotes (MQL4) Language Package",
-		"SideBarEnhancements",
 		"SublimeEvernote",
 		"Theme - Flatland",
 		"Vintage"
