@@ -10,30 +10,30 @@
 
 # 基本的に先頭にダットがつくファイルだけを管理
 # 以下はバイナリだったりヒストリー含まれるので管理対象外
+.viminfo
 .swp
 .lesshst
 .*_history
 *.cache
 *.zip
+.rnd
 
 # 先頭にダットがつかないファイル
 /^./
 
 
 
-# サブフォルダとそれ以下のすべてのファイル
 # ただし/msys64/etc/以下の特定ファイルは除く。
 # 複雑な.gitignoreの書き方参考(http://qiita.com/anqooqie/items/110957797b3d5280c44f)
 /*/
 !/msys64/
 /msys64/*
 !/msys64/etc/
-/msys64/etc/*
-!/msys64/etc/profile
-!/msys64/etc/fstab
 
 !/.ipython/
 /.ipython/*
+!/.ipython/extensions/
+/.ipython/extensions/*/
 !/.ipython/profile_default/
 /.ipython/profile_default/*/
 /.ipython/profile_default/history.sqlite*
@@ -50,6 +50,7 @@
 !/cmder/
 /cmder/*
 !/cmder/config/
+/cmder/config/.history
 !/cmder/vendor
 /cmder/vendor/*
 !/cmder/vendor/conemu-maximus5/

@@ -192,56 +192,14 @@ fi
 # alias cd=cd_func
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# __USER SETTING__________________________
-
-
-
-
-
-
-
-
-# __GIT SETTINGS__
-# indicate branch name at current terminal
-if [ -f "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash" ]; then
-  source "${HOME}/msys64/usr/local/git/contrib/completion/git-prompt.sh"
-  source "${HOME}/msys64/usr/local/git/contrib/completion/git-completion.bash"
-  GIT_PS1_SHOWDIRTYSTATE=true
-  # PS1="\[\033[32m\]"            # change to green
-  # PS1="$PS1""\u@\h"             # user@host<space>
-  # PS1="$PS1""\[\033[00m\]:"     # change to white & ":"
-  PS1="\[\033[33m\]"      # change to brownish yellow
-  PS1="$PS1""\w"                # current working directory
-  PS1="$PS1""\[\033[31m\]"      # change to red
-  PS1="$PS1""`__git_ps1`"      # branch state (bash function)
-  PS1="$PS1""\[\033[35m\]"      # change to purple
-  PS1="$PS1""\n\$ "             # new line & $
-  PS1="$PS1""\[\033[00m\]"      # change to white
-  export PS1
-
-
-  # export PS1="\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ "
+# ---Bash Prompt Setting---
+if [ -f "${HOME}/.bash_prompt" ]; then
+  source "${HOME}/.bash_prompt"
+  echo '--Loading ~/.bash_prompt--'
 fi
 
 
-
-
-
+# -----------------------------
 # __LESS ENVPATH__
 # -g  検索したとき、ヒットした全ての文字列を反転するのではなく、現在カーソルがある行のみ反転する。
 # -i  検索時に全部小文字で入力したときだけ、大文字小文字を無視する。
@@ -252,8 +210,9 @@ fi
 # -z-4    ウィンドウのサイズをターミナルのサイズ - 4 に設定する。
 # -x4 タブを 4 つのスペースで表現する。
 # -L  $LESSOPEN 環境変数を無効にする。
-export LESS='-g -i -M -R -S -W'
- # -z-4 -x4'
+# -N  行数
+export LESS='-MigRWNx4'
+ # -z-4'
 
 # man などの様々なコマンドがページャーとして less を使うようになります
 export PAGER=less
@@ -266,12 +225,3 @@ export LESS_TERMCAP_se=$'\E[0m'          # Ends standout-mode.
 export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
-
-
-# gitの本にかいってあったけどよくわかんない
-# export GIT_PS1_SHOWDIRTYSTATE=1
-# export PS1='\W$(__git_ps1 " (%s)")\$'
-# if [ -f "${HOME}/.git-prompt.sh" ]; then
-#   source "${HOME}/.git-prompt.sh"
-# fi
-

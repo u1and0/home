@@ -1,0 +1,32 @@
+{
+    "enable_ghc_mod": true,
+    "auto_complete_imports": true,
+    "auto_complete_language_pragmas": true,
+    "enable_auto_build": true,
+    "auto_run_tests": true,
+    "enable_auto_check": true,
+    "enable_auto_lint": true,
+    "auto_build_mode": "normal",
+    "show_output_window": true,
+    "show_error_window": true,
+    "add_to_PATH": 
+    [
+        "/usr/local/bin",
+        "/Users/UserName/.stack/programs/x86_64-osx/ghc-7.10.2/bin",
+        "/Users/UserName/.local/bin"    
+    ],
+    "inhibit_completions": false,
+    "auto_completion_popup": false,
+    "ghc_opts": [],
+    "enable_hsdev": true,
+    "lint_check_fly": false,
+    "lint_check_fly_idle": 5,
+    "enable_hdevtools": true,
+    "unicode_symbol_info": false,
+    "hdevtools_socket": "",
+    "enable_hdocs": true,
+    "inspect_modules": true,
+    "cache_path": ".",
+    "ghci_opts": [],
+    "log": 3
+}

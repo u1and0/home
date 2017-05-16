@@ -29,7 +29,12 @@ alias path='echo -e ${PATH//:/\\n}'
 alias df='df -h'
 alias du='du -h'
 alias du1='du -d1'
+function dut() {
+    du -s $* | sort -h
+}
 
+# diff custom
+alias diff='diff --color'
 
 # find custom
 alias findx='find . -name'
@@ -39,8 +44,8 @@ alias findx='find . -name'
 	# find | grep hogeで./以下のファイル名からhogeを検索
 	# whereis hogeでコマンドの関連場所を検索(bin, src, man)
 	# type -a hogeでコマンドを検索
-alias grep='grep --color'
-alias grepx='grep --color=always -nriC'
+	# -I: バイナリ無視
+alias grep='grep --color=tty -ni'
 # "grepx 1 検索文字列"で前後一行の表示、"grepx 2 検索文字列"で前後2行の表示
 
 # Windowsコマンド文字化け対策
@@ -103,5 +108,10 @@ alias gd='git diff --color-words'
 alias gch='git checkout'
 alias gb='git branch'
 alias gm='git merge'
-alias gt='git tag'
+alias gst='git stash'
+alias gt='git tag -n'
 alias grst-h='git reset --hard HEAD'
+
+# tweet
+alias tweet="~/sh/kotoriotoko/BIN/tweet.sh"
+alias timeline="~/sh/get_tl.sh"

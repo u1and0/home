@@ -2,15 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"Anaconda",
-		"BracketHighlighter",
-		"LaTeXTools",
-		"Markdown Extended",
-		"Markdown Preview",
-		"MarkdownTOC",
-		"Match",
-		"MetaQuotes (MQL4) Language Package",
-		"SideBarEnhancements"
 	],
 	"installed_packages":
 	[
@@ -26,7 +17,6 @@
 		"Expand Selection to Whitespace",
 		"File History",
 		"FindKeyConflicts",
-		"GitGutter",
 		"Gnuplot",
 		"IMESupport",
 		"INI",
@@ -41,13 +31,16 @@
 		"MetaQuotes (MQL4) Language Package",
 		"Package Control",
 		"PackageDev",
-		"RealityCheck",
+		"ProjectManager",
 		"Search Stack Overflow",
 		"SideBarEnhancements",
 		"Sublime Files",
 		"sublime-text-2-buildview",
+		"SublimeHaskell",
+		"SublimeREPL",
 		"Sublimerge 3",
 		"Super Calculator",
+		"Terminal",
 		"Theme - Nexus",
 		"Theme - Nil",
 		"TrailingSpaces",

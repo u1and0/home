@@ -1,28 +1,11 @@
-;= @echo off
-;= rem Call DOSKEY and use this file as the macrofile
-;= %SystemRoot%\system32\doskey /listsize=1000 /macrofile=%0%
-;= rem In batch mode, jump to the end of the file
-;= goto:eof
-;= Add aliases below here
-e.=explorer .
-gl=git log --oneline --all --graph --decorate  $*
-ls=ls --show-control-chars -F --color $*
-pwd=cd
-clear=cls
-history=cat %CMDER_ROOT%\config\.history
-unalias=alias /d $1
-vi=vim $*
-cmderr=cd /d "%CMDER_ROOT%"
 ::shell=
 ls=ls --show-control-chars -F --color $*
-ll=ls -lA $*
-la=ls -A $*
 pwd=cd
 clear=cls
 history=cat %CMDER_ROOT%\config\.history
 grep=grep --color $*
 grepx=grep --color -nriC $*
-findx=find . -name $*
+find=find . -name $*
 unalias=alias /d $*
 
 
@@ -34,10 +17,9 @@ subl="sublime_text.exe" $*
 ::python=
 py="python" $*
 ipy=ipython
-jpy=cmd /k "jupyter qtconsole" -new_console:t:"Jupyter" -new_console:b -new_console:C:"%Anaconda%\Menu\jupyter.ico"
-spy=spyder -new_console:t:"Spyder" -new_console:b -new_console:C:"%Anaconda%\Menu\spyder.ico"
-jpyn=jupyter notebook -new_console:t:"Jupyter Notebook"  -new_console:C:"%Anaconda%\Menu\jupyter.ico"
-
+jpy=cmd /k "jupyter qtconsole --style=monokai" -new_console:t:"Jupyter" -new_console:b
+jpyn=jupyter notebook -new_console:t:"Jupyter Notebook" -new_console:b
+spy=spyder -new_console:t:"Spyder" -new_console:b
 
 ::git=
 g= git $*
@@ -65,4 +47,4 @@ gch=git checkout $*
 gb=git branch $*
 gm=git merge $*
 gt=git tag $*
-grst-h=git reset --hard HEAD
+grst-h=git reset --hard  HEAD  

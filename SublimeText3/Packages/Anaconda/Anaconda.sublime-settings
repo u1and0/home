@@ -291,6 +291,21 @@
     "anaconda_linter_underlines": true,
 
     /*
+        If this is set to true, anaconda will show errors inline.
+    */
+    "anaconda_linter_phantoms": false,
+
+    /*
+        This determines what theme is phantoms used.
+    */
+    "anaconda_linter_phantoms_theme": "phantom",
+
+    /*
+        This determines what template is phantoms used.
+    */
+    "anaconda_linter_phantoms_template": "default",
+
+    /*
         If anaconda_linter_show_errors_on_save is set to true, anaconda
         will show a list of errors when you save the file.
 
@@ -367,7 +382,7 @@
         default as this rule has been deprecated.
 
         D203: 1 blank line before class docstring is ignored by default, as
-        this rule has been dprecated.
+        this rule has been deprecated.
     */
     "pep257_ignore":
     [
@@ -511,6 +526,15 @@
 		Type check the interior of functions without type annotations.
 	*/
 	"mypy_check_untyped_defs": false,
+
+    /*
+        MyPy Fast Parser
+
+        Enable the experimental fast parser module of MyPy. In practice
+        this seems to be slower, however is required for support of some
+        recent syntax changes in Python.
+    */
+    "mypy_fast_parser": false,
 
 	/*
 		MyPy Custom Typing
