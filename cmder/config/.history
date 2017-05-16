@@ -647,3 +647,81 @@ py
 gs
 py
 py
+py
+gac "Package Control.merged-ca-bundle, oscrypto-ca-bundle.crt"
+gs
+gl
+gpo
+g stash clear
+hd
+gc "box length 420"
+gc "@.deg: box's 420 innner length "
+gls
+gac "delete support"
+gc "outer box size"
+gc "bolt point drow"
+gc "fix bolt @Assembly"
+gf release v2.0
+gf release start  v2.0
+gc "modify delete some refs"
+gc "print pdf"
+py
+gc "wide box"
+gf release finish v2.0
+gs
+gl
+gs
+grst-h 
+py
+gs
+py
+py
+gac "Package Control.merged-ca-bundle, oscrypto-ca-bundle.crt"
+gpo
+py
+新型
+cd 新型浮遊空中線バーアンテナ\
+cd 基盤
+ls
+cd C:\home\PROJECT\埋め込みVLF\基盤\接続図
+touch .gitignore
+echo /old/ > .gitignore
+gc "first commit"
+gch develop
+gf feature start
+gf feature start now
+gl
+gac "cut K4, K7, K10"
+cd \\sampanet.gr.jp\DFS\ShareUsers\UserTokki\Common\A_NewPLAN\新型NZRA-1\VLF空中線試作\_試験データ\20170218_標準アンテナ受信試験\170218
+cd "\\sampanet.gr.jp\DFS\ShareUsers\UserTokki\Common\A_NewPLAN\新型NZRA-1\VLF空中線試作\_試験データ\20170218_標準アンテナ受信試験\170218"
+popd
+pushd //sampanet.gr.jp/DFS/ShareUsers/UserTokki/Common/A_NewPLAN/新型NZRA-1/VLF空中線試作/_試験データ/20170218_標準アンテナ受信試験/170218/
+pushd //sampanet.gr.jp/DFS/ShareUsers/UserTokki/Common/A_NewPLAN/新型NZRA-1/VLF空中線試作/_試験データ/20170218_標準アンテナ受信試験/
+pushd //sampanet.gr.jp/DFS/ShareUsers/UserTokki/Common/A_NewPLAN/新型NZRA-1/VLF空中線試作/_試験データ/20170218_標準アンテナ受信試験
+pushd /"/sampanet.gr.jp/DFS/ShareUsers/UserTokki/Common/A_NewPLAN/新型NZRA-1/VLF空中線試作/_試験データ/20170218_標準アンテナ受信試験"
+cd ~
+cd
+cd ..
+pwd
+cd //sampanet.gr.jp/DFS/ShareUsers/UserTokki/Common/A_NewPLAN/新型NZRA-1/VLF空中線試作/_試験データ/20170218_標準アンテナ受信試験/170218
+pushd //sampanet.gr.jp/DFS/ShareUsers/UserTokki/Common/A_NewPLAN/新型NZRA-1/VLF空中線試作/_試験データ/20170218_標準アンテナ受信試験/170218
+pushd \\\\sampanet.gr.jp\DFS\ShareUsers\UserTokki\Common\A_NewPLAN\新型NZRA-1\VLF空中線試作\_試験データ\20170218_標準アンテナ受信試験\170218
+pushd \\\\sampanet.gr.jp\DFS\ShareUsers\UserTokki\Common\A_NewPLAN\新型NZRA-1\VLF空中線試作\_試験データ\20170218_標準アンテナ受信試験\170218\
+cd \\ns5
+pushd \\ns5
+cd PROJECT\
+cd C:\home\python\ZRA16\170218
+g init
+gf init
+echo *.PNG\n*.STA > .gitignore
+echo *.PNG > .gitignore
+echo *.STA >> .gitignore
+less .gitignore 
+gs
+gaa
+gc "set data"
+ipy
+choco update all -y
+py
+ipy
+conda update --all -y
