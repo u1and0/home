@@ -7754,3 +7754,5 @@ cinst ricty-diminished
 cinst fonts-ricty-diminished
 gl
 gch origin/master
+gch origin/master
+gch --conflict=merge C:\home\SublimeText3\Packages\User\Preferences.sublime-settings
