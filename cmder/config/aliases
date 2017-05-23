@@ -5,7 +5,7 @@ la=ls -A $*
 pwd=cd
 clear=cls
 history=cat %CMDER_ROOT%\config\.history
-grep=grep --color=tty $*
+grep=grep --color $*
 grepx=grep --color -nriC $*
 findx=find . -name $*
 unalias=alias /d $*
@@ -49,7 +49,5 @@ gd= git diff --color-words $*
 gch=git checkout $*
 gb=git branch $*
 gm=git merge $*
-gst=git stash $*
 gt=git tag $*
 grst-h=git reset --hard HEAD
-vi=vim $*  

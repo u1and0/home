@@ -1,4 +1,0 @@
-"%USERPROGRAM%\Cmder\vendor\Sublime Text 3\sublime_text.exe"  -new_console:t:"Sublime Text 3" 
--new_console:d:%USERPROGRAM% set CHERE_INVOKING=1 & %USERPROGRAM%\msys64\usr\bin\bash.exe --login -i -new_console:C:"%USERPROGRAM%\msys64\msys2.ico"  -new_console:t:"MSYS2"-new_console:s40V
-set CHERE_INVOKING=1 & sh.exe --login -i -new_console:d:%USERPROGRAM%\SublimeText3\Packages\User -new_console:C:"%USERPROGRAM%\Cmder\vendor\git-for-windows\bin\git.exe" -new_console:s60H
-cmd /k "%ConEmuDir%\..\init.bat"  -new_console:d:%USERPROFILE% -new_console:s50H

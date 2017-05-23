@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string> # EnhancedText ver3.7 3.6の機能削除
+	<string> # EnhancedText v3.8 ダラーマーク($)のsyntax(Markdown - LaTeX)追加 ## TEST # ハイライト $$ 1なんが $$
+$hoge$と$foo$ $$hoge$$と$$foo$$ $hoge$だｋｆｊ；ｄｋｌｆ$youya$dasfa;lkdj$
+# notハイライト $ $agjp
+
+# EnhancedText ver3.7 3.6の機能削除
 # EnhancedText 3.6 シングル、ダブルクォート空白入れるとシンタックス終了
 ##TEST 'これはハイライト' 'これは　ハイライトじゃない' ''ここはハイライト' 'ここはハイライト'ここはハイライトとするな' ''ここだけハイライト'''ここだけハイライト'
 
@@ -133,6 +137,14 @@ color ------------------------------------------------------------------------- 
 		</dict>
 		<dict>
 			<key>comment</key>
+			<string>{}内の文字</string>
+			<key>match</key>
+			<string>\{[^\}]*\}</string>
+			<key>name</key>
+			<string>support.function</string>
+		</dict>
+		<dict>
+			<key>comment</key>
 			<string>[]内</string>
 			<key>match</key>
 			<string>\[+[^\]]+\]+</string>
@@ -189,7 +201,7 @@ color ------------------------------------------------------------------------- 
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>ダラーマーク内(LaTeX形式)</string>
+			<string>ダラーマーク内(MarkdonwのLaTeX形式)</string>
 			<key>match</key>
 			<string>\$+[^\$]+\$</string>
 			<key>name</key>
@@ -197,7 +209,7 @@ color ------------------------------------------------------------------------- 
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>ダラーマーク複数行(LaTeX形式)</string>
+			<string>ダラーマーク複数行(MarkdonwのLaTeX形式)</string>
 			<key>match</key>
 			<string>\$\$\s</string>
 			<key>name</key>

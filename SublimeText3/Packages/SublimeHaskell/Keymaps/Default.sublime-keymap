@@ -61,7 +61,7 @@
         "args": { "panel": "output.sublime_haskell_output_panel" }
     },
     {
-        "keys": ["ctrl+alt+o"],
+        "keys": ["shift+alt+o"],
         "command": "show_panel",
         "args": { "panel": "output.sublime_haskell_build_log_panel" }
     },

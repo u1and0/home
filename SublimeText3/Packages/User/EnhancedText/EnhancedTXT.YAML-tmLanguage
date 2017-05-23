@@ -224,10 +224,10 @@ Color Scheme-Tubnil_kai << customed Tubnil (Sankasan)
        "name": "storage",
        "comment": "飾りカッコ【】内"
        },
-       # {"match": "\\{[^\\}]*\\}",
-       # "name": "keyword.operator",
-       # "comment": "{}内の文字"
-       # },
+       {"match": "\\{[^\\}]*\\}",
+       "name": "support.function",
+       "comment": "{}内の文字"
+       },
        {"match": "\\[+[^\\]]+\\]+",
        "name": "meta.tag",
        "comment": "[]内"

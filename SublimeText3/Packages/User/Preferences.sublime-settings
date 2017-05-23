@@ -28,6 +28,12 @@
 	"ignored_packages":
 	[
 		"GotoRecent",
+		"LaTeXTools",
+		"Markdown Extended",
+		"Markdown Preview",
+		"MarkdownTOC",
+		"Match",
+		"MetaQuotes (MQL4) Language Package",
 		"SublimeEvernote",
 		"Theme - Flatland",
 		"Vintage"
