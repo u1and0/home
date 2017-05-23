@@ -111,3 +111,9 @@ function sublime-projects() {
 }
 alias subl='sublime_text.exe'
 alias subp='sublime-projects'
+
+# perlで計算
+function perl_print(){
+	perl -e "print $*"
+}
+alias pp='perl_print'
