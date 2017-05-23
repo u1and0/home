@@ -36,7 +36,7 @@
 	po = push origin
 	# ========diff========
 	difff = !git diff --word-diff
-	di = !git diff --name-only
+	dif = !git diff --name-only
 	# ========branch========
 	b = branch
 	# ========log========
